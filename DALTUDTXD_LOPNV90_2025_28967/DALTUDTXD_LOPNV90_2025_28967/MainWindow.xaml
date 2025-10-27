@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DALTUDTXD_LOPNV90_2025_28967"
         mc:Ignorable="d"
-        Title="Trang chủ" Height="600" Width="1000" Background="#C2E2FA">
+        Title="Trang chủ" Height="800" Width="1200" Background="#C2E2FA">
 
     <Window.Resources>
         <ResourceDictionary>
@@ -255,7 +255,91 @@
 
             </Grid>
         </TabItem>
+<TabItem Header="Vẽ thép">
+            <DockPanel LastChildFill="True" Background="AliceBlue">
+                <Grid   DockPanel.Dock="Top">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="340"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="300"/>
+                        <ColumnDefinition Width="500"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0" Grid.Row="0">
+                        <GroupBox Header="Thép chủ" FontSize="16" FontWeight="Bold" Margin="5,5,5,0" >
+                            <StackPanel Orientation="Vertical">
+                                <TextBlock>Số cây thép theo phương X:</TextBlock>
+                                <TextBox></TextBox>
+                                <TextBlock>Đường kính thép phương X:</TextBlock>
+                                <ComboBox Height="35" FontSize="14" Margin="10" ItemsSource="{Binding Diameters}" SelectedItem="{Binding StirrupDiameter}" 
+              DisplayMemberPath="Name"/>
+                                <TextBlock>Số cây thép theo phương Y:</TextBlock>
+                               <TextBox></TextBox>
+                                <TextBlock>Đường kính thép phương Y:</TextBlock>
+                                <ComboBox Height="35" FontSize="14" Margin="10"/>
+                            </StackPanel>
 
+                        </GroupBox>
+                    </Grid>
+                    <GroupBox Header="Chiều dài neo và móc thép " FontSize="16" FontWeight="Bold" Margin="5 5 5 4"  Grid.Column="0" Grid.Row="1" Grid.RowSpan="2">
+                        <StackPanel Orientation="Vertical" Grid.Row="1" Grid.Column="0" Grid.RowSpan="2">
+                            <StackPanel>
+                                <TextBlock Margin="0,10,0,0">Chọn kiểu neo thép :</TextBlock>
+                                <ComboBox Margin="10"></ComboBox>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock>Lan =</TextBlock>
+                                    <TextBox Width="40" Margin="7,0,0,0" TextAlignment="Center"></TextBox>
+                                    <TextBlock Margin="5,0,0,0">*Ø</TextBlock>
+                                </StackPanel>
+                                <TextBlock Margin="0 10 0 0">Móc trên :</TextBlock>
+                                <ComboBox FontSize="14" Margin="10"/>
+                                <TextBlock>Móc dưới :</TextBlock>
+                                <ComboBox FontSize="14" Margin="10"/>
+                            </StackPanel>
+                        </StackPanel>
+                    </GroupBox>
+                    <GroupBox Header="Thép đai" FontSize="16" FontWeight="Bold" Margin="5"  Grid.Column="1" Grid.RowSpan="3" >
+                        <StackPanel Orientation="Vertical">
+                            <TextBlock >Đường kính thép đai:</TextBlock>
+                            <ComboBox Margin="10" FontSize="14"></ComboBox>
+                            <TextBlock Margin="0,10,0,0">Chọn kiểu thép đai :</TextBlock>
+                            <ComboBox ItemsSource="{Binding }"
+          SelectedItem="{Binding diai}"
+          Margin="10"></ComboBox>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Margin="180,0,0,0">Lt</TextBlock>
+                                <TextBlock HorizontalAlignment="Center" Margin="80,0,0,0">Ln</TextBlock>
+                                <TextBlock Margin="80,0,0,0">Lt</TextBlock>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock>Đoạn phân bố:</TextBlock>
+                                <TextBox Width="60" Margin="45,0,0,0" BorderThickness="2" TextAlignment="Center"></TextBox>
+                                <TextBox Width="60" Margin="37,0,0,0" BorderThickness="2" TextAlignment="Center"></TextBox>
+                                <TextBox Width="60" Margin="35,0,0,0" BorderThickness="2" TextAlignment="Center"></TextBox>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal" >
+                                <TextBlock Margin="0,10,0,0">Khoảng cách :</TextBlock>
+                                <TextBox Width="60"  Margin="50,4,0,0" BorderThickness="2" TextAlignment="Center"></TextBox>
+                                <TextBox Width="60" Margin="37,4,0,0" BorderThickness="2" TextAlignment="Center"></TextBox>
+                                <TextBox Width="60" Margin="35,4,0,0" BorderThickness="2" TextAlignment="Center"></TextBox>
+                            </StackPanel>
+                            <Image Source="/resources/Images/thepdai.png" Height="300" Margin="0 10 0 0"/>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Margin="18">Chiều dày lớp bảo vệ c =</TextBlock>
+                                <TextBox Width="60" Height="30" TextAlignment="Center" ></TextBox>
+                            </StackPanel>
+                        </StackPanel>
+                    </GroupBox>
+                    <GroupBox Header="Hình ảnh" FontSize="16" FontWeight="Bold" Margin="5"  Grid.Column="2" Grid.Row="0" Grid.RowSpan="2"/>
+                </Grid>
+                <Grid DockPanel.Dock="Bottom">
+                    <Button  Width="110" Height="30" Content="OK" Command="{Binding OkCommand}" HorizontalAlignment="Right" Margin="0 0 250 0 "/>
+                    <Button  Width="110" Height="30" Content="Cancel" Command="{Binding CloseCommand}"  HorizontalAlignment="Right" Margin="0 0 50 0 "/>
+                </Grid>
+            </DockPanel>
+        </TabItem>
     </TabControl>
 
 
