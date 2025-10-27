@@ -5,6 +5,18 @@
     {
       "AbsoluteMoniker": "D:0:0:{98B56120-10E6-4BFA-B8EF-963CC4316E96}|DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967.csproj|d:\\do an lap trinh 1027\\huce_daltudtxd_lopnv90_2025_28967\\daltudtxd_lopnv90_2025_28967\\daltudtxd_lopnv90_2025_28967\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{98B56120-10E6-4BFA-B8EF-963CC4316E96}|DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967.csproj|solutionrelative:daltudtxd_lopnv90_2025_28967\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{98B56120-10E6-4BFA-B8EF-963CC4316E96}|DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967.csproj|D:\\do an lap trinh 1027\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\daltudtxd_lopnv90_2025_28967\\resources\\style\\dictionary1.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{98B56120-10E6-4BFA-B8EF-963CC4316E96}|DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967.csproj|solutionrelative:daltudtxd_lopnv90_2025_28967\\resources\\style\\dictionary1.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{98B56120-10E6-4BFA-B8EF-963CC4316E96}|DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967.csproj|D:\\do an lap trinh 1027\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\daltudtxd_lopnv90_2025_28967\\resources\\canvas\\dictionary1.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{98B56120-10E6-4BFA-B8EF-963CC4316E96}|DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967.csproj|solutionrelative:daltudtxd_lopnv90_2025_28967\\resources\\canvas\\dictionary1.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{98B56120-10E6-4BFA-B8EF-963CC4316E96}|DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967.csproj|D:\\do an lap trinh 1027\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\daltudtxd_lopnv90_2025_28967\\cmd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{98B56120-10E6-4BFA-B8EF-963CC4316E96}|DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967.csproj|solutionrelative:daltudtxd_lopnv90_2025_28967\\cmd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 9,
           "Children": [
             {
               "$type": "Bookmark",
@@ -39,6 +51,42 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Dictionary1.xaml",
+              "DocumentMoniker": "D:\\do an lap trinh 1027\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\resources\\Canvas\\Dictionary1.xaml",
+              "RelativeDocumentMoniker": "DALTUDTXD_LOPNV90_2025_28967\\resources\\Canvas\\Dictionary1.xaml",
+              "ToolTip": "D:\\do an lap trinh 1027\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\resources\\Canvas\\Dictionary1.xaml",
+              "RelativeToolTip": "DALTUDTXD_LOPNV90_2025_28967\\resources\\Canvas\\Dictionary1.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-10-27T15:28:55.911Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Dictionary1.xaml",
+              "DocumentMoniker": "D:\\do an lap trinh 1027\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\resources\\style\\Dictionary1.xaml",
+              "RelativeDocumentMoniker": "DALTUDTXD_LOPNV90_2025_28967\\resources\\style\\Dictionary1.xaml",
+              "ToolTip": "D:\\do an lap trinh 1027\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\resources\\style\\Dictionary1.xaml",
+              "RelativeToolTip": "DALTUDTXD_LOPNV90_2025_28967\\resources\\style\\Dictionary1.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-10-27T14:51:12.752Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Cmd.cs",
+              "DocumentMoniker": "D:\\do an lap trinh 1027\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\Cmd.cs",
+              "RelativeDocumentMoniker": "DALTUDTXD_LOPNV90_2025_28967\\Cmd.cs",
+              "ToolTip": "D:\\do an lap trinh 1027\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\Cmd.cs",
+              "RelativeToolTip": "DALTUDTXD_LOPNV90_2025_28967\\Cmd.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-27T14:27:36.587Z"
             },
             {
               "$type": "Document",
