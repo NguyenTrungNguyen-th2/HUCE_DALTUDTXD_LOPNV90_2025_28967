@@ -21,9 +21,13 @@
 
         <TabItem Header="Vật Liệu" Background="Azure" Width="220"  FontSize="16" FontWeight="Bold" BorderThickness="1" >
             <Grid Margin="10">
-                <TextBlock Text="Thông Tin Vật Liệu" FontSize="24" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,10,0,20"/>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="949*"/>
+                    <ColumnDefinition Width="225*"/>
+                </Grid.ColumnDefinitions>
+                <TextBlock Text="Thông Tin Vật Liệu" FontSize="24" FontWeight="Bold" HorizontalAlignment="Left" Margin="481,10,0,20"/>
 
-                <GroupBox Header="Thông số vật liệu" Margin="0,60,0,0" VerticalAlignment="Top">
+                <GroupBox Header="Thông số vật liệu" Margin="0,60,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2">
                     <Grid>
                         <StackPanel HorizontalAlignment="Left">
                             <TextBlock Text="Mác bê tông:"/>
@@ -54,12 +58,12 @@
                     </Grid>
                 </GroupBox>
 
-                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,97,10,0" RenderTransformOrigin="0.499,1.28" Height="128" Width="175">
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,97,10,0" RenderTransformOrigin="0.499,1.28" Height="128" Width="175" Grid.Column="1">
                     <Button Name="SaveButton" Background="Blue" Content="Lưu vật liệu" Width="150" Margin="10,10,0,60" Height="24" />
                     <Button Name="ClearButton" Background="Blue" Content="Xóa dữ liệu" Width="150" Margin="-150,60,0,10" Height="30" />
                 </StackPanel>
 
-                <GroupBox Header="Danh sách vật liệu đã lưu" Margin="0,260,0,0">
+                <GroupBox Header="Danh sách vật liệu đã lưu" Margin="0,260,0,0" Grid.ColumnSpan="2">
                     <DataGrid Name="MaterialDataGrid" AutoGenerateColumns="False" ItemsSource="{Binding clsVatLieu}" IsReadOnly="True">
                         <DataGrid.Columns>
                             <DataGridTextColumn Width="*" Header="Mác bê tông" />
@@ -311,7 +315,7 @@
                             <StackPanel>
                                 <TextBlock Margin="0,10,0,0">Chọn kiểu neo thép :</TextBlock>
                                 <ComboBox Margin="10"></ComboBox>
-                                <StackPanel Orientation="Horizontal">
+                                <StackPanel Orientation="Horizontal" Margin="0 25 0 0">
                                     <TextBlock>Lan =</TextBlock>
                                     <TextBox Width="40" Margin="7,0,0,0" TextAlignment="Center"></TextBox>
                                     <TextBlock Margin="5,0,0,0">*Ø</TextBlock>
@@ -348,8 +352,8 @@
                                 <TextBox Width="60" Margin="37,4,0,0" BorderThickness="2" TextAlignment="Center"></TextBox>
                                 <TextBox Width="60" Margin="35,4,0,0" BorderThickness="2" TextAlignment="Center"></TextBox>
                             </StackPanel>
-                            <Image Source="/resources/images/thepdai.png" Height="300" Margin="0 10 0 0"/>
-                            <StackPanel Orientation="Horizontal">
+                            <Image Source="D:\do an lap trinh 1027\HUCE_DALTUDTXD_LOPNV90_2025_28967\DALTUDTXD_LOPNV90_2025_28967\DALTUDTXD_LOPNV90_2025_28967\resources\images\thepdai.png" Height="300" Margin="20"/>
+                            <StackPanel Orientation="Horizontal" >
                                 <TextBlock Margin="18">Chiều dày lớp bảo vệ c =</TextBlock>
                                 <TextBox Width="60" Height="30" TextAlignment="Center" ></TextBox>
                             </StackPanel>
