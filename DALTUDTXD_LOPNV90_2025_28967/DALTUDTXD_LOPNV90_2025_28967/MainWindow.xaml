@@ -3,7 +3,9 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         xmlns:local="clr-namespace:DALTUDTXD_LOPNV90_2025_28967"
+        xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
         mc:Ignorable="d"
         Title="Trang chủ" Height="800" Width="1200" Background="#C2E2FA">
     <Window.Resources>
@@ -17,7 +19,7 @@
 
     <TabControl >
 
-        <TabItem Header="Vật Liệu" Background="LightSkyBlue" Width="220"  FontSize="16" FontWeight="Bold">
+        <TabItem Header="Vật Liệu" Background="Azure" Width="220"  FontSize="16" FontWeight="Bold" BorderThickness="1" >
             <Grid Margin="10">
                 <TextBlock Text="Thông Tin Vật Liệu" FontSize="24" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,10,0,20"/>
 
@@ -71,7 +73,7 @@
             </Grid>
         </TabItem>
 
-        <TabItem Header="Thông số Cột" Background="LightSkyBlue" Width="220"  FontSize="16" FontWeight="Bold">
+        <TabItem Header="Thông số Cột" Background="Azure" Width="220"  FontSize="16" FontWeight="Bold" BorderThickness="1" >
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="*"/>
@@ -149,7 +151,7 @@
                 </GroupBox>
             </Grid>
         </TabItem>
-        <TabItem Header="Mặt Cắt" Background="LightSkyBlue" Width="220"  FontSize="16" FontWeight="Bold">
+        <TabItem Header="Mặt Cắt" Background="Azure" Width="220"  FontSize="16" FontWeight="Bold" BorderThickness="1" >
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
@@ -201,7 +203,7 @@
                 <Button Grid.Row="1" Grid.Column="1" VerticalAlignment="Top" x:Name="btnThem" Content="Lưu" Width="130" Margin="0,368,0,0" HorizontalAlignment="Center" Background="Blue" Foreground="White" />
             </Grid>
         </TabItem>
-        <TabItem Header="Tính toán" Background="LightSkyBlue" Width="240"  FontSize="16" FontWeight="Bold">
+        <TabItem Header="Tính toán" Background="Azure" Width="240"  FontSize="16" FontWeight="Bold" BorderThickness="2" BorderBrush="LightSkyBlue">
             <Grid Margin="20,20,20,20">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="134*"/>
@@ -260,7 +262,7 @@
 
             </Grid>
         </TabItem>
-        <TabItem Header="Vẽ thép" Width="250" FontSize="16" FontWeight="Bold">
+        <TabItem Header="Vẽ thép" Width="250" FontSize="16" Background="Azure"  BorderThickness="1" >
             <DockPanel LastChildFill="True" Background="AliceBlue">
                 <Grid   DockPanel.Dock="Top">
                     <Grid.RowDefinitions>
@@ -276,12 +278,28 @@
                         <GroupBox Header="Thép chủ" FontSize="16" FontWeight="Bold" Margin="5,5,5,0" >
                             <StackPanel Orientation="Vertical">
                                 <TextBlock>Số cây thép theo phương X:</TextBlock>
-                                <TextBox></TextBox>
+                                <mah:NumericUpDown 
+                                    Minimum="0"
+                                    Maximum="10"
+                                    Interval="1"
+                                    Height="35"
+                                    FontSize="14"
+                                    Margin="10"
+                                    mah:TextBoxHelper.Watermark="Nhập số..."
+                                    mah:TextBoxHelper.ClearTextButton="True" />
                                 <TextBlock>Đường kính thép phương X:</TextBlock>
                                 <ComboBox Height="35" FontSize="14" Margin="10" ItemsSource="{Binding Diameters}" SelectedItem="{Binding StirrupDiameter}" 
               DisplayMemberPath="Name"/>
                                 <TextBlock>Số cây thép theo phương Y:</TextBlock>
-                                <TextBox></TextBox>
+                                <mah:NumericUpDown 
+                                    Minimum="0"
+                                    Maximum="10"
+                                    Interval="1"
+                                    Height="35"
+                                    FontSize="14"
+                                    Margin="10"
+                                    mah:TextBoxHelper.Watermark="Nhập số..."
+                                    mah:TextBoxHelper.ClearTextButton="True" />
                                 <TextBlock>Đường kính thép phương Y:</TextBlock>
                                 <ComboBox Height="35" FontSize="14" Margin="10"/>
                             </StackPanel>
