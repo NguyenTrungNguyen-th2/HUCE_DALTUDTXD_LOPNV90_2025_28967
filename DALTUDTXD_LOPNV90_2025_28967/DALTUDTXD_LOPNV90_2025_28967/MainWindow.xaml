@@ -75,12 +75,12 @@
         </TabItem>
 
         <TabItem Header="Thông số Cột" Background="Azure" Width="220"  FontSize="16" FontWeight="Bold" BorderThickness="1" >
-            <Grid Background="AliceBlue">
+            <Grid Margin="10" Background="AliceBlue">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="450"/>
                 </Grid.RowDefinitions>
-                <GroupBox Header="Thông số tiết diện" Width="1200" HorizontalAlignment="Center" VerticalAlignment="Top" Height="391" Margin="0,10,0,0" Grid.RowSpan="2">
+                <GroupBox Header="Thông số tiết diện" Margin="0,20,0,0" VerticalAlignment="Top" Grid.ColumnSpan="3">
                     <Grid>
                         <StackPanel HorizontalAlignment="Left">
 
@@ -153,7 +153,7 @@
             </Grid>
         </TabItem>
         <TabItem Header="Mặt Cắt" Background="Azure" Width="220"  FontSize="16" FontWeight="Bold" BorderThickness="1" >
-            <Grid Background="AliceBlue">
+            <Grid Margin="10" Background="AliceBlue">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="450"/>
@@ -189,9 +189,9 @@
                             <TextBox FontSize="16" HorizontalAlignment="Left" Name="txthLamviec" Width="200" Margin="0 0 0 2"/>
                         </StackPanel>
                     </StackPanel>
-                    <GroupBox Header="Danh sách vật liệu đã lưu" Margin="10" Height="520">
-                        <DataGrid Name="dtgTietDien" AutoGenerateColumns="False" ItemsSource="{Binding clsTietDien}" IsReadOnly="True">
-                            <DataGrid.Columns>
+                    <GroupBox Header="Danh sách vật liệu đã lưu" Margin="10" Grid.Row="1" >
+                        <DataGrid Name="dtgTietDien" AutoGenerateColumns="False" ItemsSource="{Binding clsTietDien}" IsReadOnly="True" Height="451">
+                            <DataGrid.Columns >
                                 <DataGridTextColumn Width="*" Header="Tên" Binding="{Binding Name}" />
                                 <DataGridTextColumn Width="*" Header="Chiều rộng " Binding="{Binding ChieuRongCanh}" />
                                 <DataGridTextColumn Width="*" Header="Chiều cao" Binding="{Binding DoDayCanh}"/>
@@ -201,7 +201,7 @@
                         </DataGrid>
                     </GroupBox>
                 </StackPanel>
-                <Button Grid.Row="1" Grid.Column="1" VerticalAlignment="Top" x:Name="btnThem" Content="Lưu" Width="130" Margin="0,636,0,0" HorizontalAlignment="Center" Background="Blue" Foreground="White" />
+                <Button Grid.Row="1" Grid.Column="1" VerticalAlignment="Top" x:Name="btnThem" Content="Lưu" Width="130" Margin="0,608,0,0" HorizontalAlignment="Center" Background="Blue" Foreground="White" />
             </Grid>
         </TabItem>
         <TabItem Header="Tính toán" Background="Azure" Width="240"  FontSize="16" FontWeight="Bold" BorderThickness="2" BorderBrush="LightSkyBlue">
