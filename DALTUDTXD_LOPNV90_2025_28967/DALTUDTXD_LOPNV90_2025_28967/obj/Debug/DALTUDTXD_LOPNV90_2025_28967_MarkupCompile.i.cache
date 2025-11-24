@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 
-31120186360
+8-1458482340
 
-9-1866488725
+14793822199
 37-165035768
-MainWindow.xaml;resources\Canvas\Dictionary1.xaml;resources\style\Dictionary1.xaml;
+MainWindow.xaml;resources\Canvas\Dictionary1.xaml;resources\style\Dictionary1.xaml;View\ViewThongSoCot.xaml;View\ViewThongSoTinhToan.xaml;View\ViewTinhToan.xaml;View\ViewVatLieu.xaml;View\ViewVeThep.xaml;
 
-False
+True
 
