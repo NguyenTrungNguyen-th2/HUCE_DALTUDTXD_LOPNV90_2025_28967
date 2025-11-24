@@ -147,6 +147,21 @@
   <ItemGroup>
     <Compile Include="CommandAddin\MyAddin1.cs" />
     <Compile Include="ViewModel\ColumnRebarViewModel.cs" />
+    <Compile Include="View\ViewThongSoCot.xaml.cs">
+      <DependentUpon>ViewThongSoCot.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ViewThongSoTinhToan.xaml.cs">
+      <DependentUpon>ViewThongSoTinhToan.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ViewTinhToan.xaml.cs">
+      <DependentUpon>ViewTinhToan.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ViewVatLieu.xaml.cs">
+      <DependentUpon>ViewVatLieu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ViewVeThep.xaml.cs">
+      <DependentUpon>ViewVeThep.xaml</DependentUpon>
+    </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -161,6 +176,26 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="resources\style\Dictionary1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\ViewThongSoCot.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\ViewThongSoTinhToan.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\ViewTinhToan.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\ViewVatLieu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\ViewVeThep.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -217,9 +252,7 @@
     <Resource Include="resources\anh\logorevit.jpeg" />
     <Resource Include="resources\anh\thepdai.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="View\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Resource Include="resources\IconRibbonRevit\MaterialEditor.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
