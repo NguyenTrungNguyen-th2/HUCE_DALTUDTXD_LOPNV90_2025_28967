@@ -1,0 +1,15 @@
+﻿<?xml version ="1.0" encoding="utf-8" standalone="no"?>
+<RevitAddIns>
+
+  <AddIn Type="Application">
+    <Name>REVIT_API_TUTORIAL_NVH Commands</Name>
+    <Assembly>D:\do an lap trinh 1027\HUCE_DALTUDTXD_LOPNV90_2025_28967\DALTUDTXD_LOPNV90_2025_28967\DALTUDTXD_LOPNV90_2025_28967\bin\Debug\DALTUDTXD_LOPNV90_2025_28967.dll</Assembly>
+    <AddInId>f204a68d-6e44-4998-b835-6173f5bd14f9</AddInId>
+    <FullClassName>DALTUDTXD_LOPNV90_2025_28967.CommandAddin.MyAddin1</FullClassName>
+    <Description>This is a Plugin</Description>
+    <VendorId>Omar Samy</VendorId>
+    <VendorDescription>Software Engineer</VendorDescription>
+    <VisibilityMode>NotVisibleWhenNoActiveDocument</VisibilityMode>
+  </AddIn>
+
+</RevitAddIns>
