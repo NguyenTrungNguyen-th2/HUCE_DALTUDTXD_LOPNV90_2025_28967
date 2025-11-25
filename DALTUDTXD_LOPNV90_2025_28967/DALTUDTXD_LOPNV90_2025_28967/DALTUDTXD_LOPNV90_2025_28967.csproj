@@ -140,13 +140,37 @@
     <Reference Include="System.Xaml">
       <RequiredTargetFramework>4.0</RequiredTargetFramework>
     </Reference>
+    <Reference Include="UIAutomationClient" />
+    <Reference Include="UIAutomationTypes" />
     <Reference Include="WindowsBase" />
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="classcolumnrebar\ColumnCanvas.cs" />
+    <Compile Include="classcolumnrebar\ColumnSelectionFilter.cs" />
+    <Compile Include="classcolumnrebar\DistributeStirrupType.cs" />
+    <Compile Include="classcolumnrebar\DoubleUtils.cs" />
+    <Compile Include="classcolumnrebar\GetBarDiameter.cs" />
+    <Compile Include="classcolumnrebar\IsCustomDistributionConverter.cs" />
+    <Compile Include="classcolumnrebar\LanType.cs" />
+    <Compile Include="CmdCot.cs" />
+    <Compile Include="CmdTinhToan.cs" />
+    <Compile Include="CmdVatLieu.cs" />
     <Compile Include="CommandAddin\MyAddin1.cs" />
+    <Compile Include="Model\ColumnModel.cs" />
+    <Compile Include="Model\ColumnRebarModel.cs" />
+    <Compile Include="Model\HeSoTinhToan.cs" />
+    <Compile Include="Model\MaterialModel.cs" />
+    <Compile Include="RibbonSwitcher.cs.cs" />
+    <Compile Include="services\TinhToanCotService.cs" />
     <Compile Include="ViewModel\ColumnRebarViewModel.cs" />
+    <Compile Include="ViewModel\ColumnViewModel.cs" />
+    <Compile Include="ViewModel\MainViewModel.cs" />
+    <Compile Include="ViewModel\RelayCommand.cs" />
+    <Compile Include="ViewModel\RevitCommandData.cs" />
+    <Compile Include="ViewModel\TinhToanViewModel.cs" />
+    <Compile Include="ViewModel\VatLieuViewModel.cs" />
     <Compile Include="View\ViewThongSoCot.xaml.cs">
       <DependentUpon>ViewThongSoCot.xaml</DependentUpon>
     </Compile>
@@ -166,7 +190,6 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Compile Include="Cmd.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -201,7 +224,6 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Model\ColumnRebarModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -252,7 +274,10 @@
     <Resource Include="resources\anh\logorevit.jpeg" />
     <Resource Include="resources\anh\thepdai.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="resources\IconRibbonRevit\Calculator.png" />
+    <Resource Include="resources\IconRibbonRevit\Column.png" />
+  </ItemGroup>
   <ItemGroup>
     <Resource Include="resources\IconRibbonRevit\MaterialEditor.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>

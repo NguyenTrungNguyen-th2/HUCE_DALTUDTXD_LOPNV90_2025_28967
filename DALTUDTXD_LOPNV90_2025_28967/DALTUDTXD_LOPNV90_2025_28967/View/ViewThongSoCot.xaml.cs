@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DALTUDTXD_LOPNV90_2025_28967.ViewModel;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,9 +20,12 @@ namespace DALTUDTXD_LOPNV90_2025_28967.View
     /// </summary>
     public partial class ViewThongSoCot : Window
     {
-        public ViewThongSoCot()
+        // Constructor dùng trong Revit (bắt buộc)
+        public ViewThongSoCot(ColumnViewModel viewModel)
         {
             InitializeComponent();
+            DataContext = viewModel; // ✅ OK
         }
+
     }
 }

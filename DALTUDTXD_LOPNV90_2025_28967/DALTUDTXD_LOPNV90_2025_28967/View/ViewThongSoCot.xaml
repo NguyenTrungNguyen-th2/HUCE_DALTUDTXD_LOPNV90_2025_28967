@@ -5,8 +5,77 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DALTUDTXD_LOPNV90_2025_28967.View"
         mc:Ignorable="d"
-        Title="ViewThongSoCot" Height="450" Width="800">
-    <Grid>
-        
+        Title="ViewThongSoCot" Height="600" Width="1200">
+    <Grid Margin="10" Background="AliceBlue">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="400"/>
+        </Grid.RowDefinitions>
+        <GroupBox Header="Thông số tiết diện" Margin="0,20,0,0" VerticalAlignment="Top" Height="285">
+            <Grid>
+
+                <StackPanel HorizontalAlignment="Left">
+
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock VerticalAlignment="Center" FontWeight="Bold" Height="60" Width="100" Text="Mác bê tông :"/>
+                        <ComboBox x:Name="cbbLK" Width="200" Margin="20 10 0 50">
+                            <ComboBoxItem IsSelected="True" Content="B15"/>
+                            <ComboBoxItem Content="B20"/>
+                            <ComboBoxItem Content="B25"/>
+                            <ComboBoxItem Content="B30"/>
+                        </ComboBox>
+                    </StackPanel>
+
+                    <!-- Tải trọng -->
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock VerticalAlignment="Center" FontWeight="Bold" Text="Tải trọng (N):" Height="60" Width="100"/>
+                        <TextBox Text="{Binding TaiTrong, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                                  Width="200" Margin="20 10 0 50"/>
+                    </StackPanel>
+
+                </StackPanel>
+                <StackPanel HorizontalAlignment="Center">
+                    <!-- Momen X -->
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock VerticalAlignment="Center" FontWeight="Bold" Text="Momen X (Mx):" Height="60" Width="100"/>
+                        <TextBox Text="{Binding MomenX, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                                  Width="200" Margin="20 10 0 50"/>
+                    </StackPanel>
+
+                    <!-- Momen Y -->
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock VerticalAlignment="Center" FontWeight="Bold" Text="Momen Y (My):" Height="60" Width="100"/>
+                        <TextBox Text="{Binding MomenY, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                                  Width="200" Margin="20 10 0 50"/>
+                    </StackPanel>
+                </StackPanel>
+            </Grid>
+        </GroupBox>
+        <StackPanel VerticalAlignment="Bottom" Orientation="Horizontal" HorizontalAlignment="Right" Margin="50">
+            <Button x:Name="btnNhapTuRevit"
+                     Command="{Binding cmNhapRevit}"
+                     Content="Nhập từ Revit"
+                     Width="130"
+                     Margin="0,0,20,0"
+                     Background="Blue"
+                     Foreground="White" />
+            <Button x:Name="btnluu" Command="{Binding cmLuuCot}" CommandParameter="{Binding ElementName=pgCLParameter}" Content="Lưu" Width="130" Background="Blue" Foreground="White"/>
+        </StackPanel>
+        <GroupBox FontWeight="Bold" Header="Danh sách cột" Grid.Row="1" Margin="0,10,0,0" >
+            <DataGrid ItemsSource="{Binding DanhSachCot}"
+                   SelectedItem="{Binding SelectedColumn}"
+                   AutoGenerateColumns="False">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Width="*" Header="Tên" Binding="{Binding Name}" />
+                    <DataGridTextColumn Width="*" Header="Tiết diện (mm)" Binding="{Binding Width}" />
+                    <DataGridTextColumn Width="*" Header="Chiều cao (mm)" Binding="{Binding Height}" />
+                    <DataGridTextColumn Width="*" Header="Chiều dài (mm)" Binding="{Binding Length}" />
+                    <DataGridTextColumn Width="*" Header="Tải trọng (N)" Binding="{Binding Load}" />
+                    <DataGridTextColumn Width="*" Header="Momen X" Binding="{Binding MomentX}" />
+                    <DataGridTextColumn Width="*" Header="Momen Y" Binding="{Binding MomentY}" />
+                </DataGrid.Columns>
+            </DataGrid>
+        </GroupBox>
+
     </Grid>
 </Window>
