@@ -15,31 +15,28 @@ namespace DALTUDTXD_LOPNV90_2025_28967.CommandAddin
     {
         public Result OnStartup(UIControlledApplication application)
         {
-            application.CreateRibbonTab("My addin");
-
-            var Panelthongso = application.CreateRibbonPanel("My addin", "Thông số đầu vào");
-            var Paneltinhtoan = application.CreateRibbonPanel("My addin", "Tính toán");
-            var Panelvethep = application.CreateRibbonPanel("My addin", "Vẽ thép");
+            application.CreateRibbonTab("addin");
+            var Panelthongso = application.CreateRibbonPanel("addin", "Thông số đầu vào");
 
             var Path = Assembly.GetExecutingAssembly().Location;
 
-            // Nút 1
-            var pushButtonData1 = new PushButtonData("VatLieu1", "Vật liệu 1", Path, "DALTUDTXD_LOPNV90_2025_28967.Cmd");
+            // Nút 1: Vật Liệu -> Gọi CmdVatLieu
+            var pushButtonData1 = new PushButtonData("VatLieu1", "Vật Liệu", Path, "DALTUDTXD_LOPNV90_2025_28967.CmdVatLieu");
             PushButton btn1 = Panelthongso.AddItem(pushButtonData1) as PushButton;
             btn1.LargeImage = new BitmapImage(new Uri(
                 "pack://application:,,,/DALTUDTXD_LOPNV90_2025_28967;component/resources/IconRibbonRevit/MaterialEditor.png"));
 
-            // Nút 2
-            var pushButtonData2 = new PushButtonData("VatLieu2", "Vật liệu 2", Path, "DALTUDTXD_LOPNV90_2025_28967.Cmd");
+            // Nút 2: Cột -> Gọi CmdCot
+            var pushButtonData2 = new PushButtonData("VatLieu2", "Cột", Path, "DALTUDTXD_LOPNV90_2025_28967.CmdCot");
             PushButton btn2 = Panelthongso.AddItem(pushButtonData2) as PushButton;
             btn2.LargeImage = new BitmapImage(new Uri(
-                "pack://application:,,,/DALTUDTXD_LOPNV90_2025_28967;component/resources/IconRibbonRevit/MaterialEditor.png"));
+                "pack://application:,,,/DALTUDTXD_LOPNV90_2025_28967;component/resources/IconRibbonRevit/Column.png"));
 
-            // Nút 3
-            var pushButtonData3 = new PushButtonData("VatLieu3", "Vật liệu 3", Path, "DALTUDTXD_LOPNV90_2025_28967.Cmd");
+            // Nút 3: Tính Toán -> Gọi CmdTinhToan
+            var pushButtonData3 = new PushButtonData("VatLieu3", "Tính Toán", Path, "DALTUDTXD_LOPNV90_2025_28967.CmdTinhToan");
             PushButton btn3 = Panelthongso.AddItem(pushButtonData3) as PushButton;
             btn3.LargeImage = new BitmapImage(new Uri(
-                "pack://application:,,,/DALTUDTXD_LOPNV90_2025_28967;component/resources/IconRibbonRevit/MaterialEditor.png"));
+                "pack://application:,,,/DALTUDTXD_LOPNV90_2025_28967;component/resources/IconRibbonRevit/Calculator.png"));
 
             return Result.Succeeded;
         }
