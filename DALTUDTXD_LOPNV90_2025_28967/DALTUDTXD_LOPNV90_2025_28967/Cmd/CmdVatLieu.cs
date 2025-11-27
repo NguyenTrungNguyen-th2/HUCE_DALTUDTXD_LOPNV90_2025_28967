@@ -9,7 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DALTUDTXD_LOPNV90_2025_28967
+namespace DALTUDTXD_LOPNV90_2025_28967.Cmd
 {
     [Transaction(TransactionMode.Manual)]
     public class CmdVatLieu : IExternalCommand

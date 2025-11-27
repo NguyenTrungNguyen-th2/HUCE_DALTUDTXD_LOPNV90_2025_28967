@@ -5,7 +5,7 @@ using DALTUDTXD_LOPNV90_2025_28967.View;
 using DALTUDTXD_LOPNV90_2025_28967.ViewModel;
 using System;
 
-namespace DALTUDTXD_LOPNV90_2025_28967
+namespace DALTUDTXD_LOPNV90_2025_28967.Cmd
 {
     // CmdCot.cs
     [Transaction(TransactionMode.Manual)]

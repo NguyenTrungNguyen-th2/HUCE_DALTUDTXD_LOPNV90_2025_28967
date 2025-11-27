@@ -21,13 +21,13 @@ namespace DALTUDTXD_LOPNV90_2025_28967.CommandAddin
             var Path = Assembly.GetExecutingAssembly().Location;
 
             // Nút 1: Vật Liệu -> Gọi CmdVatLieu
-            var pushButtonData1 = new PushButtonData("VatLieu1", "Vật Liệu", Path, "DALTUDTXD_LOPNV90_2025_28967.CmdVatLieu");
+            var pushButtonData1 = new PushButtonData("VatLieu1", "Vật Liệu", Path, "DALTUDTXD_LOPNV90_2025_28967.Cmd.CmdVatLieu");
             PushButton btn1 = Panelthongso.AddItem(pushButtonData1) as PushButton;
             btn1.LargeImage = new BitmapImage(new Uri(
                 "pack://application:,,,/DALTUDTXD_LOPNV90_2025_28967;component/resources/IconRibbonRevit/MaterialEditor.png"));
 
             // Nút 2: Cột -> Gọi CmdCot
-            var pushButtonData2 = new PushButtonData("VatLieu2", "Cột", Path, "DALTUDTXD_LOPNV90_2025_28967.CmdCot");
+            var pushButtonData2 = new PushButtonData("VatLieu2", "Cột", Path, "DALTUDTXD_LOPNV90_2025_28967.Cmd.CmdCot");
             PushButton btn2 = Panelthongso.AddItem(pushButtonData2) as PushButton;
             btn2.LargeImage = new BitmapImage(new Uri(
                 "pack://application:,,,/DALTUDTXD_LOPNV90_2025_28967;component/resources/IconRibbonRevit/Column.png"));
@@ -37,10 +37,32 @@ namespace DALTUDTXD_LOPNV90_2025_28967.CommandAddin
             var Paneltinhtoan = application.CreateRibbonPanel("addin", "Tính Toán");
 
             var Path1 = Assembly.GetExecutingAssembly().Location;
-            var pushButtonData3 = new PushButtonData("VatLieu3", "Tinh toán", Path1, "DALTUDTXD_LOPNV90_2025_28967.CmdTinhToan");
+            var pushButtonData3 = new PushButtonData("VatLieu3", "Tinh toán", Path1, "DALTUDTXD_LOPNV90_2025_28967.Cmd.CmdTinhToan");
             PushButton btn3 = Paneltinhtoan.AddItem(pushButtonData3) as PushButton;
             btn3.LargeImage = new BitmapImage(new Uri(
                 "pack://application:,,,/DALTUDTXD_LOPNV90_2025_28967;component/resources/IconRibbonRevit/Column.png"));
+
+            #region DatRegion
+            var Panelvethep = application.CreateRibbonPanel("addin", "Vẽ thép");
+            var pushButtonDataDraw = new PushButtonData("ThongSoVe", "Thông số vẽ", Path, "DALTUDTXD_LOPNV90_2025_28967.Cmd.CmdThongSoVe");
+            PushButton pushButtonDraw = Panelvethep.AddItem(pushButtonDataDraw) as PushButton;
+            pushButtonDraw.LargeImage = new BitmapImage(new Uri(
+                "pack://application:,,,/DALTUDTXD_LOPNV90_2025_28967;component/resources/IconRibbonRevit/Draw.png"));
+            var pushButtonDataColumn = new PushButtonData("Ve thep", "Chọn thép", Path, "DALTUDTXD_LOPNV90_2025_28967.Cmd.CmdChonThep");
+            PushButton pushButtonColumn = Panelvethep.AddItem(pushButtonDataColumn) as PushButton;
+            pushButtonColumn.LargeImage = new BitmapImage(new Uri(
+                "pack://application:,,,/DALTUDTXD_LOPNV90_2025_28967;component/resources/IconRibbonRevit/Column32px.png"));
+
+
+
+            #endregion
+
+
+
+
+
+
+
             return Result.Succeeded;
         }
 
