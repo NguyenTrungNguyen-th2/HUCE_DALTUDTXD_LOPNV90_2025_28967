@@ -154,15 +154,16 @@
     <Compile Include="classcolumnrebar\GetBarDiameter.cs" />
     <Compile Include="classcolumnrebar\IsCustomDistributionConverter.cs" />
     <Compile Include="classcolumnrebar\LanType.cs" />
-    <Compile Include="CmdCot.cs" />
-    <Compile Include="CmdTinhToan.cs" />
-    <Compile Include="CmdVatLieu.cs" />
+    <Compile Include="Cmd\CmdChonThep.cs" />
+    <Compile Include="Cmd\CmdCot.cs" />
+    <Compile Include="Cmd\CmdThongSoVe.cs" />
+    <Compile Include="Cmd\CmdTinhToan.cs" />
+    <Compile Include="Cmd\CmdVatLieu.cs" />
     <Compile Include="CommandAddin\MyAddin1.cs" />
     <Compile Include="Model\ColumnModel.cs" />
     <Compile Include="Model\ColumnRebarModel.cs" />
     <Compile Include="Model\HeSoTinhToan.cs" />
     <Compile Include="Model\MaterialModel.cs" />
-    <Compile Include="RibbonSwitcher.cs.cs" />
     <Compile Include="services\TinhToanCotService.cs" />
     <Compile Include="ViewModel\ColumnRebarViewModel.cs" />
     <Compile Include="ViewModel\ColumnViewModel.cs" />
@@ -173,6 +174,9 @@
     <Compile Include="ViewModel\VatLieuViewModel.cs" />
     <Compile Include="View\ViewThongSoCot.xaml.cs">
       <DependentUpon>ViewThongSoCot.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ViewThongSoVe.xaml.cs">
+      <DependentUpon>ViewThongSoVe.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\ViewTinhToan.xaml.cs">
       <DependentUpon>ViewTinhToan.xaml</DependentUpon>
@@ -195,11 +199,36 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="resources\style\Dictionary1.xaml">
+    <Resource Include="resources\style\ButtonStyle.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resources\style\ComboBoxStyle.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resources\style\DataGridStyle.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resources\style\Dictionary1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resources\style\TextBoxStyle.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Page Include="View\ViewThongSoCot.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\ViewThongSoCot.xaml">
+    <Page Include="View\ViewThongSoVe.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -280,6 +309,12 @@
     <Resource Include="resources\IconRibbonRevit\Material Editor50px.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="resources\IconRibbonRevit\Column32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="resources\IconRibbonRevit\Draw.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
