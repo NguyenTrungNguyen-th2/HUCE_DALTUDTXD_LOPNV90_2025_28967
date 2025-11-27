@@ -7,6 +7,21 @@
         mc:Ignorable="d"
         Title="ViewTinhToan" Height="450" Width="800">
     <Grid>
-        
+        <GroupBox FontWeight="Bold" Header="Danh sách cột " Grid.Column="1" Margin="0,10,0,0" >
+            <DataGrid ItemsSource="{Binding DanhSachCotHienThi}"
+                      AutoGenerateColumns="False">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Width="*" Header="Tên" Binding="{Binding Name}" />
+                    <DataGridTextColumn Width="*" Header="Loại liên kết" Binding="{Binding LienKet}" />
+                    <DataGridTextColumn Width="60" Header="Ψ" Binding="{Binding Psi}" />
+                    <DataGridTextColumn Width="*" Header="Chiều rộng (mm)" Binding="{Binding Width}" />
+                    <DataGridTextColumn Width="*" Header="Chiều cao (mm)" Binding="{Binding Height}" />
+                    <DataGridTextColumn Width="*" Header="Chiều dài (mm)" Binding="{Binding Length}" />
+                    <DataGridTextColumn Width="*" Header="As tính toán" Binding="{Binding AsValue}" />
+                    <DataGridTextColumn Width="*" Header="Chọn thép" Binding="{Binding SelectedRebarText}" />
+                    <DataGridTextColumn Width="*" Header="As thực tế" Binding="{Binding SelectedRebarArea}" />
+                </DataGrid.Columns>
+            </DataGrid>
+        </GroupBox>
     </Grid>
 </Window>

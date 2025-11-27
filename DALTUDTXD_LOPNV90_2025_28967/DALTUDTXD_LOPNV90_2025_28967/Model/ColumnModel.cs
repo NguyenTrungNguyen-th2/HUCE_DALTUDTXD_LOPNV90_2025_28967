@@ -12,7 +12,13 @@
         public string MomentX { get; set; }
         public string MomentY { get; set; }
         public string ConcreteGrade { get; set; }
-      
+        public string LienKet { get; set; }
+        public double Psi { get; set; }
+
+        public string AsTinhToan { get; set; } = "—";
+        public string ChonThep { get; set; } = "—";
+        public string AsThucTe { get; set; } = "—";
+        public string TrangThaiTinhToan { get; set; } = "Chưa tính";
     }
 
 }

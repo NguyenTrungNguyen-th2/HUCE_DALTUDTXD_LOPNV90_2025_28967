@@ -33,11 +33,14 @@ namespace DALTUDTXD_LOPNV90_2025_28967.CommandAddin
                 "pack://application:,,,/DALTUDTXD_LOPNV90_2025_28967;component/resources/IconRibbonRevit/Column.png"));
 
             // Nút 3: Tính Toán -> Gọi CmdTinhToan
-            var pushButtonData3 = new PushButtonData("VatLieu3", "Tính Toán", Path, "DALTUDTXD_LOPNV90_2025_28967.CmdTinhToan");
-            PushButton btn3 = Panelthongso.AddItem(pushButtonData3) as PushButton;
-            btn3.LargeImage = new BitmapImage(new Uri(
-                "pack://application:,,,/DALTUDTXD_LOPNV90_2025_28967;component/resources/IconRibbonRevit/Calculator.png"));
 
+            var Paneltinhtoan = application.CreateRibbonPanel("addin", "Tính Toán");
+
+            var Path1 = Assembly.GetExecutingAssembly().Location;
+            var pushButtonData3 = new PushButtonData("VatLieu3", "Tinh toán", Path1, "DALTUDTXD_LOPNV90_2025_28967.CmdTinhToan");
+            PushButton btn3 = Paneltinhtoan.AddItem(pushButtonData3) as PushButton;
+            btn3.LargeImage = new BitmapImage(new Uri(
+                "pack://application:,,,/DALTUDTXD_LOPNV90_2025_28967;component/resources/IconRibbonRevit/Column.png"));
             return Result.Succeeded;
         }
 

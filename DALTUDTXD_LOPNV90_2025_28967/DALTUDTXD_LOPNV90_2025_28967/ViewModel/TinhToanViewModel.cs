@@ -10,11 +10,18 @@ namespace DALTUDTXD_LOPNV90_2025_28967.ViewModel
     public class TinhToanViewModel : INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler PropertyChanged;
-
         protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
+
+        // === THÔNG TIN CỘT (để hiển thị trong ViewTinhToan) ===
+        public string Name { get; set; } = "";
+        public string Width { get; set; } = "";
+        public string Height { get; set; } = "";
+        public string Length { get; set; } = "";
+        public string LienKet { get; set; } = "";
+        public double Psi { get; set; } 
 
         // ---- Thông số tiết diện ----
         private string _tenCot = "";
@@ -125,82 +132,39 @@ namespace DALTUDTXD_LOPNV90_2025_28967.ViewModel
             set { _caseName = value; OnPropertyChanged(); }
         }
 
-        // ===============================
-        //         COMMAND
-        // ===============================
-        public ICommand cmTinhToan { get; }
+        private string _selectedRebarText = "";
+        public string SelectedRebarText
+        {
+            get => _selectedRebarText;
+            set { _selectedRebarText = value; OnPropertyChanged(); }
+        }
+
+        private string _selectedRebarArea = "";
+        public string SelectedRebarArea
+        {
+            get => _selectedRebarArea;
+            set { _selectedRebarArea = value; OnPropertyChanged(); }
+        }
 
         // ===============================
-        //         SERVICE
+        //         COMMAND & SERVICE
         // ===============================
+        public ICommand cmTinhToan { get; }
         private readonly TinhToanCotService _service;
 
         // ===============================
-        //       CONSTRUCTOR
+        //         CONSTRUCTOR
         // ===============================
         public TinhToanViewModel()
         {
             _service = new TinhToanCotService();
             cmTinhToan = new RelayCommand(_ => TinhToan());
-
-        }
-        // Danh sách đường kính thép có sẵn (mm)
-        private readonly double[] _availableDiameters = { 12, 14, 16, 18, 20, 22, 25, 28 };
-
-        private (string description, double area) RecommendRebar(double requiredArea)
-        {
-            (string desc, double area, double excess) best = ("", 0, double.MaxValue);
-
-            foreach (double dia in _availableDiameters)
-            {
-                double areaPerBar = Math.PI * dia * dia / 4;
-
-                // Tính số thanh tối thiểu cần thiết
-                int minCount = (int)Math.Ceiling(requiredArea / areaPerBar);
-
-                // Đảm bảo số thanh là chẵn và ≥ 4
-                if (minCount < 4) minCount = 4;
-                if (minCount % 2 != 0) minCount++; // làm tròn lên số chẵn gần nhất
-
-                // Duyệt các số chẵn từ minCount đến 12
-                for (int count = minCount; count <= 12; count += 2)
-                {
-                    double totalArea = count * areaPerBar;
-                    double excess = totalArea - requiredArea;
-
-                    // Chọn tổ hợp tốt nhất:
-                    // - Chênh lệch nhỏ nhất
-                    // - Nếu bằng nhau → ưu tiên đường kính nhỏ hơn
-                    if (excess < best.excess ||
-                        (Math.Abs(excess - best.excess) < 1e-6 && dia < ExtractDiameter(best.desc)))
-                    {
-                        best = ($"{count}Φ{dia}", totalArea, excess);
-                    }
-                }
-            }
-
-            // Fallback an toàn
-            if (string.IsNullOrEmpty(best.desc))
-            {
-                return ("4Φ16", 4 * Math.PI * 16 * 16 / 4); // ≈ 804 mm²
-            }
-
-            return (best.desc, best.area);
         }
 
-        // Hàm trích đường kính (tương thích C# 7.3)
-        private double ExtractDiameter(string desc)
-        {
-            if (string.IsNullOrEmpty(desc)) return double.MaxValue;
-            var parts = desc.Split('Φ');
-            if (parts.Length == 0) return double.MaxValue;
-            string lastPart = parts[parts.Length - 1];
-            return double.TryParse(lastPart, out double d) ? d : double.MaxValue;
-        }
         // ===============================
-        //         HÀM TÍNH TOÁN
+        //         HÀM TÍNH TOÁN (PUBLIC)
         // ===============================
-        private void TinhToan()
+        public void TinhToan() // ← ĐÃ ĐỔI TỪ private → public
         {
             if (!double.TryParse(ChieuRong, out double b) || b <= 0) return;
             if (!double.TryParse(ChieuDai, out double h) || h <= 0) return;
@@ -211,17 +175,17 @@ namespace DALTUDTXD_LOPNV90_2025_28967.ViewModel
 
             try
             {
+                // ✅ ĐÃ THÊM Psi VÀO ĐÂY
                 var (AsCalc, caseName) = _service.TinhThep(
                     TaiTrong, MomenX, MomenY,
                     b, h, a,
                     Rb, Rs, Es, Eb,
-                    mu_min, mu_max
+                    mu_min, mu_max, Psi  // ← thiếu dòng này trước đây
                 );
 
                 AsValue = Math.Max(AsCalc, 0);
                 CaseName = caseName;
 
-                // 🔥 TỰ ĐỘNG ĐỀ XUẤT THÉP SAU KHI CÓ As
                 if (AsCalc > 0)
                 {
                     var (rebarText, rebarArea) = RecommendRebar(AsCalc);
@@ -242,19 +206,51 @@ namespace DALTUDTXD_LOPNV90_2025_28967.ViewModel
                 SelectedRebarArea = "";
             }
         }
-        private string _selectedRebarText = "";
-        public string SelectedRebarText
+
+        // ===============================
+        //         REBAR RECOMMENDATION
+        // ===============================
+        private readonly double[] _availableDiameters = { 12, 14, 16, 18, 20, 22, 25, 28 };
+
+        private (string description, double area) RecommendRebar(double requiredArea)
         {
-            get => _selectedRebarText;
-            set { _selectedRebarText = value; OnPropertyChanged(); }
+            (string desc, double area, double excess) best = ("", 0, double.MaxValue);
+
+            foreach (double dia in _availableDiameters)
+            {
+                double areaPerBar = Math.PI * dia * dia / 4;
+                int minCount = (int)Math.Ceiling(requiredArea / areaPerBar);
+                if (minCount < 4) minCount = 4;
+                if (minCount % 2 != 0) minCount++;
+
+                for (int count = minCount; count <= 12; count += 2)
+                {
+                    double totalArea = count * areaPerBar;
+                    double excess = totalArea - requiredArea;
+
+                    if (excess < best.excess ||
+                        (Math.Abs(excess - best.excess) < 1e-6 && dia < ExtractDiameter(best.desc)))
+                    {
+                        best = ($"{count}Φ{dia}", totalArea, excess);
+                    }
+                }
+            }
+
+            if (string.IsNullOrEmpty(best.desc))
+            {
+                return ("4Φ16", 4 * Math.PI * 16 * 16 / 4);
+            }
+
+            return (best.desc, best.area);
         }
 
-        private string _selectedRebarArea = "";
-        public string SelectedRebarArea
+        private double ExtractDiameter(string desc)
         {
-            get => _selectedRebarArea;
-            set { _selectedRebarArea = value; OnPropertyChanged(); }
+            if (string.IsNullOrEmpty(desc)) return double.MaxValue;
+            var parts = desc.Split('Φ');
+            if (parts.Length == 0) return double.MaxValue;
+            string lastPart = parts[parts.Length - 1];
+            return double.TryParse(lastPart, out double d) ? d : double.MaxValue;
         }
-
     }
 }

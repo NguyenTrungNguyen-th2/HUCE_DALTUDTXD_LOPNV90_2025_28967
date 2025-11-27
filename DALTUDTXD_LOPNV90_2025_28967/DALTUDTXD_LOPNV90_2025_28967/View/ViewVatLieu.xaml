@@ -15,21 +15,21 @@
                     <TextBlock Text="Mác bê tông:"/>
                     <ComboBox ItemsSource="{Binding ConcreteGrades}"
                    SelectedItem="{Binding SelectedConcrete}"
-                   Width="160" HorizontalContentAlignment="Center"/>
+                   Width="160" Height="25" HorizontalContentAlignment="Center"/>
                     <TextBlock Text="Cường độ chịu nén (Rb) [MPa]:"/>
-                    <TextBox Text="{Binding Rb}" Width="160"/>
+                    <TextBox Text="{Binding Rb}" Width="160" Height="25"/>
                     <TextBlock Text="Modun đàn hồi (Eb) [MPa]:"/>
-                    <TextBox Text="{Binding Eb}" Width="160"/>
+                    <TextBox Text="{Binding Eb}" Width="160" Height="25"/>
                 </StackPanel>
                 <StackPanel HorizontalAlignment="Center">
                     <TextBlock Text="Mác thép:"/>
                     <ComboBox ItemsSource="{Binding SteelGrades}"
                    SelectedItem="{Binding SelectedSteel}"
-                   Width="220" HorizontalContentAlignment="Center"/>
+                   Width="220" Height="25" HorizontalContentAlignment="Center"/>
                     <TextBlock Text="Cường độ chịu nén và kéo (Rs,Rsc) [MPa]:"/>
-                    <TextBox Text="{Binding Rs}" Width="220"/>
+                    <TextBox Text="{Binding Rs}" Width="220" Height="25"/>
                     <TextBlock Text="Modun đàn hồi (Es) [MPa]:"/>
-                    <TextBox Text="{Binding Es}" Width="220"/>
+                    <TextBox Text="{Binding Es}" Width="220" Height="25"/>
                 </StackPanel>
             </Grid>
         </GroupBox>
@@ -41,16 +41,16 @@
 
             <Button Command="{Binding SaveCommand}" 
                     Content="Lưu vật liệu" 
-                    Width="120" Margin="5"/>
+                    Width="120" Height="25" Margin="5"/>
 
             <Button Command="{Binding ClearCommand}" 
                  Content="Xóa tất cả" 
-                 Width="120" Margin="5"/>
+                 Width="120" Height="25" Margin="5"/>
         </StackPanel>
         <StackPanel Orientation="Horizontal" 
                     HorizontalAlignment="Right" 
                     VerticalAlignment="Top" 
-                    Margin="0,130,50,0" Grid.Column="1">
+                    Margin="0,130,50,0" Grid.Column="1" Width="170" Height="25">
             <Button Click="ChuyenSangCot_Click">chuyển sang nhập dữ liệu cột</Button>
         </StackPanel>
             <GroupBox Header="Danh sách vật liệu đã lưu" Margin="0,200,0,0" Grid.ColumnSpan="2">

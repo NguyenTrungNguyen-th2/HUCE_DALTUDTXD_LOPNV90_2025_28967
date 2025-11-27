@@ -25,7 +25,7 @@ namespace DALTUDTXD_LOPNV90_2025_28967
                 // ✅ DUY NHẤT Ở ĐÂY: truyền uiDoc
                 var tinhToanVM = new TinhToanViewModel();
                 var columnVM = new ColumnViewModel(uiDoc, tinhToanVM);
-
+                var mainVM = new MainViewModel(uiDoc);
                 // → Mở ViewThongSoCot với ViewModel đã có uiDoc
                 var view = new ViewThongSoCot(columnVM);
                 view.ShowDialog();
