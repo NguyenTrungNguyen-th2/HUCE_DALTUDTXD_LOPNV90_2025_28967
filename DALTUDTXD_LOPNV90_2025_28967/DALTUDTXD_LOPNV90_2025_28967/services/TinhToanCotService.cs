@@ -8,7 +8,7 @@ namespace DALTUDTXD_LOPNV90_2025_28967.Services
             double N, double Mx, double My,
             double b, double h, double a,
             double Rb, double Rs, double Es, double Eb,
-            double mu_min, double mu_max
+            double mu_min, double mu_max,double Psi
         )
         {
             // 🔹 BƯỚC 1: CHUYỂN ĐƠN VỊ
@@ -25,7 +25,7 @@ namespace DALTUDTXD_LOPNV90_2025_28967.Services
 
 
             // 🔹 BƯỚC 4: CHIỀU DÀI TÍNH TOÁN
-            double Ψ = 0.7;
+            double Ψ = Psi;
             double Lox = Ψ * 3300;
             double Loy = Ψ * 3300;
 

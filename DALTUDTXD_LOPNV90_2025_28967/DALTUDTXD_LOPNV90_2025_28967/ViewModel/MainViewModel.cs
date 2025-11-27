@@ -18,6 +18,7 @@ namespace DALTUDTXD_LOPNV90_2025_28967.ViewModel
         {
             VatLieuVM = vatLieuVM ?? new VatLieuViewModel();
             TinhToanVM = tinhToanVM ?? new TinhToanViewModel();
+            ColumnVM = new ColumnViewModel(uiDoc, TinhToanVM);
 
             // ✅ Gán ColumnVM nếu có uiDoc
             if (uiDoc != null)

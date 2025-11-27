@@ -174,9 +174,6 @@
     <Compile Include="View\ViewThongSoCot.xaml.cs">
       <DependentUpon>ViewThongSoCot.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\ViewThongSoTinhToan.xaml.cs">
-      <DependentUpon>ViewThongSoTinhToan.xaml</DependentUpon>
-    </Compile>
     <Compile Include="View\ViewTinhToan.xaml.cs">
       <DependentUpon>ViewTinhToan.xaml</DependentUpon>
     </Compile>
@@ -203,10 +200,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\ViewThongSoCot.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="View\ViewThongSoTinhToan.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
