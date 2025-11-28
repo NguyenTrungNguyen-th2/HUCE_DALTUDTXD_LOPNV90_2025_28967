@@ -1,4 +1,5 @@
-﻿using System.Collections.ObjectModel;
+﻿using System;
+using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Windows.Input;
@@ -9,6 +10,7 @@ namespace DALTUDTXD_LOPNV90_2025_28967.ViewModel
     public class VatLieuViewModel : INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler PropertyChanged;
+        public event Action OnSaveRequested;
         private void OnProp([CallerMemberName] string n = null) => PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(n));
         public ObservableCollection<string> ConcreteGrades { get; } =
             new ObservableCollection<string> { "B15", "B20", "B25", "B30", "B35", "B40" };
@@ -133,7 +135,10 @@ namespace DALTUDTXD_LOPNV90_2025_28967.ViewModel
                 Rs = Rs,
                 Es = Es
             };
-            clsVatLieu.Add(m);
+
+            SharedState.CurrentMaterial = m; // ✅ Lưu vào nơi chung
+
+            OnSaveRequested?.Invoke(); // Đóng cửa sổ
         }
 
         private void ClearInputs()
@@ -150,6 +155,17 @@ namespace DALTUDTXD_LOPNV90_2025_28967.ViewModel
                 clsVatLieu.Remove(SelectedMaterial);
                 SelectedMaterial = null;
             }
+        }
+        public void LoadFromMaterial(MaterialModel material)
+        {
+            if (material == null) return;
+
+            SelectedConcrete = material.ConcreteGrade;
+            Rb = material.Rb;
+            Eb = material.Eb;
+            SelectedSteel = material.SteelGrade;
+            Rs = material.Rs;
+            Es = material.Es;
         }
     }
 }

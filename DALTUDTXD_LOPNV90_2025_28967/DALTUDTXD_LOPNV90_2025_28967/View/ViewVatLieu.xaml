@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DALTUDTXD_LOPNV90_2025_28967.View"
         mc:Ignorable="d"
-        Title="ViewVatLieu" Height="500" Width="1000">
+        Title="ViewVatLieu" Height="429" Width="465">
     <Window.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
@@ -13,10 +13,10 @@
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Window.Resources>
-    <Grid Margin="10">
+    <Grid Margin="10" Background="AliceBlue">
 
-        <TextBlock Text="Thông Tin Vật Liệu" FontSize="24" FontWeight="Bold" Margin="400,0,0,0" Height="420" />
-        <GroupBox Header="Thông số vật liệu" Margin="0,60,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2">
+        <TextBlock Text="Thông Tin Vật Liệu" FontSize="24" FontWeight="Bold" Height="333" Width="229" HorizontalAlignment="Center" />
+        <GroupBox Header="Thông số vật liệu" Margin="0,86,0,10">
             <Grid>
                 <StackPanel HorizontalAlignment="Left">
                     <TextBlock Text="Mác bê tông:"/>
@@ -28,49 +28,36 @@
                     <TextBlock Text="Modun đàn hồi (Eb) [MPa]:"/>
                     <TextBox Text="{Binding Eb}" Width="160" Height="25"/>
                 </StackPanel>
-                <StackPanel HorizontalAlignment="Center">
+                <StackPanel HorizontalAlignment="Left" Width="230" Margin="200,0,0,0">
                     <TextBlock Text="Mác thép:"/>
                     <ComboBox ItemsSource="{Binding SteelGrades}"
-                   SelectedItem="{Binding SelectedSteel}"
-                   Width="220" Height="25" HorizontalContentAlignment="Center"/>
+                              SelectedItem="{Binding SelectedSteel}"
+                              Width="160" Height="25 " HorizontalAlignment="Left" />
                     <TextBlock Text="Cường độ chịu nén và kéo (Rs,Rsc) [MPa]:"/>
-                    <TextBox Text="{Binding Rs}" Width="220" Height="25"/>
+                    <TextBox Text="{Binding Rs}" Width="160" Height="25" HorizontalAlignment="Left" />
                     <TextBlock Text="Modun đàn hồi (Es) [MPa]:"/>
-                    <TextBox Text="{Binding Es}" Width="220" Height="25"/>
+                    <TextBox Text="{Binding Es}" Width="160" Height="25" HorizontalAlignment="Left"/>
+                </StackPanel>
+
+                <StackPanel  Orientation="Horizontal"
+                             HorizontalAlignment="Left" 
+                             VerticalAlignment="Top" 
+                             Margin="80,170,0,0" >
+
+                    <Button Command="{Binding SaveCommand}" 
+                            Content="Lưu vật liệu" 
+                            Width="120" Height="25" Margin="5" Style="{StaticResource ButtonStyle}"/>
+
+                    <Button Command="{Binding ClearCommand}" 
+                            Content="Xóa tất cả" 
+                            Width="120" Height="25" Margin="5" Style="{StaticResource ButtonStyle}"/>
                 </StackPanel>
             </Grid>
+
         </GroupBox>
 
-        <StackPanel Orientation="Horizontal" 
-                 HorizontalAlignment="Right" 
-                 VerticalAlignment="Top" 
-                 Margin="0,170,20,0" Grid.Column="1">
 
-            <Button Command="{Binding SaveCommand}" 
-                    Content="Lưu vật liệu" 
-                    Width="120" Height="25" Margin="5" Style="{StaticResource ButtonStyle}"/>
 
-            <Button Command="{Binding ClearCommand}" 
-                 Content="Xóa tất cả" 
-                 Width="120" Height="25" Margin="5" Style="{StaticResource ButtonStyle}"/>
-        </StackPanel>
-        <StackPanel Orientation="Horizontal" 
-                    HorizontalAlignment="Right" 
-                    VerticalAlignment="Top" 
-                    Margin="0,120,50,0" Grid.Column="1" Width="170"  >
-            <Button Click="ChuyenSangCot_Click" Width="170" Height="25" Style="{StaticResource ButtonStyle}">chuyển sang nhập dữ liệu cột</Button>
-        </StackPanel>
-        <GroupBox Header="Danh sách vật liệu đã lưu" Margin="0,200,0,0" Grid.ColumnSpan="2">
-            <DataGrid AutoGenerateColumns="False" ItemsSource="{Binding clsVatLieu}" IsReadOnly="True">
-                <DataGrid.Columns>
-                    <DataGridTextColumn Width="*" Header="Mác bê tông" Binding="{Binding ConcreteGrade}" />
-                    <DataGridTextColumn Width="*" Header="Cường độ chịu nén (Rb)" Binding="{Binding Rb}" />
-                    <DataGridTextColumn Width="*" Header="Modun đàn hồi (Eb)" Binding="{Binding Eb}" />
-                    <DataGridTextColumn Width="*" Header="Mác thép" Binding="{Binding SteelGrade}" />
-                    <DataGridTextColumn Width="*" Header="Cường độ chịu kéo (Rs)" Binding="{Binding Rs}" />
-                    <DataGridTextColumn Width="*" Header="Modun đàn hồi (Es)" Binding="{Binding Es}" />
-                </DataGrid.Columns>
-            </DataGrid>
-        </GroupBox>
+
     </Grid>
 </Window>

@@ -24,23 +24,9 @@ namespace DALTUDTXD_LOPNV90_2025_28967.View
         public ViewVatLieu()
         {
             InitializeComponent();
-            DataContext = new VatLieuViewModel();
-        }
-
-        // ViewVatLieu.xaml.cs
-        private void ChuyenSangCot_Click(object sender, RoutedEventArgs e)
-        {
-            this.Close();
-            // Lấy UIApplication từ RevitCommandData (bạn cần gán nó trong CmdVatLieu)
-            var uiApp = RevitCommandData.UiApp;
-            if (uiApp != null)
-            {
-                CmdCot.OpenCotView(uiApp);
-            }
-            else
-            {
-                MessageBox.Show("Không thể mở form Cột vì không có kết nối Revit.");
-            }
+            var vm = new VatLieuViewModel();
+            vm.OnSaveRequested += () => this.Close();
+            DataContext = vm;
         }
     }
 }

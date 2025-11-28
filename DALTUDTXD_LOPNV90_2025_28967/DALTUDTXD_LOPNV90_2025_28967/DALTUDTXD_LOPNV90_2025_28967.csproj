@@ -164,7 +164,7 @@
     <Compile Include="Model\ColumnRebarModel.cs" />
     <Compile Include="Model\HeSoTinhToan.cs" />
     <Compile Include="Model\MaterialModel.cs" />
-    <Compile Include="services\TinhToanCotService.cs" />
+    <Compile Include="SharedState.cs" />
     <Compile Include="ViewModel\ColumnRebarViewModel.cs" />
     <Compile Include="ViewModel\ColumnViewModel.cs" />
     <Compile Include="ViewModel\MainViewModel.cs" />

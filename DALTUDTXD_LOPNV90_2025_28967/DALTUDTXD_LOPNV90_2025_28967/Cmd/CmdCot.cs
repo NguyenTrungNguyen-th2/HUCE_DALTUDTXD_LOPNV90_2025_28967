@@ -14,29 +14,34 @@ namespace DALTUDTXD_LOPNV90_2025_28967.Cmd
         public Result Execute(ExternalCommandData commandData, ref string message, ElementSet elements)
         {
             UIDocument uiDoc = commandData.Application.ActiveUIDocument;
-            if (uiDoc == null || uiDoc.Document == null)
+            if (uiDoc == null) return Result.Failed;
+
+            // Kiểm tra xem đã lưu vật liệu chưa
+            if (SharedState.CurrentMaterial == null)
             {
-                TaskDialog.Show("Lỗi", "Vui lòng mở file Revit trước.");
-                return Result.Failed;
+                TaskDialog.Show("Cảnh báo", "Vui lòng nhập và lưu thông số vật liệu trước!");
+                return Result.Cancelled;
             }
 
-            try
-            {
-                // ✅ DUY NHẤT Ở ĐÂY: truyền uiDoc
-                var tinhToanVM = new TinhToanViewModel();
-                var columnVM = new ColumnViewModel(uiDoc, tinhToanVM);
-                var mainVM = new MainViewModel(uiDoc);
-                // → Mở ViewThongSoCot với ViewModel đã có uiDoc
-                var view = new ViewThongSoCot(columnVM);
-                view.ShowDialog();
+            // Tạo ViewModel dùng vật liệu đã lưu
+            var vatLieuVM = new VatLieuViewModel();
+            vatLieuVM.LoadFromMaterial(SharedState.CurrentMaterial); // ← Cần thêm phương thức này
 
-                return Result.Succeeded;
-            }
-            catch (Exception ex)
-            {
-                TaskDialog.Show("Lỗi", ex.Message);
-                return Result.Failed;
-            }
+            var tinhToanVM = new TinhToanViewModel();
+            var columnVM = new ColumnViewModel(uiDoc, tinhToanVM);
+
+            // Sync dữ liệu vật liệu đã lưu vào TinhToanVM
+            tinhToanVM.Rb = SharedState.CurrentMaterial.Rb;
+            tinhToanVM.Eb = SharedState.CurrentMaterial.Eb;
+            tinhToanVM.Rs = SharedState.CurrentMaterial.Rs;
+            tinhToanVM.Es = SharedState.CurrentMaterial.Es;
+            tinhToanVM.MacBeTong = SharedState.CurrentMaterial.ConcreteGrade;
+            tinhToanVM.MacThep = SharedState.CurrentMaterial.SteelGrade;
+
+            var view = new ViewThongSoCot(columnVM);
+            view.ShowDialog();
+
+            return Result.Succeeded;
         }
         public static void OpenCotView(UIApplication uiApp)
         {
