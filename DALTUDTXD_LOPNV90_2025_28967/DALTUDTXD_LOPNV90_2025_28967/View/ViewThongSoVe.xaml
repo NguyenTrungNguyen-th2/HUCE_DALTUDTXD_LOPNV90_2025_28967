@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DALTUDTXD_LOPNV90_2025_28967.View"
         mc:Ignorable="d"
-        Title="Thông số vẽ" Height="350" Width="250">
+        Title="Thông số vẽ" Height="350" Width="220">
     <Window.Resources>
         <ResourceDictionary Source="pack://application:,,,/DALTUDTXD_LOPNV90_2025_28967;component/resources/style/Dictionary1.xaml" />
     </Window.Resources>
