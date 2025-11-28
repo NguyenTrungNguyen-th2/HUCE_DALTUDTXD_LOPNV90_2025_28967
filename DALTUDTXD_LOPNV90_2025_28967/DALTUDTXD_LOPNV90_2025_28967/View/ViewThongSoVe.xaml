@@ -5,12 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DALTUDTXD_LOPNV90_2025_28967.View"
         mc:Ignorable="d"
-        Title="Thông số vẽ" Height="350" Width="250">
+        Title="Thông số vẽ" Height="350" Width="220">
     <Window.Resources>
         <ResourceDictionary Source="pack://application:,,,/DALTUDTXD_LOPNV90_2025_28967;component/resources/style/Dictionary1.xaml" />
     </Window.Resources>
     <Grid>
-        <GroupBox Header="Thiết lập chung">
+        <GroupBox Header="Thiết lập chung" Background="AliceBlue">
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="80"/>
@@ -25,15 +25,15 @@
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
                 <TextBlock Grid.Column="0" Grid.Row="0" Text="Thép đai:" HorizontalAlignment="Left" VerticalAlignment="Center"></TextBlock>
-                <TextBlock Grid.Column="0" Grid.Row="1" Text="Phân bố:" HorizontalAlignment="Left" VerticalAlignment="Center"></TextBlock>
+                <TextBlock Grid.Column="0" Grid.Row="1" Text="Khoảng cách:" HorizontalAlignment="Left" VerticalAlignment="Center"></TextBlock>
                 <TextBlock Grid.Column="0" Grid.Row="2" Text="Neo thép:" HorizontalAlignment="Left" VerticalAlignment="Center"></TextBlock>
                 <TextBlock Grid.Column="0" Grid.Row="3" Text="Lan:" HorizontalAlignment="Left" VerticalAlignment="Center"></TextBlock>
                 <TextBlock Grid.Column="0" Grid.Row="4" Text="Lớp bảo vệ:" HorizontalAlignment="Left" VerticalAlignment="Center"></TextBlock>
-                <ComboBox Grid.Column="1" Grid.Row="0" Margin="10"></ComboBox>
-                <ComboBox Grid.Column="1" Grid.Row="1" Margin="10"></ComboBox>
-                <ComboBox Grid.Column="1" Grid.Row="2" Margin="10"></ComboBox>
-                <ComboBox Grid.Column="1" Grid.Row="3" Margin="10"></ComboBox>
-                <ComboBox Grid.Column="1" Grid.Row="4" Margin="10"></ComboBox>
+                <ComboBox Grid.Column="1" Grid.Row="0" Margin="10" Style="{StaticResource ComboBoxStyle}"></ComboBox>
+                <TextBox Grid.Column="1" Grid.Row="1" Margin="10"  ></TextBox>
+                <ComboBox Grid.Column="1" Grid.Row="2" Margin="10" Style="{StaticResource ComboBoxStyle}"></ComboBox>
+                <ComboBox Grid.Column="1" Grid.Row="3" Margin="10" Style="{StaticResource ComboBoxStyle}"></ComboBox>
+                <ComboBox Grid.Column="1" Grid.Row="4" Margin="10" Style="{StaticResource ComboBoxStyle}"></ComboBox>
                 <StackPanel Grid.ColumnSpan="2" Grid.Row="5" Orientation="Horizontal" HorizontalAlignment="Center">
                     <Button Width="60" Height="30" Content="Đồng ý"  Style="{StaticResource ButtonStyle}"></Button>
                     <Button Width="60" Height="30" Content="Hủy bỏ" Margin="20 0 0 0" Style="{StaticResource ButtonStyle}"></Button>
