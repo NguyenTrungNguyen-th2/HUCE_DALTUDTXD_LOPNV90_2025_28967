@@ -40,7 +40,7 @@ namespace DALTUDTXD_LOPNV90_2025_28967.CommandAddin
             var pushButtonData3 = new PushButtonData("VatLieu3", "Tinh toán", Path1, "DALTUDTXD_LOPNV90_2025_28967.Cmd.CmdTinhToan");
             PushButton btn3 = Paneltinhtoan.AddItem(pushButtonData3) as PushButton;
             btn3.LargeImage = new BitmapImage(new Uri(
-                "pack://application:,,,/DALTUDTXD_LOPNV90_2025_28967;component/resources/IconRibbonRevit/Column.png"));
+                "pack://application:,,,/DALTUDTXD_LOPNV90_2025_28967;component/resources/IconRibbonRevit/Calculator.png"));
 
             #region DatRegion
             var Panelvethep = application.CreateRibbonPanel("addin", "Vẽ thép");
