@@ -51,7 +51,7 @@ namespace DALTUDTXD_LOPNV90_2025_28967.CommandAddin
             var pushButtonDataColumn = new PushButtonData("Ve thep", "Chọn thép", Path, "DALTUDTXD_LOPNV90_2025_28967.Cmd.CmdChonThep");
             PushButton pushButtonColumn = Panelvethep.AddItem(pushButtonDataColumn) as PushButton;
             pushButtonColumn.LargeImage = new BitmapImage(new Uri(
-                "pack://application:,,,/DALTUDTXD_LOPNV90_2025_28967;component/resources/IconRibbonRevit/Column32px.png"));
+                "pack://application:,,,/DALTUDTXD_LOPNV90_2025_28967;component/resources/IconRibbonRevit/concrete.png"));
 
 
 
