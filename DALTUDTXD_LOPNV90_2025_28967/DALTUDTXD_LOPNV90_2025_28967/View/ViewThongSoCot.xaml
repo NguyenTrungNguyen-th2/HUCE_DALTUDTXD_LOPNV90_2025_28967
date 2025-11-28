@@ -6,6 +6,13 @@
         xmlns:local="clr-namespace:DALTUDTXD_LOPNV90_2025_28967.View"
         mc:Ignorable="d"
         Title="ViewThongSoCot" Height="600" Width="1200">
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/DALTUDTXD_LOPNV90_2025_28967;component/resources/style/Dictionary1.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
     <Grid Margin="10" Background="AliceBlue">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="350"/>
@@ -62,23 +69,25 @@
                 </StackPanel>
             </Grid>
         </GroupBox>
-        <StackPanel VerticalAlignment="Bottom" Orientation="Horizontal" Height="25" HorizontalAlignment="Right" Margin="30,350,30,60">
+        <StackPanel VerticalAlignment="Bottom" Orientation="Horizontal" HorizontalAlignment="Right" Margin="30,350,30,60">
             <Button x:Name="btnNhapTuRevit"
                      Command="{Binding cmNhapRevit}"
                      Content="Nhập từ Revit"
-                     Width="130"
+                     Width="130" Height="25"
                      Margin="0,0,20,0"
-                     Background="Blue"
-                     Foreground="White" />
-            <Button x:Name="btnluu" Command="{Binding cmLuuCot}" CommandParameter="{Binding ElementName=pgCLParameter}" Content="Lưu" Width="130" Background="Blue" Foreground="White"/>
+                     Style="{StaticResource ButtonStyle}" />
+            <Button x:Name="btnluu" 
+                    Command="{Binding cmLuuCot}" CommandParameter="{Binding ElementName=pgCLParameter}"
+                    Content="Lưu" 
+                    Width="130" Height="25"
+                    Style="{StaticResource ButtonStyle}"/>
 
         </StackPanel>
-        <StackPanel VerticalAlignment="Bottom" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,0,120,10" Height="25" RenderTransformOrigin="0.5,0.5" Width="130">
+        <StackPanel VerticalAlignment="Bottom" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,0,120,10"  RenderTransformOrigin="0.5,0.5" Width="140">
             <Button x:Name="btntinhtoan"
                     Content="Tính Toán"
-                    Width="130"
-                    Background="Blue"
-                    Foreground="White"
+                    Width="130" Height="25"
+                    Style="{StaticResource ButtonStyle}"
                     Click="btntinhtoan_Click"/>
 
         </StackPanel>

@@ -23,7 +23,6 @@ namespace DALTUDTXD_LOPNV90_2025_28967.ViewModel
         private readonly UIDocument _uiDoc;
         private readonly Document _doc;
         public readonly TinhToanViewModel TinhToanVM;
-        public readonly VatLieuViewModel VatLieuVM;
 
         // ======== Constructor ========
         public ColumnViewModel(UIDocument uiDoc, TinhToanViewModel tinhToanVM = null)
@@ -32,7 +31,6 @@ namespace DALTUDTXD_LOPNV90_2025_28967.ViewModel
             _doc = _uiDoc.Document ?? throw new ArgumentException("Document is null");
 
             TinhToanVM = tinhToanVM ?? new TinhToanViewModel();
-            VatLieuVM = new VatLieuViewModel();
 
             // Collections
             DanhSachCot = new ObservableCollection<ColumnModel>();
@@ -193,24 +191,42 @@ namespace DALTUDTXD_LOPNV90_2025_28967.ViewModel
         {
             try
             {
-                TinhToanVM.ChieuRong = SelectedColumn.Width;
-                TinhToanVM.ChieuDai = SelectedColumn.Height;
-                TinhToanVM.ChieuCao = SelectedColumn.Length;
+                // Đồng bộ thông số hình học từ cột đã chọn
+                TinhToanVM.ChieuRong = SelectedColumn?.Width ?? "";
+                TinhToanVM.ChieuDai = SelectedColumn?.Height ?? "";
+                TinhToanVM.ChieuCao = SelectedColumn?.Length ?? "";
 
+                // Đồng bộ tải trọng
                 TinhToanVM.TaiTrong = TaiTrong;
                 TinhToanVM.MomenX = MomenX;
                 TinhToanVM.MomenY = MomenY;
 
-                TinhToanVM.MacBeTong = VatLieuVM.SelectedConcrete ?? SelectedConcrete ?? "B20";
-                TinhToanVM.Rb = VatLieuVM.Rb;
-                TinhToanVM.Eb = VatLieuVM.Eb;
-                TinhToanVM.MacThep = VatLieuVM.SelectedSteel;
-                TinhToanVM.Rs = VatLieuVM.Rs;
-                TinhToanVM.Es = VatLieuVM.Es;
+                // ✅ LẤY VẬT LIỆU ĐÃ LƯU TỪ NƠI CHUNG (SharedState)
+                var material = SharedState.CurrentMaterial;
+
+                if (material != null)
+                {
+                    TinhToanVM.MacBeTong = material.ConcreteGrade ?? "B20";
+                    TinhToanVM.Rb = material.Rb;
+                    TinhToanVM.Eb = material.Eb;
+                    TinhToanVM.MacThep = material.SteelGrade ?? "CII";
+                    TinhToanVM.Rs = material.Rs;
+                    TinhToanVM.Es = material.Es;
+                }
+                else
+                {
+                    // Fallback nếu chưa lưu vật liệu (có thể cảnh báo người dùng thay vì dùng mặc định)
+                    TinhToanVM.MacBeTong = "B20";
+                    TinhToanVM.Rb = 11.5;
+                    TinhToanVM.Eb = 27000;
+                    TinhToanVM.MacThep = "CII";
+                    TinhToanVM.Rs = 280;
+                    TinhToanVM.Es = 210000;
+                }
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Đồng bộ lỗi: {ex.Message}");
+                MessageBox.Show($"Lỗi khi đồng bộ dữ liệu sang tính toán: {ex.Message}");
             }
         }
 
