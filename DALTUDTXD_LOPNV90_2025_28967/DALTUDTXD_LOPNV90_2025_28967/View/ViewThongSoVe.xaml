@@ -29,11 +29,11 @@
                 <TextBlock Grid.Column="0" Grid.Row="2" Text="Neo thép:" HorizontalAlignment="Left" VerticalAlignment="Center"></TextBlock>
                 <TextBlock Grid.Column="0" Grid.Row="3" Text="Lan:" HorizontalAlignment="Left" VerticalAlignment="Center"></TextBlock>
                 <TextBlock Grid.Column="0" Grid.Row="4" Text="Lớp bảo vệ:" HorizontalAlignment="Left" VerticalAlignment="Center"></TextBlock>
-                <ComboBox Grid.Column="1" Grid.Row="0" Margin="10"></ComboBox>
-                <ComboBox Grid.Column="1" Grid.Row="1" Margin="10"></ComboBox>
-                <ComboBox Grid.Column="1" Grid.Row="2" Margin="10"></ComboBox>
-                <ComboBox Grid.Column="1" Grid.Row="3" Margin="10"></ComboBox>
-                <ComboBox Grid.Column="1" Grid.Row="4" Margin="10"></ComboBox>
+                <ComboBox Grid.Column="1" Grid.Row="0" Margin="10" Style="{StaticResource ComboBoxStyle}"></ComboBox>
+                <ComboBox Grid.Column="1" Grid.Row="1" Margin="10" Style="{StaticResource ComboBoxStyle}"></ComboBox>
+                <ComboBox Grid.Column="1" Grid.Row="2" Margin="10" Style="{StaticResource ComboBoxStyle}"></ComboBox>
+                <ComboBox Grid.Column="1" Grid.Row="3" Margin="10" Style="{StaticResource ComboBoxStyle}"></ComboBox>
+                <ComboBox Grid.Column="1" Grid.Row="4" Margin="10" Style="{StaticResource ComboBoxStyle}"></ComboBox>
                 <StackPanel Grid.ColumnSpan="2" Grid.Row="5" Orientation="Horizontal" HorizontalAlignment="Center">
                     <Button Width="60" Height="30" Content="Đồng ý"  Style="{StaticResource ButtonStyle}"></Button>
                     <Button Width="60" Height="30" Content="Hủy bỏ" Margin="20 0 0 0" Style="{StaticResource ButtonStyle}"></Button>
