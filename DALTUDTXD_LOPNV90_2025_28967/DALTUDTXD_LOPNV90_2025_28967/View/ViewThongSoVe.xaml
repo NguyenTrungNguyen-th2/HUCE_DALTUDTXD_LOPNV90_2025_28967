@@ -10,7 +10,7 @@
         <ResourceDictionary Source="pack://application:,,,/DALTUDTXD_LOPNV90_2025_28967;component/resources/style/Dictionary1.xaml" />
     </Window.Resources>
     <Grid>
-        <GroupBox Header="Thiết lập chung">
+        <GroupBox Header="Thiết lập chung" Background="AliceBlue">
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="80"/>
