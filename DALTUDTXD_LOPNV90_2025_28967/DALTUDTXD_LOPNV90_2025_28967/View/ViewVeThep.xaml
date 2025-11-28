@@ -34,10 +34,11 @@
                 </Grid.RowDefinitions>
                 <StackPanel Grid.Row="0" Grid.Column="0" Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Center">
                     <TextBlock Text="Cột"></TextBlock>
-                    <ComboBox Margin="10 -2 0 0 " Width="60"></ComboBox>
+                    <ComboBox Margin="10 -2 0 0 " Width="60" Style="{StaticResource ComboBoxStyle}"></ComboBox>
                    
                 </StackPanel>
-                <TextBlock Grid.Column="0"  Grid.Row="0" Text="As:" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0 0 5 0"></TextBlock>
+                <TextBlock Grid.Column="0"  Grid.Row="0" Text="As(mm2):" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0 0 5 0"></TextBlock>
+                <TextBlock Grid.Column="1" Grid.Row="0" Width="100" Height="27" Background="White" Margin="10 0"></TextBlock>
                 <TextBlock Grid.Column="0" Grid.Row="1" Text="Số thanh thép phương X:"></TextBlock>
                 <TextBlock Grid.Column="0" Grid.Row="2" Text="Đường kính thép phương X:"></TextBlock>
                 <TextBlock Grid.Column="0" Grid.Row="3" Text="Số thanh thép phương Y:"></TextBlock>
