@@ -14,8 +14,6 @@ namespace DALTUDTXD_LOPNV90_2025_28967.ViewModel
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
-
-        // === THÔNG TIN CỘT (để hiển thị trong ViewTinhToan) ===
         public string Name { get; set; } = "";
         public string Width { get; set; } = "";
         public string Height { get; set; } = "";
@@ -23,7 +21,6 @@ namespace DALTUDTXD_LOPNV90_2025_28967.ViewModel
         public string LienKet { get; set; } = "";
         public double Psi { get; set; } 
 
-        // ---- Thông số tiết diện ----
         private string _tenCot = "";
         public string TenCot
         {
@@ -52,7 +49,6 @@ namespace DALTUDTXD_LOPNV90_2025_28967.ViewModel
             set { _chieuCao = value; OnPropertyChanged(); }
         }
 
-        // ---- Tải trọng / Momen ----
         private double _taiTrong;
         public double TaiTrong
         {
@@ -116,8 +112,6 @@ namespace DALTUDTXD_LOPNV90_2025_28967.ViewModel
             get => _es;
             set { _es = value; OnPropertyChanged(); }
         }
-
-        // ---- Kết quả ----
         private double _asValue;
         public double AsValue
         {
@@ -145,26 +139,14 @@ namespace DALTUDTXD_LOPNV90_2025_28967.ViewModel
             get => _selectedRebarArea;
             set { _selectedRebarArea = value; OnPropertyChanged(); }
         }
-
-        // ===============================
-        //         COMMAND & SERVICE
-        // ===============================
         public ICommand cmTinhToan { get; }
         private readonly TinhToanCotService _service;
-
-        // ===============================
-        //         CONSTRUCTOR
-        // ===============================
         public TinhToanViewModel()
         {
             _service = new TinhToanCotService();
             cmTinhToan = new RelayCommand(_ => TinhToan());
         }
-
-        // ===============================
-        //         HÀM TÍNH TOÁN (PUBLIC)
-        // ===============================
-        public void TinhToan() // ← ĐÃ ĐỔI TỪ private → public
+        public void TinhToan() 
         {
             if (!double.TryParse(ChieuRong, out double b) || b <= 0) return;
             if (!double.TryParse(ChieuDai, out double h) || h <= 0) return;
@@ -175,12 +157,11 @@ namespace DALTUDTXD_LOPNV90_2025_28967.ViewModel
 
             try
             {
-                // ✅ ĐÃ THÊM Psi VÀO ĐÂY
                 var (AsCalc, caseName) = _service.TinhThep(
                     TaiTrong, MomenX, MomenY,
                     b, h, a,
                     Rb, Rs, Es, Eb,
-                    mu_min, mu_max, Psi  // ← thiếu dòng này trước đây
+                    mu_min, mu_max, Psi 
                 );
 
                 AsValue = Math.Max(AsCalc, 0);
@@ -207,9 +188,6 @@ namespace DALTUDTXD_LOPNV90_2025_28967.ViewModel
             }
         }
 
-        // ===============================
-        //         REBAR RECOMMENDATION
-        // ===============================
         private readonly double[] _availableDiameters = { 12, 14, 16, 18, 20, 22, 25, 28 };
 
         private (string description, double area) RecommendRebar(double requiredArea)

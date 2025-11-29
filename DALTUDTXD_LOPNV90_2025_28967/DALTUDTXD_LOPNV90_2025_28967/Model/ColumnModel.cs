@@ -3,11 +3,11 @@
     public class ColumnModel
     {
         public string Id { get; set; }
-        public string Name { get; set; }           // Family / Type name
-        public string Width { get; set; }          // b (mm)
-        public string Height { get; set; }         // h (mm)
-        public string Length { get; set; }         // Chiều cao thực (mm)
-        public string Level { get; set; }          // Tên tầng
+        public string Name { get; set; }           
+        public string Width { get; set; }          
+        public string Height { get; set; }         
+        public string Length { get; set; }        
+        public string Level { get; set; }          
         public string Load { get; set; }
         public string MomentX { get; set; }
         public string MomentY { get; set; }

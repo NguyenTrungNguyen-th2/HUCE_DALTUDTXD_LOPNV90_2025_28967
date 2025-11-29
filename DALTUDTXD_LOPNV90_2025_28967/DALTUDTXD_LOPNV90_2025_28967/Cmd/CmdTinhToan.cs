@@ -24,7 +24,6 @@ namespace DALTUDTXD_LOPNV90_2025_28967.Cmd
 
             var viewModel = new TinhToanViewModel();
 
-            // Copy dữ liệu từ cột đã chọn + vật liệu đã lưu
             var col = SharedState.MainVM.ColumnVM.SelectedColumn;
             viewModel.Name = col.Name;
             viewModel.Width = col.Width;
@@ -33,19 +32,16 @@ namespace DALTUDTXD_LOPNV90_2025_28967.Cmd
             viewModel.LienKet = col.LienKet;
             viewModel.Psi = col.Psi;
 
-            // Dùng vật liệu đã lưu
             if (SharedState.CurrentMaterial != null)
             {
                 viewModel.Rb = SharedState.CurrentMaterial.Rb;
-                // ... tương tự cho các thuộc tính khác
             }
 
             viewModel.TaiTrong = SharedState.MainVM.ColumnVM.TaiTrong;
             viewModel.MomenX = SharedState.MainVM.ColumnVM.MomenX;
             viewModel.MomenY = SharedState.MainVM.ColumnVM.MomenY;
 
-            viewModel.TinhToan(); // Tính luôn
-
+            viewModel.TinhToan();
             var view = new ViewTinhToan();
             view.DataContext = viewModel;
             view.ShowDialog();
