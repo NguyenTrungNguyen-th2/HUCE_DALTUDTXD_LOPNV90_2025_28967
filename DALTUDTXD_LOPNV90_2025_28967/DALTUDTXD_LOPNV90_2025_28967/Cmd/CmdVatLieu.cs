@@ -14,12 +14,10 @@ namespace DALTUDTXD_LOPNV90_2025_28967.Cmd
     [Transaction(TransactionMode.Manual)]
     public class CmdVatLieu : IExternalCommand
     {
-        // CmdVatLieu.cs
         public Result Execute(ExternalCommandData data, ref string msg, ElementSet els)
         {
-            RevitCommandData.UiApp = data.Application; // ← gán để dùng sau
+            RevitCommandData.UiApp = data.Application; 
             new ViewVatLieu().ShowDialog();
-            // RevitCommandData.UiApp = null; // optional: clear sau khi đóng
             return Result.Succeeded;
         }
     }

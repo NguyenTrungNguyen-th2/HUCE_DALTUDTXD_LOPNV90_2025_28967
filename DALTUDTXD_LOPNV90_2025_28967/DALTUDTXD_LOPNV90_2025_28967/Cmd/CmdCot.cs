@@ -7,7 +7,6 @@ using System;
 
 namespace DALTUDTXD_LOPNV90_2025_28967.Cmd
 {
-    // CmdCot.cs
     [Transaction(TransactionMode.Manual)]
     public class CmdCot : IExternalCommand
     {
@@ -16,21 +15,15 @@ namespace DALTUDTXD_LOPNV90_2025_28967.Cmd
             UIDocument uiDoc = commandData.Application.ActiveUIDocument;
             if (uiDoc == null) return Result.Failed;
 
-            // Kiểm tra xem đã lưu vật liệu chưa
             if (SharedState.CurrentMaterial == null)
             {
                 TaskDialog.Show("Cảnh báo", "Vui lòng nhập và lưu thông số vật liệu trước!");
                 return Result.Cancelled;
             }
-
-            // Tạo ViewModel dùng vật liệu đã lưu
             var vatLieuVM = new VatLieuViewModel();
-            vatLieuVM.LoadFromMaterial(SharedState.CurrentMaterial); // ← Cần thêm phương thức này
-
+            vatLieuVM.LoadFromMaterial(SharedState.CurrentMaterial); 
             var tinhToanVM = new TinhToanViewModel();
             var columnVM = new ColumnViewModel(uiDoc, tinhToanVM);
-
-            // Sync dữ liệu vật liệu đã lưu vào TinhToanVM
             tinhToanVM.Rb = SharedState.CurrentMaterial.Rb;
             tinhToanVM.Eb = SharedState.CurrentMaterial.Eb;
             tinhToanVM.Rs = SharedState.CurrentMaterial.Rs;

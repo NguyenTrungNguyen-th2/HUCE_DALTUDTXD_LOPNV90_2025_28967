@@ -24,19 +24,19 @@
                    SelectedItem="{Binding SelectedConcrete}"
                    Width="160" Height="25" HorizontalContentAlignment="Center"/>
                     <TextBlock Text="Cường độ chịu nén (Rb) [MPa]:"/>
-                    <TextBox Text="{Binding Rb}" Width="160" Height="25"/>
+                    <TextBox Text="{Binding Rb}" Width="160" Height="25" TextAlignment="Center"/>
                     <TextBlock Text="Modun đàn hồi (Eb) [MPa]:"/>
-                    <TextBox Text="{Binding Eb}" Width="160" Height="25"/>
+                    <TextBox Text="{Binding Eb}" Width="160" Height="25" TextAlignment="Center"/>
                 </StackPanel>
                 <StackPanel HorizontalAlignment="Left" Width="230" Margin="200,0,0,0">
                     <TextBlock Text="Mác thép:"/>
                     <ComboBox ItemsSource="{Binding SteelGrades}"
                               SelectedItem="{Binding SelectedSteel}"
-                              Width="160" Height="25 " HorizontalAlignment="Left" />
+                              Width="160" Height="25 " HorizontalAlignment="Left" HorizontalContentAlignment="Center"/>
                     <TextBlock Text="Cường độ chịu nén và kéo (Rs,Rsc) [MPa]:"/>
-                    <TextBox Text="{Binding Rs}" Width="160" Height="25" HorizontalAlignment="Left" />
+                    <TextBox Text="{Binding Rs}" Width="160" Height="25" HorizontalAlignment="Left" TextAlignment="Center" />
                     <TextBlock Text="Modun đàn hồi (Es) [MPa]:"/>
-                    <TextBox Text="{Binding Es}" Width="160" Height="25" HorizontalAlignment="Left"/>
+                    <TextBox Text="{Binding Es}" Width="160" Height="25" HorizontalAlignment="Left" TextAlignment="Center"/>
                 </StackPanel>
 
                 <StackPanel  Orientation="Horizontal"

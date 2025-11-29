@@ -84,11 +84,9 @@ namespace DALTUDTXD_LOPNV90_2025_28967.ViewModel
             ClearCommand = new RelayCommand(_ => ClearInputs());
             DeleteCommand = new RelayCommand(_ => DeleteMaterial(), _ => SelectedMaterial != null);
 
-            // Khởi tạo mặc định
             SelectedConcrete = "B20";
             SelectedSteel = "CII";
 
-            // 🔥 Thêm 2 dòng này để hiển thị giá trị ngay khi mở form
             UpdateConcrete();
             UpdateSteel();
         }
@@ -136,9 +134,9 @@ namespace DALTUDTXD_LOPNV90_2025_28967.ViewModel
                 Es = Es
             };
 
-            SharedState.CurrentMaterial = m; // ✅ Lưu vào nơi chung
+            SharedState.CurrentMaterial = m; 
 
-            OnSaveRequested?.Invoke(); // Đóng cửa sổ
+            OnSaveRequested?.Invoke(); 
         }
 
         private void ClearInputs()
