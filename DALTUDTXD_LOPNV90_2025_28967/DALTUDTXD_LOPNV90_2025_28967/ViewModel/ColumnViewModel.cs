@@ -14,17 +14,14 @@ namespace DALTUDTXD_LOPNV90_2025_28967.ViewModel
 {
     public class ColumnViewModel : INotifyPropertyChanged
     {
-        // ======== INPC ========
         public event PropertyChangedEventHandler PropertyChanged;
         protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
             => PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
 
-        // ======== Dependencies ========
         private readonly UIDocument _uiDoc;
         private readonly Document _doc;
         public readonly TinhToanViewModel TinhToanVM;
 
-        // ======== Constructor ========
         public ColumnViewModel(UIDocument uiDoc, TinhToanViewModel tinhToanVM = null)
         {
             _uiDoc = uiDoc ?? throw new ArgumentNullException(nameof(uiDoc));
@@ -32,13 +29,11 @@ namespace DALTUDTXD_LOPNV90_2025_28967.ViewModel
 
             TinhToanVM = tinhToanVM ?? new TinhToanViewModel();
 
-            // Collections
             DanhSachCot = new ObservableCollection<ColumnModel>();
 
             ConcreteGrades = new ObservableCollection<string> { "B15", "B20", "B25", "B30", "B35", "B40" };
             SelectedConcrete = ConcreteGrades.FirstOrDefault();
 
-            // *** FIX PHẦN BẠN VIẾT SAI Ở DƯỚI ***
             DanhSachLienKet = new ObservableCollection<string>()
             {
                 "Ngàm ngàm",
@@ -51,12 +46,9 @@ namespace DALTUDTXD_LOPNV90_2025_28967.ViewModel
             LienKetDangChon = DanhSachLienKet.First();
             HeSoPsi = HeSoTinhToan.Psi;
 
-            // Commands
             cmNhapRevit = new RelayCommand(_ => NhapTuRevit());
-            cmLuuCot = new RelayCommand(_ => LuuCotAll(), _ => DanhSachCot?.Count > 0);
         }
 
-        // ======== PROPERTIES ========
         private double _taiTrong;
         public double TaiTrong
         {
@@ -94,7 +86,6 @@ namespace DALTUDTXD_LOPNV90_2025_28967.ViewModel
 
         public ObservableCollection<string> ConcreteGrades { get; }
 
-        // ======== Danh sách cột ========
         public ObservableCollection<ColumnModel> DanhSachCot { get; }
 
         private ColumnModel _selectedColumn;
@@ -117,11 +108,9 @@ namespace DALTUDTXD_LOPNV90_2025_28967.ViewModel
             }
         }
 
-        // ======== COMMANDS ========
         public ICommand cmNhapRevit { get; }
         public ICommand cmLuuCot { get; }
 
-        // ======== LIÊN KẾT – HỆ SỐ PSI ========
         public ObservableCollection<string> DanhSachLienKet { get; set; }
 
         private string _lienKetDangChon;
@@ -148,11 +137,10 @@ namespace DALTUDTXD_LOPNV90_2025_28967.ViewModel
             if (HeSoTinhToan.PsiTheoLienKet.ContainsKey(LienKetDangChon))
             {
                 HeSoPsi = HeSoTinhToan.PsiTheoLienKet[LienKetDangChon];
-                HeSoTinhToan.Psi = HeSoPsi;     // cập nhật static
+                HeSoTinhToan.Psi = HeSoPsi;    
             }
         }
 
-        // ======== METHODS ========
 
         private void SelectColumnInRevit()
         {
@@ -191,17 +179,14 @@ namespace DALTUDTXD_LOPNV90_2025_28967.ViewModel
         {
             try
             {
-                // Đồng bộ thông số hình học từ cột đã chọn
                 TinhToanVM.ChieuRong = SelectedColumn?.Width ?? "";
                 TinhToanVM.ChieuDai = SelectedColumn?.Height ?? "";
                 TinhToanVM.ChieuCao = SelectedColumn?.Length ?? "";
 
-                // Đồng bộ tải trọng
                 TinhToanVM.TaiTrong = TaiTrong;
                 TinhToanVM.MomenX = MomenX;
                 TinhToanVM.MomenY = MomenY;
 
-                // ✅ LẤY VẬT LIỆU ĐÃ LƯU TỪ NƠI CHUNG (SharedState)
                 var material = SharedState.CurrentMaterial;
 
                 if (material != null)
@@ -215,7 +200,6 @@ namespace DALTUDTXD_LOPNV90_2025_28967.ViewModel
                 }
                 else
                 {
-                    // Fallback nếu chưa lưu vật liệu (có thể cảnh báo người dùng thay vì dùng mặc định)
                     TinhToanVM.MacBeTong = "B20";
                     TinhToanVM.Rb = 11.5;
                     TinhToanVM.Eb = 27000;
@@ -287,28 +271,7 @@ namespace DALTUDTXD_LOPNV90_2025_28967.ViewModel
             }
         }
 
-        private void LuuCotAll()
-        {
-            try
-            {
-                foreach (var c in DanhSachCot)
-                {
-                    c.Load = TaiTrong != 0 ? TaiTrong.ToString("0.##") : "—";
-                    c.MomentX = MomenX != 0 ? MomenX.ToString("0.##") : "—";
-                    c.MomentY = MomenY != 0 ? MomenY.ToString("0.##") : "—";
-                    c.ConcreteGrade = SelectedConcrete ?? "—";
-                }
-
-                if (SelectedColumn != null)
-                    SyncToTinhToan();
-
-                MessageBox.Show($"Đã lưu thông số cho {DanhSachCot.Count} cột.");
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Lỗi lưu: {ex.Message}");
-            }
-        }
+        
 
     }
 }

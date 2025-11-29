@@ -7,10 +7,9 @@ namespace DALTUDTXD_LOPNV90_2025_28967.ViewModel
     {
         public VatLieuViewModel VatLieuVM { get; }
         public TinhToanViewModel TinhToanVM { get; }
-        public ColumnViewModel ColumnVM { get; private set; } // ✅ private set
-        public ColumnRebarViewModel ColumnRebarVM { get; private set; } // ✅ private set
+        public ColumnViewModel ColumnVM { get; private set; } 
+        public ColumnRebarViewModel ColumnRebarVM { get; private set; } 
 
-        // Constructor nhận các dependency từ ngoài
         public MainViewModel(
             UIDocument uiDoc,
             VatLieuViewModel vatLieuVM = null,
@@ -20,7 +19,6 @@ namespace DALTUDTXD_LOPNV90_2025_28967.ViewModel
             TinhToanVM = tinhToanVM ?? new TinhToanViewModel();
             ColumnVM = new ColumnViewModel(uiDoc, TinhToanVM);
 
-            // ✅ Gán ColumnVM nếu có uiDoc
             if (uiDoc != null)
             {
                 ColumnVM = new ColumnViewModel(uiDoc, TinhToanVM);
