@@ -1,7 +1,6 @@
 ﻿using DALTUDTXD_LOPNV90_2025_28967.Services;
 using System;
 using System.ComponentModel;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Windows.Input;
 
@@ -14,20 +13,16 @@ namespace DALTUDTXD_LOPNV90_2025_28967.ViewModel
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
+
+        // ===== Dữ liệu hiển thị (từ cột) =====
         public string Name { get; set; } = "";
         public string Width { get; set; } = "";
         public string Height { get; set; } = "";
         public string Length { get; set; } = "";
         public string LienKet { get; set; } = "";
-        public double Psi { get; set; } 
+        public double Psi { get; set; }
 
-        private string _tenCot = "";
-        public string TenCot
-        {
-            get => _tenCot;
-            set { _tenCot = value; OnPropertyChanged(); }
-        }
-
+        // ===== Các chiều (dùng để tính toán) =====
         private string _chieuRong = "";
         public string ChieuRong
         {
@@ -49,6 +44,7 @@ namespace DALTUDTXD_LOPNV90_2025_28967.ViewModel
             set { _chieuCao = value; OnPropertyChanged(); }
         }
 
+        // ===== Nội lực =====
         private double _taiTrong;
         public double TaiTrong
         {
@@ -70,7 +66,7 @@ namespace DALTUDTXD_LOPNV90_2025_28967.ViewModel
             set { _momenY = value; OnPropertyChanged(); }
         }
 
-        // ---- Vật liệu ----
+        // ===== Vật liệu =====
         private string _macBeTong = "";
         public string MacBeTong
         {
@@ -112,6 +108,8 @@ namespace DALTUDTXD_LOPNV90_2025_28967.ViewModel
             get => _es;
             set { _es = value; OnPropertyChanged(); }
         }
+
+        // ===== Kết quả tính toán =====
         private double _asValue;
         public double AsValue
         {
@@ -139,19 +137,38 @@ namespace DALTUDTXD_LOPNV90_2025_28967.ViewModel
             get => _selectedRebarArea;
             set { _selectedRebarArea = value; OnPropertyChanged(); }
         }
+
+        // ===== Lệnh =====
         public ICommand cmTinhToan { get; }
+
+        // ===== Service tính toán =====
         private readonly TinhToanCotService _service;
+
+        // ===== Danh sách thép sẵn có =====
+        private readonly double[] _availableDiameters = { 12, 14, 16, 18, 20, 22, 25, 28 };
+
+        // ===== Constructor =====
         public TinhToanViewModel()
         {
             _service = new TinhToanCotService();
             cmTinhToan = new RelayCommand(_ => TinhToan());
         }
-        public void TinhToan() 
-        {
-            if (!double.TryParse(ChieuRong, out double b) || b <= 0) return;
-            if (!double.TryParse(ChieuDai, out double h) || h <= 0) return;
 
-            double a = 40;
+        // ===== Phương thức tính toán chính =====
+        public void TinhToan()
+        {
+            if (!double.TryParse(ChieuRong, out double b) || b <= 0)
+            {
+                SetError("Thiếu hoặc sai chiều rộng tiết diện.");
+                return;
+            }
+            if (!double.TryParse(ChieuDai, out double h) || h <= 0)
+            {
+                SetError("Thiếu hoặc sai chiều cao tiết diện.");
+                return;
+            }
+
+            double a = 40; // lớp bảo vệ
             double mu_min = 0.01;
             double mu_max = 0.03;
 
@@ -161,7 +178,7 @@ namespace DALTUDTXD_LOPNV90_2025_28967.ViewModel
                     TaiTrong, MomenX, MomenY,
                     b, h, a,
                     Rb, Rs, Es, Eb,
-                    mu_min, mu_max, Psi 
+                    mu_min, mu_max, Psi
                 );
 
                 AsValue = Math.Max(AsCalc, 0);
@@ -181,22 +198,18 @@ namespace DALTUDTXD_LOPNV90_2025_28967.ViewModel
             }
             catch (Exception ex)
             {
-                AsValue = 0;
-                CaseName = $"LỖI: {ex.Message}";
-                SelectedRebarText = "";
-                SelectedRebarArea = "";
+                SetError($"LỖI: {ex.Message}");
             }
         }
 
-        private readonly double[] _availableDiameters = { 12, 14, 16, 18, 20, 22, 25, 28 };
-
+        // ===== Hàm chọn thép =====
         private (string description, double area) RecommendRebar(double requiredArea)
         {
             (string desc, double area, double excess) best = ("", 0, double.MaxValue);
 
             foreach (double dia in _availableDiameters)
             {
-                double areaPerBar = Math.PI * dia * dia / 4;
+                double areaPerBar = Math.PI * dia * dia / 4.0;
                 int minCount = (int)Math.Ceiling(requiredArea / areaPerBar);
                 if (minCount < 4) minCount = 4;
                 if (minCount % 2 != 0) minCount++;
@@ -216,19 +229,31 @@ namespace DALTUDTXD_LOPNV90_2025_28967.ViewModel
 
             if (string.IsNullOrEmpty(best.desc))
             {
-                return ("4Φ16", 4 * Math.PI * 16 * 16 / 4);
+                double fallbackArea = 4 * Math.PI * 16 * 16 / 4.0;
+                return ("4Φ16", fallbackArea);
             }
 
             return (best.desc, best.area);
         }
 
+        // ===== Trích xuất đường kính từ chuỗi như "6Φ20" =====
         private double ExtractDiameter(string desc)
         {
             if (string.IsNullOrEmpty(desc)) return double.MaxValue;
             var parts = desc.Split('Φ');
-            if (parts.Length == 0) return double.MaxValue;
-            string lastPart = parts[parts.Length - 1];
-            return double.TryParse(lastPart, out double d) ? d : double.MaxValue;
+            if (parts.Length < 2) return double.MaxValue;
+            // Lấy phần sau ký tự Φ (có thể có nhiều Φ, nhưng thường chỉ 1)
+            string diaPart = parts[1];
+            return double.TryParse(diaPart, out double d) ? d : double.MaxValue;
+        }
+
+        // ===== Thiết lập lỗi =====
+        private void SetError(string message)
+        {
+            AsValue = 0;
+            CaseName = message;
+            SelectedRebarText = "";
+            SelectedRebarArea = "";
         }
     }
 }

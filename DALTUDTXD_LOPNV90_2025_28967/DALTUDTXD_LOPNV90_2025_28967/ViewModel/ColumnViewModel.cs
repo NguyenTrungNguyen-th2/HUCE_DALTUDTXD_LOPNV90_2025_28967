@@ -22,6 +22,10 @@ namespace DALTUDTXD_LOPNV90_2025_28967.ViewModel
         private readonly Document _doc;
         public readonly TinhToanViewModel TinhToanVM;
 
+        // ===== LỆNH (Commands) =====
+        public ICommand cmNhapRevit { get; private set; }
+        public ICommand cmThemNoiLuc { get; private set; } // 👈 ĐÃ KHAI BÁO
+
         public ColumnViewModel(UIDocument uiDoc, TinhToanViewModel tinhToanVM = null)
         {
             _uiDoc = uiDoc ?? throw new ArgumentNullException(nameof(uiDoc));
@@ -46,9 +50,13 @@ namespace DALTUDTXD_LOPNV90_2025_28967.ViewModel
             LienKetDangChon = DanhSachLienKet.First();
             HeSoPsi = HeSoTinhToan.Psi;
 
+            // 👇 KHỞI TẠO CÁC LỆNH — BẠN THIẾU DÒNG THỨ 2 TRƯỚC ĐÂY!
             cmNhapRevit = new RelayCommand(_ => NhapTuRevit());
+            cmThemNoiLuc = new RelayCommand(_ => ThemNoiLuc()); // ✅ ĐÃ THÊM!
+            cmXoaCot = new RelayCommand(_ => XoaCot());
         }
 
+        // ===== Các thuộc tính cho TextBox nhập liệu =====
         private double _taiTrong;
         public double TaiTrong
         {
@@ -107,10 +115,23 @@ namespace DALTUDTXD_LOPNV90_2025_28967.ViewModel
                 }
             }
         }
+        // Danh sách cột từ Revit — chỉ để chọn trong ComboBox
+        public ObservableCollection<ColumnModel> DanhSachCotTuRevit { get; }
+            = new ObservableCollection<ColumnModel>();
 
-        public ICommand cmNhapRevit { get; }
-        public ICommand cmLuuCot { get; }
+        // Cột đang chọn trong ComboBox
+        private ColumnModel _cotDangChon;
+        public ColumnModel CotDangChon
+        {
+            get => _cotDangChon;
+            set { _cotDangChon = value; OnPropertyChanged(); }
+        }
 
+        // Danh sách cột đã gán nội lực → hiển thị trong DataGrid
+        public ObservableCollection<ColumnModel> DanhSachCotDaGanNoiLuc { get; }
+            = new ObservableCollection<ColumnModel>();
+        // Trong ColumnViewModel.cs
+       
         public ObservableCollection<string> DanhSachLienKet { get; set; }
 
         private string _lienKetDangChon;
@@ -137,10 +158,9 @@ namespace DALTUDTXD_LOPNV90_2025_28967.ViewModel
             if (HeSoTinhToan.PsiTheoLienKet.ContainsKey(LienKetDangChon))
             {
                 HeSoPsi = HeSoTinhToan.PsiTheoLienKet[LienKetDangChon];
-                HeSoTinhToan.Psi = HeSoPsi;    
+                HeSoTinhToan.Psi = HeSoPsi;
             }
         }
-
 
         private void SelectColumnInRevit()
         {
@@ -214,64 +234,104 @@ namespace DALTUDTXD_LOPNV90_2025_28967.ViewModel
             }
         }
 
+        // ===== PHƯƠNG THỨC XỬ LÝ "THÊM NỘI LỰC" =====
+        private void ThemNoiLuc()
+        {
+            if (CotDangChon == null)
+            {
+                MessageBox.Show("Vui lòng chọn một cột trong danh sách Revit.");
+                return;
+            }
+
+            // Tạo bản sao mới (không ảnh hưởng dữ liệu gốc)
+            var newCot = new ColumnModel
+            {
+                Id = CotDangChon.Id,
+                Name = CotDangChon.Name,
+                Width = CotDangChon.Width,
+                Height = CotDangChon.Height,
+                Length = CotDangChon.Length,
+                Level = CotDangChon.Level,
+                ConcreteGrade = CotDangChon.ConcreteGrade,
+
+                // Gán nội lực và thông số từ UI
+                LoadValue = TaiTrong,
+                MomentXValue = MomenX,
+                MomentYValue = MomenY,
+                Psi = HeSoPsi,
+                LienKet = LienKetDangChon,
+
+                // Cập nhật hiển thị
+                Load = TaiTrong != 0 ? TaiTrong.ToString("0.##") : "—",
+                MomentX = MomenX != 0 ? MomenX.ToString("0.##") : "—",
+                MomentY = MomenY != 0 ? MomenY.ToString("0.##") : "—"
+            };
+
+            DanhSachCotDaGanNoiLuc.Add(newCot);
+            MessageBox.Show($"Đã thêm nội lực cho cột: {newCot.Name}");
+        }
+        // ===== NHẬP CỘT TỪ REVIT =====
         private void NhapTuRevit()
         {
-            try
+            DanhSachCotTuRevit.Clear();
+            var columns = new FilteredElementCollector(_doc)
+                .OfCategory(BuiltInCategory.OST_StructuralColumns)
+                .WhereElementIsNotElementType()
+                .OfClass(typeof(FamilyInstance))
+                .Cast<FamilyInstance>();
+
+            int count = 0;
+            foreach (var fi in columns)
             {
-                DanhSachCot.Clear();
+                var symbol = _doc.GetElement(fi.GetTypeId()) as FamilySymbol;
+                var pb = symbol?.LookupParameter("b") ?? fi.LookupParameter("b");
+                var ph = symbol?.LookupParameter("h") ?? fi.LookupParameter("h");
+                if (pb == null || ph == null) continue;
 
-                var columns = new FilteredElementCollector(_doc)
-                    .OfCategory(BuiltInCategory.OST_StructuralColumns)
-                    .WhereElementIsNotElementType()
-                    .OfClass(typeof(FamilyInstance))
-                    .Cast<FamilyInstance>();
+                double b = pb.AsDouble() * 304.8;
+                double h = ph.AsDouble() * 304.8;
+                var bb = fi.get_BoundingBox(null);
+                double len = bb != null ? Math.Abs(bb.Max.Z - bb.Min.Z) * 304.8 : 0;
+                string level = _doc.GetElement(fi.LevelId)?.Name ?? "—";
 
-                int count = 0;
-
-                foreach (var fi in columns)
+                DanhSachCotTuRevit.Add(new ColumnModel
                 {
-                    var symbol = _doc.GetElement(fi.GetTypeId()) as FamilySymbol;
-                    var pb = symbol?.LookupParameter("b") ?? fi.LookupParameter("b");
-                    var ph = symbol?.LookupParameter("h") ?? fi.LookupParameter("h");
-
-                    if (pb == null || ph == null) continue;
-
-                    double b = pb.AsDouble() * 304.8;
-                    double h = ph.AsDouble() * 304.8;
-
-                    var bb = fi.get_BoundingBox(null);
-                    double len = bb != null ? Math.Abs(bb.Max.Z - bb.Min.Z) * 304.8 : 0;
-
-                    string level = _doc.GetElement(fi.LevelId)?.Name ?? "—";
-
-                    DanhSachCot.Add(new ColumnModel
-                    {
-                        Id = fi.Id.IntegerValue.ToString(),
-                        Name = fi.Name,
-                        Width = Math.Round(b).ToString(),
-                        Height = Math.Round(h).ToString(),
-                        Length = Math.Round(len).ToString(),
-                        Level = level,
-                        Load = TaiTrong != 0 ? TaiTrong.ToString("0.##") : "—",
-                        MomentX = MomenX != 0 ? MomenX.ToString("0.##") : "—",
-                        MomentY = MomenY != 0 ? MomenY.ToString("0.##") : "—",
-                        ConcreteGrade = MacBeTong ?? "—",
-                        LienKet = LienKetDangChon,
-                        Psi = HeSoPsi
-                    });
-
-                    count++;
-                }
-
-                MessageBox.Show($"Đã nhập {count} cột từ Revit.");
+                    Id = fi.Id.IntegerValue.ToString(),
+                    Name = fi.Name,
+                    Width = Math.Round(b).ToString(),
+                    Height = Math.Round(h).ToString(),
+                    Length = Math.Round(len).ToString(),
+                    Level = level,
+                    ConcreteGrade = MacBeTong ?? "—"
+                    // KHÔNG gán Load, Moment, Psi, LienKet ở đây
+                });
+                count++;
             }
-            catch (Exception ex)
+            MessageBox.Show($"Đã nhập {count} cột từ Revit.");
+        }
+        private ColumnModel _selectedCot;
+        public ColumnModel SelectedCot
+        {
+            get => _selectedCot;
+            set { _selectedCot = value; OnPropertyChanged(); }
+        }
+        public ICommand cmXoaCot { get; private set; }
+        private void XoaCot()
+        {
+            if (SelectedCot == null)
             {
-                MessageBox.Show($"Nhập lỗi: {ex.Message}");
+                MessageBox.Show("Vui lòng chọn một cột trong danh sách để xóa.");
+                return;
+            }
+
+            string tenCot = SelectedCot.Name;
+            if (MessageBox.Show($"Bạn có chắc muốn xóa cột '{tenCot}'?", "Xác nhận xóa",
+                                MessageBoxButton.YesNo, MessageBoxImage.Question) == MessageBoxResult.Yes)
+            {
+                DanhSachCotDaGanNoiLuc.Remove(SelectedCot);
+                SelectedCot = null; // Đặt lại selection
+                MessageBox.Show($"Đã xóa cột: {tenCot}");
             }
         }
-
-        
-
     }
 }
