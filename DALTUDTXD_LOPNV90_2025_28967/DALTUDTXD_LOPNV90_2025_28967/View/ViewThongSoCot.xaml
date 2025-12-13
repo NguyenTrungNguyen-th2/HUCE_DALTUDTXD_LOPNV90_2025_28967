@@ -26,17 +26,17 @@
                     <StackPanel Orientation="Horizontal">
                         <TextBlock VerticalAlignment="Center"  Text="Tải trọng (N):" Height="60" Width="100"/>
                         <TextBox Text="{Binding TaiTrong, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
-                                  Width="100" Height="25" Margin="20 10 0 50"  Style="{StaticResource TextBoxStyle}" TextAlignment="Center"/>
+                                  Width="100" Height="25" Margin="20 10 0 50" TextAlignment="Center"/>
                     </StackPanel>
                     <StackPanel Orientation="Horizontal">
                         <TextBlock VerticalAlignment="Center" Text="Momen X (Mx):" Height="60" Width="100"/>
                         <TextBox Text="{Binding MomenX, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
-                                  Width="100" Height="25" Margin="20 10 0 50"  Style="{StaticResource TextBoxStyle}" TextAlignment="Center"/>
+                                  Width="100" Height="25" Margin="20 10 0 50"  TextAlignment="Center"/>
                     </StackPanel>
                     <StackPanel Orientation="Horizontal">
                         <TextBlock VerticalAlignment="Center"  Text="Momen Y (My):" Height="60" Width="100"/>
                         <TextBox Text="{Binding MomenY, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
-                                  Width="100" Height="25" Margin="20 10 0 50"  Style="{StaticResource TextBoxStyle}" TextAlignment="Center"/>
+                                  Width="100" Height="25" Margin="20 10 0 50" TextAlignment="Center"/>
                     </StackPanel>
                 </StackPanel>
             </Grid>
@@ -54,7 +54,7 @@
                     <StackPanel Orientation="Horizontal">
                         <TextBlock VerticalAlignment="Center"  Text="Hệ số (Ψ):" Height="60" Width="100"/>
                         <TextBox Width="100" Height="25" Margin="20 10 0 50"
-                                 Text="{Binding HeSoPsi, Mode=TwoWay}"  Style="{StaticResource TextBoxStyle}" TextAlignment="Center"/>
+                                 Text="{Binding HeSoPsi, Mode=TwoWay}"  TextAlignment="Center"/>
 
                     </StackPanel>
                 </StackPanel>

@@ -4,17 +4,17 @@
 library
 C#
 .cs
-C:\HUCE_DALTUDTXD_LOPNV90_2025_28967\HUCE_DALTUDTXD_LOPNV90_2025_28967\DALTUDTXD_LOPNV90_2025_28967\DALTUDTXD_LOPNV90_2025_28967\obj\Debug\
+D:\do an lap trinh 1027\HUCE_DALTUDTXD_LOPNV90_2025_28967\DALTUDTXD_LOPNV90_2025_28967\DALTUDTXD_LOPNV90_2025_28967\obj\Debug\
 DALTUDTXD_LOPNV90_2025_28967
 none
 false
 DEBUG;TRACE
 
-7-1916200561
+13-962953058
 
 36-385163217
-39-516280864
-MainWindow.xaml;resources\Canvas\Dictionary1.xaml;View\ViewThongSoCot.xaml;View\ViewThongSoVe.xaml;View\ViewTinhToan.xaml;View\ViewVatLieu.xaml;View\ViewVeThep.xaml;
+391759860978
+MainWindow.xaml;resources\Canvas\Dictionary1.xaml;resources\style\ButtonStyle.xaml;resources\style\ComboBoxStyle.xaml;resources\style\DataGridStyle.xaml;resources\style\Dictionary1.xaml;resources\style\GroupBoxStyle.xaml;resources\style\TextBoxStyle.xaml;View\ViewThongSoCot.xaml;View\ViewThongSoVe.xaml;View\ViewTinhToan.xaml;View\ViewVatLieu.xaml;View\ViewVeThep.xaml;
 
 False
 
