@@ -4,56 +4,108 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DALTUDTXD_LOPNV90_2025_28967.View"
+         xmlns:viewmodel="clr-namespace:DALTUDTXD_LOPNV90_2025_28967.ViewModel"
         mc:Ignorable="d"
-        Title="Chọn thép" Height="350" Width="620">
-    <Window.Resources>
+        d:DataContext="{d:DesignInstance viewmodel:ColumnRebarViewModel}"
+        Title="Chọn thép" Height="380" Width="820">
+        <Window.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="pack://application:,,,/DALTUDTXD_LOPNV90_2025_28967;component/resources/style/Dictionary1.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/DALTUDTXD_LOPNV90_2025_28967;component/resources/Canvas/Dictionary1.xaml" />
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Window.Resources>
-    <DockPanel LastChildFill="True" Background="AliceBlue">
+    <DockPanel LastChildFill="True" Background="White">
         <StackPanel DockPanel.Dock="Bottom" Orientation="Horizontal" HorizontalAlignment="Right">
-            <Button Width="60" Height="30" Content="Vẽ" Style="{StaticResource ButtonStyle}"></Button>
-            <Button Width="60" Height="30" Content="Hủy" Margin="20 0 20 0" Style="{StaticResource ButtonStyle}"></Button>
+            <Button Width="60" Height="30" Content="Vẽ" Style="{StaticResource ButtonStyle}" Command="{Binding OkCommand}"></Button>
+            <Button Width="60" Height="30" Content="Hủy" Margin="20 0 20 0" Style="{StaticResource ButtonStyle}" Command="{Binding CloseCommand}"></Button>
         </StackPanel>
-        <GroupBox Header="Thép chủ" DockPanel.Dock="Left" Margin="5">
-            <Grid>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="200"/>
-                    <ColumnDefinition Width="100"/>
-                </Grid.ColumnDefinitions>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="50"/>
-                    <RowDefinition Height="50"/>
-                    <RowDefinition Height="50"/>
-                    <RowDefinition Height="50"/>
-                    <RowDefinition Height="50"/>
-                    <RowDefinition Height="50"/>
-                </Grid.RowDefinitions>
-                <StackPanel Grid.Row="0" Grid.Column="0" Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Center">
-                    <TextBlock Text="Cột"></TextBlock>
-                    <ComboBox Margin="10 -2 0 0 " Width="60" Style="{StaticResource ComboBoxStyle}"></ComboBox>
-                   
-                </StackPanel>
-                <TextBlock Grid.Column="0"  Grid.Row="0" Text="As(mm2):" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0 0 5 0"></TextBlock>
-                <TextBlock Grid.Column="1" Grid.Row="0" Width="100" Height="27" Background="White" Margin="10 0"></TextBlock>
-                <TextBlock Grid.Column="0" Grid.Row="1" Text="Số thanh thép phương X:"></TextBlock>
-                <TextBlock Grid.Column="0" Grid.Row="2" Text="Đường kính thép phương X:"></TextBlock>
-                <TextBlock Grid.Column="0" Grid.Row="3" Text="Số thanh thép phương Y:"></TextBlock>
-                <TextBlock Grid.Column="0" Grid.Row="4" Text="Đường kính thép phương Y:"></TextBlock>
-                <TextBox Grid.Column="1" Grid.Row="1" Margin="5" Style="{StaticResource TextBoxStyle}"></TextBox>
-                <TextBox Grid.Column="1" Grid.Row="3" Margin="5" Style="{StaticResource TextBoxStyle}"></TextBox>
-                <ComboBox Grid.Column="1" Grid.Row="2" Margin="10 12" Style="{StaticResource ComboBoxStyle}"></ComboBox>
-                <ComboBox Grid.Column="1" Grid.Row="4" Margin="10 12"  Style="{StaticResource ComboBoxStyle}"></ComboBox>
-            </Grid>
-            
-        </GroupBox>
-<GroupBox DockPanel.Dock="Right" Header="Hình ảnh" Margin="5">
-<Canvas></Canvas>
-</GroupBox>
+        <StackPanel DockPanel.Dock="Left" Orientation="Horizontal" Width="190">
+            <GroupBox Header="Thông số chung" Style="{StaticResource GroupBoxStyle}" Width="185">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="80"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="50"/>
+                        <RowDefinition Height="50"/>
+                        <RowDefinition Height="50"/>
+                        <RowDefinition Height="50"/>
+                        <RowDefinition Height="50"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <TextBlock Grid.Column="0" Grid.Row="0" Text="Thép đai:" HorizontalAlignment="Left" VerticalAlignment="Center"></TextBlock>
+                    <TextBlock Grid.Column="0" Grid.Row="1" Text="Khoảng cách:" HorizontalAlignment="Left" VerticalAlignment="Center"></TextBlock>
+                    <TextBlock Grid.Column="0" Grid.Row="2" Text="Neo thép:" HorizontalAlignment="Left" VerticalAlignment="Center"></TextBlock>
+                    <TextBlock Grid.Column="0" Grid.Row="3" Text="Lan:" HorizontalAlignment="Left" VerticalAlignment="Center"></TextBlock>
+                    <ComboBox Grid.Column="1" Grid.Row="0" Margin="5" ItemsSource="{Binding Diameters}" SelectedItem="{Binding StirrupDiameter}" DisplayMemberPath="Name" ></ComboBox>
+                    <TextBox Grid.Column="1" Grid.Row="1" Margin="5" Text="{Binding StirrupSpacing}"></TextBox>
+                    <ComboBox Grid.Column="1" Grid.Row="2" Margin="5" ItemsSource="{Binding LanType}" SelectedItem="{Binding SeletedLanType}" DisplayMemberPath="Name"></ComboBox>
+                    <TextBox Grid.Column="1" Grid.Row="3" Margin="5" Text="{Binding Lan}"></TextBox>
+                </Grid>
+            </GroupBox>
+
+        </StackPanel>
         
-        
+        <StackPanel DockPanel.Dock="Right" Orientation="Horizontal" HorizontalAlignment="Right">
+            <GroupBox Header="Thép chủ"  Style="{StaticResource GroupBoxStyle}"  Width="300" >
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="180"/>
+                            <ColumnDefinition Width="100"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="50"/>
+                            <RowDefinition Height="50"/>
+                            <RowDefinition Height="50"/>
+                            <RowDefinition Height="50"/>
+                            <RowDefinition Height="50"/>
+                            <RowDefinition Height="50"/>
+                        </Grid.RowDefinitions>
+                        <StackPanel Grid.Row="0" Grid.Column="0" Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Center">
+                            <TextBlock Text="Cột"></TextBlock>
+                        <ComboBox  Height="40" Width="60" ItemsSource="{Binding DanhSachCot}" SelectedItem="{Binding SelectedColumn}" DisplayMemberPath="Mark" ></ComboBox>
+
+                        </StackPanel>
+                    <CheckBox Grid.Column="0"  Grid.Row="0"  HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0 0 5 0" FontSize="12" IsChecked="{Binding ApplyToAllColumns, Mode=TwoWay}"></CheckBox>
+                        <TextBlock Grid.Column="1" Grid.Row="0" Width="100" Height="27" Background="White" Margin="10 0"></TextBlock>
+                        <TextBlock Grid.Column="0" Grid.Row="1" Text="Số thanh thép phương X:"></TextBlock>
+                        <TextBlock Grid.Column="0" Grid.Row="2" Text="Đường kính thép phương X:"></TextBlock>
+                        <TextBlock Grid.Column="0" Grid.Row="3" Text="Số thanh thép phương Y:"></TextBlock>
+                        <TextBlock Grid.Column="0" Grid.Row="4" Text="Đường kính thép phương Y:"></TextBlock>
+                        <TextBox Grid.Column="1" Grid.Row="1" Margin="5" Text="{Binding SelectedColumn.NumberOfXRebar}"></TextBox>
+                    <TextBox Grid.Column="1" Grid.Row="3" Margin="5" Text="{Binding SelectedColumn.NumberOfYRebar}" ></TextBox>
+                        <ComboBox Grid.Column="1" Grid.Row="2" Margin="5"  ItemsSource="{Binding Diameters}" SelectedItem="{Binding SelectedColumn.XDiameter}" DisplayMemberPath="Name"></ComboBox>
+                    <ComboBox Grid.Column="1" Grid.Row="4" Margin="5 5 5 5"  ItemsSource="{Binding Diameters}" SelectedItem="{Binding SelectedColumn.YDiameter}" DisplayMemberPath="Name"></ComboBox>
+                    </Grid>
+
+                </GroupBox>
+            <GroupBox  Header="Hình ảnh" Margin="5" Style="{StaticResource GroupBoxStyle}" Width="290">
+
+                <Viewbox Stretch="UniformToFill">
+                    <Border  BorderThickness="1" 
+                            Background="{StaticResource MyGrayGridBrush}"
+                            >
+                        <Canvas Width="300" Height="300">
+<Path x:Name="PathBeam" Data="{Binding SelectedColumn.ProfileGeometry}" Fill="Gray"></Path>
+<Path x:Name="PathStirrup" Data="{Binding SelectedColumn.ProfileStirrup}" Stroke="Magenta" StrokeThickness="1.5"></Path>
+                            <Path x:Name="PathRebarXT" Data="{Binding SelectedColumn.ProfiletopXRebar}" Fill="Red"/>
+                                <Path x:Name="PathRebarXB" Data="{Binding SelectedColumn.ProfilebotXRebar}" Fill="Red"/>
+                                    <Path x:Name="PathRebarYL" Data="{Binding SelectedColumn.ProfileleftYRebar}" Fill="Red"/>
+                                        <Path x:Name="PathRebarYR" Data="{Binding SelectedColumn.ProfilerightYGeometry}" Fill="Red"/>
+
+
+
+
+                        </Canvas>
+                    </Border>
+                
+                </Viewbox>
+            </GroupBox>
+        </StackPanel>
+
     </DockPanel>
+   
 </Window>

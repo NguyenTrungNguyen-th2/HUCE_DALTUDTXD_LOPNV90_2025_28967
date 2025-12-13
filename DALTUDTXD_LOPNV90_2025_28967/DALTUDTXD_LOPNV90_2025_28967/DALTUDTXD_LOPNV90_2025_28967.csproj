@@ -166,6 +166,7 @@
     <Compile Include="Model\MaterialModel.cs" />
     <Compile Include="services\TinhToanCotService.cs" />
     <Compile Include="ViewModel\ColumnRebarViewModel.cs" />
+    <Compile Include="ViewModel\ColumnRebarVM.cs" />
     <Compile Include="ViewModel\ColumnViewModel.cs" />
     <Compile Include="ViewModel\MainViewModel.cs" />
     <Compile Include="ViewModel\RelayCommand.cs" />
@@ -204,11 +205,6 @@
       <SubType>Designer</SubType>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="resources\style\ComboBoxStyle.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Resource>
     <Resource Include="resources\style\DataGridStyle.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -224,6 +220,14 @@
       <SubType>Designer</SubType>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
+    <Page Include="resources\style\ComboBoxStyle.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="resources\style\GroupBoxStyle.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="View\ViewThongSoCot.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

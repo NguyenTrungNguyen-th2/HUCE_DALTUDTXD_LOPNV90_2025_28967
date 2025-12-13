@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Autodesk.Revit.Attributes;
+using DALTUDTXD_LOPNV90_2025_28967.ViewModel;
 
 namespace DALTUDTXD_LOPNV90_2025_28967.Cmd
 {
@@ -19,6 +20,8 @@ namespace DALTUDTXD_LOPNV90_2025_28967.Cmd
             UIDocument uidoc = commandData.Application.ActiveUIDocument;
             Document doc = uidoc.Document;
             var viewchonthep = new ViewVeThep();
+            var vm = new ColumnRebarViewModel(doc, uidoc);
+            viewchonthep.DataContext = vm;
             viewchonthep.ShowDialog();
 
 

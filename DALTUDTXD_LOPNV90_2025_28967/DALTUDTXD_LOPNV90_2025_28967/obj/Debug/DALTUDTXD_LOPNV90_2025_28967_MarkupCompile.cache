@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 
-7-1916200561
+9-1658541274
 
-34526775330
+35-291223475
 391759860978
-MainWindow.xaml;resources\Canvas\Dictionary1.xaml;View\ViewThongSoCot.xaml;View\ViewThongSoVe.xaml;View\ViewTinhToan.xaml;View\ViewVatLieu.xaml;View\ViewVeThep.xaml;
+MainWindow.xaml;resources\Canvas\Dictionary1.xaml;resources\style\ComboBoxStyle.xaml;resources\style\GroupBoxStyle.xaml;View\ViewThongSoCot.xaml;View\ViewThongSoVe.xaml;View\ViewTinhToan.xaml;View\ViewVatLieu.xaml;View\ViewVeThep.xaml;
 
-False
+True
 
