@@ -4,7 +4,9 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DALTUDTXD_LOPNV90_2025_28967.View"
+        xmlns:viewModel="clr-namespace:DALTUDTXD_LOPNV90_2025_28967.ViewModel"
         mc:Ignorable="d"
+        d:DataContext="{d:DesignInstance viewModel:ColumnRebarViewModel}"
         Title="Chọn thép" Height="380" Width="820">
     <Window.Resources>
         <ResourceDictionary>
@@ -38,9 +40,9 @@
                     <TextBlock Grid.Column="0" Grid.Row="1" Text="Khoảng cách:" HorizontalAlignment="Left" VerticalAlignment="Center"></TextBlock>
                     <TextBlock Grid.Column="0" Grid.Row="2" Text="Neo thép:" HorizontalAlignment="Left" VerticalAlignment="Center"></TextBlock>
                     <TextBlock Grid.Column="0" Grid.Row="3" Text="Lan:" HorizontalAlignment="Left" VerticalAlignment="Center"></TextBlock>
-                    <ComboBox Grid.Column="1" Grid.Row="0" Margin="5" ItemsSource="{Binding Diameters}" SelectedItem="{Binding StirrupDiameter}" DisplayMemberPath="Name" ></ComboBox>
+                    <ComboBox Grid.Column="1" Grid.Row="0" Margin="5 10 5 10"  ItemsSource="{Binding Diameters}" SelectedItem="{Binding StirrupDiameter}" DisplayMemberPath="Name" ></ComboBox>
                     <TextBox Grid.Column="1" Grid.Row="1" Margin="5" Text="{Binding StirrupSpacing}"></TextBox>
-                    <ComboBox Grid.Column="1" Grid.Row="2" Margin="5" ItemsSource="{Binding LanType}" SelectedItem="{Binding SeletedLanType}" DisplayMemberPath="Name"></ComboBox>
+                    <ComboBox Grid.Column="1" Grid.Row="2" Margin="5 10 5 10" ItemsSource="{Binding LanType}" SelectedItem="{Binding SeletedLanType}" DisplayMemberPath="Name"></ComboBox>
                     <TextBox Grid.Column="1" Grid.Row="3" Margin="5" Text="{Binding Lan}"></TextBox>
                 </Grid>
             </GroupBox>
@@ -64,19 +66,18 @@
                     </Grid.RowDefinitions>
                     <StackPanel Grid.Row="0" Grid.Column="0" Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Center">
                         <TextBlock Text="Cột"></TextBlock>
-                        <ComboBox  Height="40" Width="60" ItemsSource="{Binding DanhSachCot}" SelectedItem="{Binding SelectedColumn}" DisplayMemberPath="Mark" ></ComboBox>
+                        <ComboBox  Height="30" Width="75" ItemsSource="{Binding DanhSachCot}" SelectedItem="{Binding SelectedColumn}" DisplayMemberPath="Mark" ></ComboBox>
 
                     </StackPanel>
-                    <CheckBox Grid.Column="0"  Grid.Row="0"  HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0 0 5 0" FontSize="12" IsChecked="{Binding ApplyToAllColumns, Mode=TwoWay}"></CheckBox>
-                    <TextBlock Grid.Column="1" Grid.Row="0" Width="100" Height="27" Background="White" Margin="10 0"></TextBlock>
+                    <CheckBox Grid.ColumnSpan="2" Content="Áp dụng cho tất cả"  Grid.Row="0"  HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0 0 5 0" FontSize="12" IsChecked="{Binding ApplyToAllColumns, Mode=TwoWay}"></CheckBox>
                     <TextBlock Grid.Column="0" Grid.Row="1" Text="Số thanh thép phương X:"></TextBlock>
                     <TextBlock Grid.Column="0" Grid.Row="2" Text="Đường kính thép phương X:"></TextBlock>
                     <TextBlock Grid.Column="0" Grid.Row="3" Text="Số thanh thép phương Y:"></TextBlock>
                     <TextBlock Grid.Column="0" Grid.Row="4" Text="Đường kính thép phương Y:"></TextBlock>
                     <TextBox Grid.Column="1" Grid.Row="1" Margin="5" Text="{Binding SelectedColumn.NumberOfXRebar}"></TextBox>
                     <TextBox Grid.Column="1" Grid.Row="3" Margin="5" Text="{Binding SelectedColumn.NumberOfYRebar}" ></TextBox>
-                    <ComboBox Grid.Column="1" Grid.Row="2" Margin="5"  ItemsSource="{Binding Diameters}" SelectedItem="{Binding SelectedColumn.XDiameter}" DisplayMemberPath="Name"></ComboBox>
-                    <ComboBox Grid.Column="1" Grid.Row="4" Margin="5 5 5 5"  ItemsSource="{Binding Diameters}" SelectedItem="{Binding SelectedColumn.YDiameter}" DisplayMemberPath="Name"></ComboBox>
+                    <ComboBox Grid.Column="1" Grid.Row="2" Margin="5 10 5 10"  ItemsSource="{Binding Diameters}" SelectedItem="{Binding SelectedColumn.XDiameter}" DisplayMemberPath="Name"></ComboBox>
+                    <ComboBox Grid.Column="1" Grid.Row="4" Margin="5 10 5 10"  ItemsSource="{Binding Diameters}" SelectedItem="{Binding SelectedColumn.YDiameter}" DisplayMemberPath="Name"></ComboBox>
                 </Grid>
 
             </GroupBox>
