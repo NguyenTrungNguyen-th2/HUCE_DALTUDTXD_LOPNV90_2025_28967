@@ -34,7 +34,7 @@
                 </Grid.RowDefinitions>
                 <StackPanel Grid.Row="0" Grid.Column="0" Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Center">
                     <TextBlock Text="Cột"></TextBlock>
-                    <ComboBox Margin="10 -2 0 0 " Width="60" Style="{StaticResource ComboBoxStyle}"></ComboBox>
+                    <ComboBox Margin="10 -2 0 0 " Width="60"></ComboBox>
                    
                 </StackPanel>
                 <TextBlock Grid.Column="0"  Grid.Row="0" Text="As(mm2):" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0 0 5 0"></TextBlock>
@@ -43,10 +43,10 @@
                 <TextBlock Grid.Column="0" Grid.Row="2" Text="Đường kính thép phương X:"></TextBlock>
                 <TextBlock Grid.Column="0" Grid.Row="3" Text="Số thanh thép phương Y:"></TextBlock>
                 <TextBlock Grid.Column="0" Grid.Row="4" Text="Đường kính thép phương Y:"></TextBlock>
-                <TextBox Grid.Column="1" Grid.Row="1" Margin="5" Style="{StaticResource TextBoxStyle}"></TextBox>
-                <TextBox Grid.Column="1" Grid.Row="3" Margin="5" Style="{StaticResource TextBoxStyle}"></TextBox>
-                <ComboBox Grid.Column="1" Grid.Row="2" Margin="10 12" Style="{StaticResource ComboBoxStyle}"></ComboBox>
-                <ComboBox Grid.Column="1" Grid.Row="4" Margin="10 12"  Style="{StaticResource ComboBoxStyle}"></ComboBox>
+                <TextBox Grid.Column="1" Grid.Row="1" Margin="5" ></TextBox>
+                <TextBox Grid.Column="1" Grid.Row="3" Margin="5"></TextBox>
+                <ComboBox Grid.Column="1" Grid.Row="2" Margin="10 12" ></ComboBox>
+                <ComboBox Grid.Column="1" Grid.Row="4" Margin="10 12" ></ComboBox>
             </Grid>
             
         </GroupBox>

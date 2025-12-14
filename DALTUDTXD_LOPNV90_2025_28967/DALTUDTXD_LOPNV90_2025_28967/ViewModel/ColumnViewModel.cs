@@ -243,7 +243,10 @@ namespace DALTUDTXD_LOPNV90_2025_28967.ViewModel
                 return;
             }
 
-            // Tạo bản sao mới (không ảnh hưởng dữ liệu gốc)
+            // ✅ ĐẾM SỐ LẦN ĐÃ THÊM NỘI LỰC CHO CÙNG CỘT (theo Name)
+            int soLan = DanhSachCotDaGanNoiLuc.Count(c => c.Name == CotDangChon.Name);
+            int soCombo = soLan + 1;
+
             var newCot = new ColumnModel
             {
                 Id = CotDangChon.Id,
@@ -254,21 +257,22 @@ namespace DALTUDTXD_LOPNV90_2025_28967.ViewModel
                 Level = CotDangChon.Level,
                 ConcreteGrade = CotDangChon.ConcreteGrade,
 
-                // Gán nội lực và thông số từ UI
                 LoadValue = TaiTrong,
                 MomentXValue = MomenX,
                 MomentYValue = MomenY,
                 Psi = HeSoPsi,
                 LienKet = LienKetDangChon,
 
-                // Cập nhật hiển thị
                 Load = TaiTrong != 0 ? TaiTrong.ToString("0.##") : "—",
                 MomentX = MomenX != 0 ? MomenX.ToString("0.##") : "—",
-                MomentY = MomenY != 0 ? MomenY.ToString("0.##") : "—"
+                MomentY = MomenY != 0 ? MomenY.ToString("0.##") : "—",
+
+                // ✅ GÁN COMBO RIÊNG CHO CỘT NÀY
+                ComboDisplay = $"Combo {soCombo}"
             };
 
             DanhSachCotDaGanNoiLuc.Add(newCot);
-            MessageBox.Show($"Đã thêm nội lực cho cột: {newCot.Name}");
+            MessageBox.Show($"Đã thêm: {newCot.Name} - {newCot.ComboDisplay}");
         }
         // ===== NHẬP CỘT TỪ REVIT =====
         private void NhapTuRevit()
@@ -278,9 +282,10 @@ namespace DALTUDTXD_LOPNV90_2025_28967.ViewModel
                 .OfCategory(BuiltInCategory.OST_StructuralColumns)
                 .WhereElementIsNotElementType()
                 .OfClass(typeof(FamilyInstance))
-                .Cast<FamilyInstance>();
+                .Cast<FamilyInstance>()
+                .OrderBy(fi => fi.Id.IntegerValue); // 👈 Sắp xếp theo ID để thứ tự ổn định
 
-            int count = 0;
+            int index = 1; // Bắt đầu từ C1
             foreach (var fi in columns)
             {
                 var symbol = _doc.GetElement(fi.GetTypeId()) as FamilySymbol;
@@ -297,17 +302,16 @@ namespace DALTUDTXD_LOPNV90_2025_28967.ViewModel
                 DanhSachCotTuRevit.Add(new ColumnModel
                 {
                     Id = fi.Id.IntegerValue.ToString(),
-                    Name = fi.Name,
+                    Name = $"C{index}", // 👈 GÁN TÊN THEO ĐỊNH DẠNG C1, C2, C3,...
                     Width = Math.Round(b).ToString(),
                     Height = Math.Round(h).ToString(),
                     Length = Math.Round(len).ToString(),
                     Level = level,
                     ConcreteGrade = MacBeTong ?? "—"
-                    // KHÔNG gán Load, Moment, Psi, LienKet ở đây
                 });
-                count++;
+                index++; // Tăng chỉ số cho cột tiếp theo
             }
-            MessageBox.Show($"Đã nhập {count} cột từ Revit.");
+            MessageBox.Show($"Đã nhập {DanhSachCotTuRevit.Count} cột từ Revit.");
         }
         private ColumnModel _selectedCot;
         public ColumnModel SelectedCot
@@ -318,19 +322,26 @@ namespace DALTUDTXD_LOPNV90_2025_28967.ViewModel
         public ICommand cmXoaCot { get; private set; }
         private void XoaCot()
         {
-            if (SelectedCot == null)
-            {
-                MessageBox.Show("Vui lòng chọn một cột trong danh sách để xóa.");
-                return;
-            }
+            if (SelectedCot == null) return;
 
             string tenCot = SelectedCot.Name;
-            if (MessageBox.Show($"Bạn có chắc muốn xóa cột '{tenCot}'?", "Xác nhận xóa",
-                                MessageBoxButton.YesNo, MessageBoxImage.Question) == MessageBoxResult.Yes)
+            if (MessageBox.Show($"Xóa cột '{tenCot}'?", "Xác nhận",
+                                MessageBoxButton.YesNo) == MessageBoxResult.Yes)
             {
                 DanhSachCotDaGanNoiLuc.Remove(SelectedCot);
-                SelectedCot = null; // Đặt lại selection
-                MessageBox.Show($"Đã xóa cột: {tenCot}");
+
+                // Cập nhật lại combo cho các dòng còn lại của cùng cột
+                var cacDong = DanhSachCotDaGanNoiLuc
+                    .Where(c => c.Name == tenCot)
+                    .OrderBy(c => DanhSachCotDaGanNoiLuc.IndexOf(c)) // giữ thứ tự thêm
+                    .ToList();
+
+                for (int i = 0; i < cacDong.Count; i++)
+                {
+                    cacDong[i].ComboDisplay = $"Combo {i + 1}";
+                }
+
+                SelectedCot = null;
             }
         }
     }

@@ -13,7 +13,7 @@
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Window.Resources>
-    <Grid Margin="10" Background="AliceBlue">
+    <Grid Margin="10" >
 
         <TextBlock Text="Thông Tin Vật Liệu" FontSize="24" FontWeight="Bold" Height="333" Width="229" HorizontalAlignment="Center" />
         <GroupBox Header="Thông số vật liệu" Margin="0,86,0,10">
@@ -24,9 +24,9 @@
                    SelectedItem="{Binding SelectedConcrete}"
                    Width="160" Height="25" HorizontalContentAlignment="Center"/>
                     <TextBlock Text="Cường độ chịu nén (Rb) [MPa]:"/>
-                    <TextBox Text="{Binding Rb}" Width="160" Height="25" TextAlignment="Center"/>
+                    <TextBox Text="{Binding Rb}" Width="160"/>
                     <TextBlock Text="Modun đàn hồi (Eb) [MPa]:"/>
-                    <TextBox Text="{Binding Eb}" Width="160" Height="25" TextAlignment="Center"/>
+                    <TextBox Text="{Binding Eb}" Width="160"  />
                 </StackPanel>
                 <StackPanel HorizontalAlignment="Left" Width="230" Margin="200,0,0,0">
                     <TextBlock Text="Mác thép:"/>
@@ -34,9 +34,9 @@
                               SelectedItem="{Binding SelectedSteel}"
                               Width="160" Height="25 " HorizontalAlignment="Left" HorizontalContentAlignment="Center"/>
                     <TextBlock Text="Cường độ chịu nén và kéo (Rs,Rsc) [MPa]:"/>
-                    <TextBox Text="{Binding Rs}" Width="160" Height="25" HorizontalAlignment="Left" TextAlignment="Center" />
+                    <TextBox Text="{Binding Rs}" Width="160" HorizontalAlignment="Left"  />
                     <TextBlock Text="Modun đàn hồi (Es) [MPa]:"/>
-                    <TextBox Text="{Binding Es}" Width="160" Height="25" HorizontalAlignment="Left" TextAlignment="Center"/>
+                    <TextBox Text="{Binding Es}" Width="160"  HorizontalAlignment="Left" />
                 </StackPanel>
 
                 <StackPanel  Orientation="Horizontal"

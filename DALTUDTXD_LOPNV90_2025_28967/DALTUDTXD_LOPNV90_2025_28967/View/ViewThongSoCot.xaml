@@ -27,22 +27,22 @@
                     <StackPanel Orientation="Horizontal" Height="50">
                         <TextBlock VerticalAlignment="Center"  Text="N (KN) :" Height="25" Width="100" />
                         <TextBox Text="{Binding TaiTrong, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
-                                  Width="100"  Margin="0 0 0 0"  Style="{StaticResource TextBoxStyle}" TextAlignment="Center"/>
+                                  Width="100"  Margin="0 0 0 0"  TextAlignment="Center"/>
                     </StackPanel>
                     <StackPanel Orientation="Horizontal" Height="50">
                         <TextBlock VerticalAlignment="Center" Text="Mx (KN.m) :" Height="25" Width="100"/>
                         <TextBox Text="{Binding MomenX, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
-                                  Width="100"  Margin="0 0 0 0"  Style="{StaticResource TextBoxStyle}" TextAlignment="Center"/>
+                                  Width="100"  Margin="0 0 0 0"  TextAlignment="Center"/>
                     </StackPanel>
                     <StackPanel Orientation="Horizontal" Height="50">
                         <TextBlock VerticalAlignment="Center"  Text="My (KN.m):" Height="25" Width="100"/>
                         <TextBox Text="{Binding MomenY, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
-                                  Width="100"  Margin="0 0 0 0"  Style="{StaticResource TextBoxStyle}" TextAlignment="Center"/>
+                                  Width="100"  Margin="0 0 0 0"  TextAlignment="Center"/>
                     </StackPanel>
                 </StackPanel>
             </Grid>
         </GroupBox>
-        <GroupBox Header="Cột " Margin="0,250,5,150">
+        <GroupBox Header="Cột " Margin="0,250,5,120">
             <Grid>
                 <StackPanel>
                     <StackPanel Orientation="Horizontal" Height="50">
@@ -55,7 +55,7 @@
                     <StackPanel Orientation="Horizontal" Height="50">
                         <TextBlock VerticalAlignment="Center"  Text="Hệ số (Ψ):" Height="25" Width="100"/>
                         <TextBox Width="100" Margin="0 0 0 0"
-                                 Text="{Binding HeSoPsi, Mode=TwoWay}"  Style="{StaticResource TextBoxStyle}" TextAlignment="Center"/>
+                                 Text="{Binding HeSoPsi, Mode=TwoWay}"   TextAlignment="Center"/>
 
                     </StackPanel>
                     <StackPanel Orientation="Horizontal" Height="50">
@@ -113,7 +113,8 @@
                 </DataGrid.Resources>
 
                 <DataGrid.Columns>
-                    <DataGridTextColumn Header="Tên" Width="*" Binding="{Binding Name}" />
+                    <DataGridTextColumn Header="Tên" Width="60" Binding="{Binding Name}" />
+                    <DataGridTextColumn Header="Combo" Width="*" Binding="{Binding ComboDisplay}" />
                     <DataGridTextColumn Header="Loại liên kết" Width="*" Binding="{Binding LienKet}" />
                     <DataGridTextColumn Header="Hệ số Ψ" Width="80" Binding="{Binding PsiDisplay}" />
                     <DataGridTextColumn Header="b (mm)" Width="*" Binding="{Binding Width}" />

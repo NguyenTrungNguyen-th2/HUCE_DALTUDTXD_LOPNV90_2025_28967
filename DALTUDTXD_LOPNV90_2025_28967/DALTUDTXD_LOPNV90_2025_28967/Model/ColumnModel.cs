@@ -12,8 +12,7 @@ namespace DALTUDTXD_LOPNV90_2025_28967.Model
         public string Length { get; set; }
         public string Level { get; set; }
         public string ConcreteGrade { get; set; }
-
-        // ===== Loại liên kết — HIỂN THỊ =====
+        public string ComboDisplay { get; set; } = "—";
         private string _lienKet = "—";
         public string LienKet
         {
@@ -21,7 +20,6 @@ namespace DALTUDTXD_LOPNV90_2025_28967.Model
             set { _lienKet = value; OnPropertyChanged(); }
         }
 
-        // ===== Hệ số Psi (tính toán) + Hiển thị =====
         private double _psi;
         public double Psi
         {
@@ -41,7 +39,6 @@ namespace DALTUDTXD_LOPNV90_2025_28967.Model
             set { _psiDisplay = value; OnPropertyChanged(); }
         }
 
-        // ===== NỘI LỰC =====
         public double LoadValue { get; set; }
         public double MomentXValue { get; set; }
         public double MomentYValue { get; set; }
@@ -67,7 +64,6 @@ namespace DALTUDTXD_LOPNV90_2025_28967.Model
             set { _momentY = value; OnPropertyChanged(); }
         }
 
-        // ===== KẾT QUẢ TÍNH TOÁN =====
         private string _asTinhToan = "—";
         public string AsTinhToan
         {
@@ -96,7 +92,6 @@ namespace DALTUDTXD_LOPNV90_2025_28967.Model
             set { _trangThaiTinhToan = value; OnPropertyChanged(); }
         }
 
-        // ===== INotifyPropertyChanged =====
         public event PropertyChangedEventHandler PropertyChanged;
         protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
         {
