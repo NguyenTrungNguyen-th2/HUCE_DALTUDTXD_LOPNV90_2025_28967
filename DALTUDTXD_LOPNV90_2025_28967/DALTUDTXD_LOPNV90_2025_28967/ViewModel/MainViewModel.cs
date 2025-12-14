@@ -26,7 +26,7 @@ namespace DALTUDTXD_LOPNV90_2025_28967.ViewModel
                 var doc = uiDoc.Document;
                 if (doc != null)
                 {
-                    ColumnRebarVM = new ColumnRebarViewModel(doc, uiDoc, this);
+                    //ColumnRebarVM = new ColumnRebarViewModel(doc, uiDoc, this);
                 }
             }
         }
