@@ -16,7 +16,7 @@ namespace DALTUDTXD_LOPNV90_2025_28967.ViewModel
             new ObservableCollection<string> { "B15", "B20", "B25", "B30", "B35", "B40" };
 
         public ObservableCollection<string> SteelGrades { get; } =
-            new ObservableCollection<string> { "CI", "CII", "CIII", "CIV" };
+            new ObservableCollection<string> { "CB240", "CB300", "CB400", "CB500" };
 
         private string _selectedConcrete;
         public string SelectedConcrete
@@ -85,7 +85,7 @@ namespace DALTUDTXD_LOPNV90_2025_28967.ViewModel
             DeleteCommand = new RelayCommand(_ => DeleteMaterial(), _ => SelectedMaterial != null);
 
             SelectedConcrete = "B20";
-            SelectedSteel = "CII";
+            SelectedSteel = "CB300";
 
             UpdateConcrete();
             UpdateSteel();
@@ -114,11 +114,12 @@ namespace DALTUDTXD_LOPNV90_2025_28967.ViewModel
 
             switch (SelectedSteel)
             {
-                case "CI": Rs = 210; Es = 210000; break;
-                case "CII": Rs = 280; Es = 210000; break;
-                case "CIII": Rs = 350; Es = 210000; break;
-                case "CIV": Rs = 435; Es = 210000; break;
+                case "CB240": Rs = 240; Es = 200000; break;
+                case "CB300": Rs = 300; Es = 200000; break;
+                case "CB400": Rs = 400; Es = 200000; break;
+                case "CB500": Rs = 500; Es = 200000; break;
                 default: Rs = 0; Es = 0; break;
+
             }
         }
 

@@ -160,6 +160,7 @@
     <Compile Include="Cmd\CmdTinhToan.cs" />
     <Compile Include="Cmd\CmdVatLieu.cs" />
     <Compile Include="CommandAddin\MyAddin1.cs" />
+    <Compile Include="Model\ClassBienToanCuc.cs" />
     <Compile Include="Model\ColumnModel.cs" />
     <Compile Include="Model\ColumnRebarModel.cs" />
     <Compile Include="Model\HeSoTinhToan.cs" />

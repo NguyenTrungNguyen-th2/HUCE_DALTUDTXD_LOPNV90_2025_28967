@@ -14,9 +14,7 @@ using System.Windows.Shapes;
 
 namespace DALTUDTXD_LOPNV90_2025_28967.View
 {
-    /// <summary>
-    /// Interaction logic for ViewThongSoVe.xaml
-    /// </summary>
+   
     public partial class ViewThongSoVe : Window
     {
         public ViewThongSoVe()

@@ -13,7 +13,6 @@ namespace DALTUDTXD_LOPNV90_2025_28967.View
             DataContext = new { DanhSachCotHienThi = danhSachKetQua };
         }
 
-        // Constructor debug (nếu cần)
         public ViewTinhToan()
         {
 #if DEBUG

@@ -22,7 +22,7 @@
                     <TextBlock Text="Mác bê tông:"/>
                     <ComboBox ItemsSource="{Binding ConcreteGrades}"
                    SelectedItem="{Binding SelectedConcrete}"
-                   Width="160" Height="25" HorizontalContentAlignment="Center"/>
+                   Width="160" Height="25" HorizontalContentAlignment="Center" />
                     <TextBlock Text="Cường độ chịu nén (Rb) [MPa]:"/>
                     <TextBox Text="{Binding Rb}" Width="160"/>
                     <TextBlock Text="Modun đàn hồi (Eb) [MPa]:"/>

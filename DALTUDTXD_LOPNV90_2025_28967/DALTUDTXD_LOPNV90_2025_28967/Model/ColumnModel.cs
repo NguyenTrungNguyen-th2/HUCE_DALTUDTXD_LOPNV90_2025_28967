@@ -5,14 +5,25 @@ namespace DALTUDTXD_LOPNV90_2025_28967.Model
 {
     public class ColumnModel : INotifyPropertyChanged
     {
-        public string Id { get; set; }
-        public string Name { get; set; }
-        public string Width { get; set; }
-        public string Height { get; set; }
-        public string Length { get; set; }
-        public string Level { get; set; }
-        public string ConcreteGrade { get; set; }
-        public string ComboDisplay { get; set; } = "—";
+        public string Id { get; set; } = string.Empty;
+        public string Mark { get; set; } = "—"; 
+        public string Width { get; set; } = "—";
+        public string Height { get; set; } = "—";
+        public string Length { get; set; } = "—";
+        public string Level { get; set; } = "—";
+        public string ConcreteGrade { get; set; } = "B20";
+
+        private string _comboDisplay = "—";
+        public string ComboDisplay
+        {
+            get => _comboDisplay;
+            set
+            {
+                _comboDisplay = value;
+                OnPropertyChanged(); 
+                OnPropertyChanged(nameof(DisplayName)); 
+            }
+        }
         private string _lienKet = "—";
         public string LienKet
         {
@@ -39,9 +50,17 @@ namespace DALTUDTXD_LOPNV90_2025_28967.Model
             set { _psiDisplay = value; OnPropertyChanged(); }
         }
 
-        public double LoadValue { get; set; }
-        public double MomentXValue { get; set; }
-        public double MomentYValue { get; set; }
+        private double _loadValue;
+        public double LoadValue
+        {
+            get => _loadValue;
+            set
+            {
+                _loadValue = value;
+                Load = (System.Math.Abs(value) < 1e-6) ? "—" : value.ToString("0.##");
+                OnPropertyChanged();
+            }
+        }
 
         private string _load = "—";
         public string Load
@@ -50,11 +69,35 @@ namespace DALTUDTXD_LOPNV90_2025_28967.Model
             set { _load = value; OnPropertyChanged(); }
         }
 
+        private double _momentXValue;
+        public double MomentXValue
+        {
+            get => _momentXValue;
+            set
+            {
+                _momentXValue = value;
+                MomentX = (System.Math.Abs(value) < 1e-6) ? "—" : value.ToString("0.##");
+                OnPropertyChanged();
+            }
+        }
+
         private string _momentX = "—";
         public string MomentX
         {
             get => _momentX;
             set { _momentX = value; OnPropertyChanged(); }
+        }
+
+        private double _momentYValue;
+        public double MomentYValue
+        {
+            get => _momentYValue;
+            set
+            {
+                _momentYValue = value;
+                MomentY = (System.Math.Abs(value) < 1e-6) ? "—" : value.ToString("0.##");
+                OnPropertyChanged();
+            }
         }
 
         private string _momentY = "—";
@@ -92,7 +135,13 @@ namespace DALTUDTXD_LOPNV90_2025_28967.Model
             set { _trangThaiTinhToan = value; OnPropertyChanged(); }
         }
 
+        public string DisplayName =>
+            (ComboDisplay == "—" || string.IsNullOrEmpty(ComboDisplay))
+                ? Mark
+                : $"{Mark} - {ComboDisplay}";
+
         public event PropertyChangedEventHandler PropertyChanged;
+
         protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));

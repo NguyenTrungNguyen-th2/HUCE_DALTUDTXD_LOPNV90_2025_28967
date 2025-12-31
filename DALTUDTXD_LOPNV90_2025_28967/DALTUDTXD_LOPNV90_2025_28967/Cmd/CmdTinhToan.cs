@@ -25,7 +25,9 @@ namespace DALTUDTXD_LOPNV90_2025_28967.Cmd
             var viewModel = new TinhToanViewModel();
 
             var col = SharedState.MainVM.ColumnVM.SelectedColumn;
-            viewModel.Name = col.Name;
+            viewModel.DisplayName= col.DisplayName;
+            viewModel.Level = col.Level;
+
             viewModel.Width = col.Width;
             viewModel.Height = col.Height;
             viewModel.Length = col.Length;

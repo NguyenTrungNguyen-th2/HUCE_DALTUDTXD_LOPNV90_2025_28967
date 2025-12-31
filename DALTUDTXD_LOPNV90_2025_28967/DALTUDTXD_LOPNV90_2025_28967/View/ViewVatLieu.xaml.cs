@@ -16,9 +16,7 @@ using DALTUDTXD_LOPNV90_2025_28967.Cmd;
 
 namespace DALTUDTXD_LOPNV90_2025_28967.View
 {
-    /// <summary>
-    /// Interaction logic for ViewVatLieu.xaml
-    /// </summary>
+
     public partial class ViewVatLieu : Window
     {
         public ViewVatLieu()

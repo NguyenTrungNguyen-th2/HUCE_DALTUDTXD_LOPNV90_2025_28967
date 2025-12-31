@@ -1,12 +1,14 @@
-﻿using System;
+﻿// File: ViewModel/ColumnViewModel.cs
+using System;
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Linq;
+using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Windows;
 using System.Windows.Input;
 using Autodesk.Revit.DB;
-using Autodesk.Revit.DB.Structure;
 using Autodesk.Revit.UI;
 using DALTUDTXD_LOPNV90_2025_28967.Model;
 
@@ -22,9 +24,9 @@ namespace DALTUDTXD_LOPNV90_2025_28967.ViewModel
         private readonly Document _doc;
         public readonly TinhToanViewModel TinhToanVM;
 
-        // ===== LỆNH (Commands) =====
         public ICommand cmNhapRevit { get; private set; }
-        public ICommand cmThemNoiLuc { get; private set; } // 👈 ĐÃ KHAI BÁO
+        public ICommand cmThemNoiLuc { get; private set; }
+        public ICommand cmXoaCot { get; private set; }
 
         public ColumnViewModel(UIDocument uiDoc, TinhToanViewModel tinhToanVM = null)
         {
@@ -40,23 +42,19 @@ namespace DALTUDTXD_LOPNV90_2025_28967.ViewModel
 
             DanhSachLienKet = new ObservableCollection<string>()
             {
-                "Ngàm ngàm",
-                "Ngàm khớp",
-                "Khớp khớp",
-                "Ngàm",
-                "Khung cứng",
-                "Khung khớp"
+                "Ngàm ngàm", "Ngàm khớp", "Khớp khớp", "Ngàm", "Khung cứng", "Khung khớp"
             };
             LienKetDangChon = DanhSachLienKet.First();
             HeSoPsi = HeSoTinhToan.Psi;
 
-            // 👇 KHỞI TẠO CÁC LỆNH — BẠN THIẾU DÒNG THỨ 2 TRƯỚC ĐÂY!
+            DanhSachCotTuRevit = ClassBienToanCuc.RevitColumns;
+            DanhSachCotDaGanNoiLuc = ClassBienToanCuc.Columns;
+
             cmNhapRevit = new RelayCommand(_ => NhapTuRevit());
-            cmThemNoiLuc = new RelayCommand(_ => ThemNoiLuc()); // ✅ ĐÃ THÊM!
+            cmThemNoiLuc = new RelayCommand(_ => ThemNoiLuc());
             cmXoaCot = new RelayCommand(_ => XoaCot());
         }
 
-        // ===== Các thuộc tính cho TextBox nhập liệu =====
         private double _taiTrong;
         public double TaiTrong
         {
@@ -106,7 +104,6 @@ namespace DALTUDTXD_LOPNV90_2025_28967.ViewModel
                 {
                     _selectedColumn = value;
                     OnPropertyChanged();
-
                     if (_selectedColumn != null)
                     {
                         SelectColumnInRevit();
@@ -115,11 +112,11 @@ namespace DALTUDTXD_LOPNV90_2025_28967.ViewModel
                 }
             }
         }
-        // Danh sách cột từ Revit — chỉ để chọn trong ComboBox
-        public ObservableCollection<ColumnModel> DanhSachCotTuRevit { get; }
-            = new ObservableCollection<ColumnModel>();
 
-        // Cột đang chọn trong ComboBox
+        // ←←← TRỎ VÀO STATIC CLASS
+        public ObservableCollection<ColumnModel> DanhSachCotTuRevit { get; private set; }
+        public ObservableCollection<ColumnModel> DanhSachCotDaGanNoiLuc { get; private set; }
+
         private ColumnModel _cotDangChon;
         public ColumnModel CotDangChon
         {
@@ -127,11 +124,13 @@ namespace DALTUDTXD_LOPNV90_2025_28967.ViewModel
             set { _cotDangChon = value; OnPropertyChanged(); }
         }
 
-        // Danh sách cột đã gán nội lực → hiển thị trong DataGrid
-        public ObservableCollection<ColumnModel> DanhSachCotDaGanNoiLuc { get; }
-            = new ObservableCollection<ColumnModel>();
-        // Trong ColumnViewModel.cs
-       
+        private ColumnModel _selectedCot;
+        public ColumnModel SelectedCot
+        {
+            get => _selectedCot;
+            set { _selectedCot = value; OnPropertyChanged(); }
+        }
+
         public ObservableCollection<string> DanhSachLienKet { get; set; }
 
         private string _lienKetDangChon;
@@ -167,7 +166,6 @@ namespace DALTUDTXD_LOPNV90_2025_28967.ViewModel
             try
             {
                 if (!int.TryParse(SelectedColumn?.Id, out int idInt)) return;
-
                 ElementId id = new ElementId(idInt);
                 Element ele = _doc.GetElement(id);
                 if (ele == null) return;
@@ -185,7 +183,6 @@ namespace DALTUDTXD_LOPNV90_2025_28967.ViewModel
                     double scale = 1.3;
                     XYZ c = (bb.Min + bb.Max) * 0.5;
                     XYZ half = (bb.Max - bb.Min) * 0.5 * scale;
-
                     view.ZoomAndCenterRectangle(c - half, c + half);
                 }
             }
@@ -234,7 +231,6 @@ namespace DALTUDTXD_LOPNV90_2025_28967.ViewModel
             }
         }
 
-        // ===== PHƯƠNG THỨC XỬ LÝ "THÊM NỘI LỰC" =====
         private void ThemNoiLuc()
         {
             if (CotDangChon == null)
@@ -243,14 +239,14 @@ namespace DALTUDTXD_LOPNV90_2025_28967.ViewModel
                 return;
             }
 
-            // ✅ ĐẾM SỐ LẦN ĐÃ THÊM NỘI LỰC CHO CÙNG CỘT (theo Name)
-            int soLan = DanhSachCotDaGanNoiLuc.Count(c => c.Name == CotDangChon.Name);
+            string mark = CotDangChon.Mark;
+            int soLan = DanhSachCotDaGanNoiLuc.Count(c => c.Mark == mark);
             int soCombo = soLan + 1;
 
             var newCot = new ColumnModel
             {
                 Id = CotDangChon.Id,
-                Name = CotDangChon.Name,
+                Mark = mark,
                 Width = CotDangChon.Width,
                 Height = CotDangChon.Height,
                 Length = CotDangChon.Length,
@@ -263,77 +259,97 @@ namespace DALTUDTXD_LOPNV90_2025_28967.ViewModel
                 Psi = HeSoPsi,
                 LienKet = LienKetDangChon,
 
-                Load = TaiTrong != 0 ? TaiTrong.ToString("0.##") : "—",
-                MomentX = MomenX != 0 ? MomenX.ToString("0.##") : "—",
-                MomentY = MomenY != 0 ? MomenY.ToString("0.##") : "—",
-
-                // ✅ GÁN COMBO RIÊNG CHO CỘT NÀY
                 ComboDisplay = $"Combo {soCombo}"
             };
 
             DanhSachCotDaGanNoiLuc.Add(newCot);
-            MessageBox.Show($"Đã thêm: {newCot.Name} - {newCot.ComboDisplay}");
         }
-        // ===== NHẬP CỘT TỪ REVIT =====
+
         private void NhapTuRevit()
         {
-            DanhSachCotTuRevit.Clear();
+            ClassBienToanCuc.RevitColumns.Clear();
+
+            var typeMarkCounter = new Dictionary<string, int>();
+
             var columns = new FilteredElementCollector(_doc)
                 .OfCategory(BuiltInCategory.OST_StructuralColumns)
                 .WhereElementIsNotElementType()
                 .OfClass(typeof(FamilyInstance))
-                .Cast<FamilyInstance>()
-                .OrderBy(fi => fi.Id.IntegerValue); // 👈 Sắp xếp theo ID để thứ tự ổn định
+                .Cast<FamilyInstance>();
 
-            int index = 1; // Bắt đầu từ C1
-            foreach (var fi in columns)
+            using (Transaction t = new Transaction(_doc, "Gán Mark tự động"))
             {
-                var symbol = _doc.GetElement(fi.GetTypeId()) as FamilySymbol;
-                var pb = symbol?.LookupParameter("b") ?? fi.LookupParameter("b");
-                var ph = symbol?.LookupParameter("h") ?? fi.LookupParameter("h");
-                if (pb == null || ph == null) continue;
+                t.Start();
 
-                double b = pb.AsDouble() * 304.8;
-                double h = ph.AsDouble() * 304.8;
-                var bb = fi.get_BoundingBox(null);
-                double len = bb != null ? Math.Abs(bb.Max.Z - bb.Min.Z) * 304.8 : 0;
-                string level = _doc.GetElement(fi.LevelId)?.Name ?? "—";
-
-                DanhSachCotTuRevit.Add(new ColumnModel
+                foreach (var fi in columns)
                 {
-                    Id = fi.Id.IntegerValue.ToString(),
-                    Name = $"C{index}", // 👈 GÁN TÊN THEO ĐỊNH DẠNG C1, C2, C3,...
-                    Width = Math.Round(b).ToString(),
-                    Height = Math.Round(h).ToString(),
-                    Length = Math.Round(len).ToString(),
-                    Level = level,
-                    ConcreteGrade = MacBeTong ?? "—"
-                });
-                index++; // Tăng chỉ số cho cột tiếp theo
+                    string mark = fi.LookupParameter("Column Location Mark")?.AsString()?.Trim();
+
+                    if (string.IsNullOrEmpty(mark))
+                    {
+                        mark = fi.LookupParameter("Mark")?.AsString()?.Trim();
+                    }
+
+                    if (string.IsNullOrEmpty(mark))
+                    {
+                        string typeMark = fi.Symbol.LookupParameter("Type Mark")?.AsString() ?? "DEFAULT";
+
+                        if (!typeMarkCounter.ContainsKey(typeMark))
+                            typeMarkCounter[typeMark] = 1;
+                        else
+                            typeMarkCounter[typeMark]++;
+
+                        int index = typeMarkCounter[typeMark];
+                        mark = $"{typeMark}-C{index}";
+
+                        Parameter markParam = fi.LookupParameter("Mark");
+                        if (markParam != null && !markParam.IsReadOnly)
+                        {
+                            markParam.Set(mark);
+                        }
+                    }
+
+                    var symbol = _doc.GetElement(fi.GetTypeId()) as FamilySymbol;
+                    var pb = symbol?.LookupParameter("b") ?? fi.LookupParameter("b");
+                    var ph = symbol?.LookupParameter("h") ?? fi.LookupParameter("h");
+                    if (pb == null || ph == null) continue;
+
+                    double b = pb.AsDouble() * 304.8; // ft → mm
+                    double h = ph.AsDouble() * 304.8;
+                    var bb = fi.get_BoundingBox(null);
+                    double len = bb != null ? Math.Abs(bb.Max.Z - bb.Min.Z) * 304.8 : 0;
+                    string level = _doc.GetElement(fi.LevelId)?.Name ?? "—";
+
+                    ClassBienToanCuc.RevitColumns.Add(new ColumnModel
+                    {
+                        Id = fi.Id.IntegerValue.ToString(),
+                        Mark = mark,
+                        Width = Math.Round(b).ToString(),
+                        Height = Math.Round(h).ToString(),
+                        Length = Math.Round(len).ToString(),
+                        Level = level,
+                        ConcreteGrade = MacBeTong ?? "B20"
+                    });
+                }
+
+                t.Commit();
             }
-            MessageBox.Show($"Đã nhập {DanhSachCotTuRevit.Count} cột từ Revit.");
+
+            MessageBox.Show($"Đã nhập {ClassBienToanCuc.RevitColumns.Count} cột từ Revit.");
         }
-        private ColumnModel _selectedCot;
-        public ColumnModel SelectedCot
-        {
-            get => _selectedCot;
-            set { _selectedCot = value; OnPropertyChanged(); }
-        }
-        public ICommand cmXoaCot { get; private set; }
+
         private void XoaCot()
         {
             if (SelectedCot == null) return;
 
-            string tenCot = SelectedCot.Name;
-            if (MessageBox.Show($"Xóa cột '{tenCot}'?", "Xác nhận",
-                                MessageBoxButton.YesNo) == MessageBoxResult.Yes)
+            string mark = SelectedCot.Mark;
+            if (MessageBox.Show($"Xóa tổ hợp '{SelectedCot.DisplayName}'?", "Xác nhận", MessageBoxButton.YesNo) == MessageBoxResult.Yes)
             {
                 DanhSachCotDaGanNoiLuc.Remove(SelectedCot);
 
-                // Cập nhật lại combo cho các dòng còn lại của cùng cột
                 var cacDong = DanhSachCotDaGanNoiLuc
-                    .Where(c => c.Name == tenCot)
-                    .OrderBy(c => DanhSachCotDaGanNoiLuc.IndexOf(c)) // giữ thứ tự thêm
+                    .Where(c => c.Mark == mark)
+                    .OrderBy(c => DanhSachCotDaGanNoiLuc.IndexOf(c))
                     .ToList();
 
                 for (int i = 0; i < cacDong.Count; i++)
@@ -343,6 +359,43 @@ namespace DALTUDTXD_LOPNV90_2025_28967.ViewModel
 
                 SelectedCot = null;
             }
+        }
+        public void XoaNhieuCot(List<ColumnModel> cotsCanXoa)
+        {
+            if (cotsCanXoa == null || cotsCanXoa.Count == 0) return;
+
+            string danhSachTen = string.Join("\n", cotsCanXoa.Select(c => $"'{c.DisplayName}'"));
+            var result = MessageBox.Show(
+                $"Xác nhận xóa {cotsCanXoa.Count} tổ hợp:\n{danhSachTen}",
+                "Xác nhận",
+                MessageBoxButton.YesNo,
+                MessageBoxImage.Question
+            );
+
+            if (result != MessageBoxResult.Yes) return;
+
+            var marksBiAnhHuong = cotsCanXoa.Select(c => c.Mark).ToHashSet();
+
+            foreach (var cot in cotsCanXoa.ToList())
+            {
+                DanhSachCotDaGanNoiLuc.Remove(cot);
+            }
+
+            foreach (string mark in marksBiAnhHuong)
+            {
+                var cacDongConLai = DanhSachCotDaGanNoiLuc
+                    .Where(c => c.Mark == mark)
+                    .OrderBy(c => DanhSachCotDaGanNoiLuc.IndexOf(c))
+                    .ToList();
+
+                for (int i = 0; i < cacDongConLai.Count; i++)
+                {
+                    var cot = cacDongConLai[i];
+                    cot.ComboDisplay = $"Combo {i + 1}";
+                }
+            }
+
+            SelectedCot = null;
         }
     }
 }

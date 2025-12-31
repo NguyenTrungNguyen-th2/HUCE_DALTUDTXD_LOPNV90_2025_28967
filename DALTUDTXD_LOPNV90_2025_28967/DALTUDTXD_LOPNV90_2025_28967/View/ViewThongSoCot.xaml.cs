@@ -20,21 +20,24 @@ namespace DALTUDTXD_LOPNV90_2025_28967.View
     public partial class ViewThongSoCot : Window
     {
         private readonly ColumnViewModel _viewModel;
-
-        // Constructor — nhận ColumnViewModel từ CmdCot
         public ViewThongSoCot(ColumnViewModel viewModel)
         {
             InitializeComponent();
             _viewModel = viewModel;
             DataContext = _viewModel;
         }
-
         private void btntinhtoan_Click(object sender, RoutedEventArgs e)
         {
-            if (_viewModel.DanhSachCotDaGanNoiLuc == null || _viewModel.DanhSachCotDaGanNoiLuc.Count == 0)
+            var selectedItems = DataGridCot.SelectedItems.Cast<ColumnModel>().ToList();
+
+            if (selectedItems.Count == 0)
             {
-                MessageBox.Show("Chưa có cột nào. Vui lòng nhấn 'Nhập từ Revit'.");
-                return;
+                if (_viewModel.DanhSachCotDaGanNoiLuc == null || _viewModel.DanhSachCotDaGanNoiLuc.Count == 0)
+                {
+                    MessageBox.Show("Chưa có cột nào. Vui lòng nhấn 'Nhập từ Revit'.");
+                    return;
+                }
+                selectedItems = _viewModel.DanhSachCotDaGanNoiLuc.ToList();
             }
 
             var material = SharedState.CurrentMaterial;
@@ -46,45 +49,36 @@ namespace DALTUDTXD_LOPNV90_2025_28967.View
 
             var ketQuaList = new System.Collections.ObjectModel.ObservableCollection<TinhToanViewModel>();
 
-            foreach (var cot in _viewModel.DanhSachCotDaGanNoiLuc)
+            foreach (var cot in selectedItems)
             {
-                // Bỏ qua cột không có kích thước hợp lệ
                 if (!double.TryParse(cot.Width, out double b) || b <= 0) continue;
                 if (!double.TryParse(cot.Height, out double h) || h <= 0) continue;
-                if (!double.TryParse(cot.Length, out double length)) length = 3000; // mặc định nếu cần
+                if (!double.TryParse(cot.Length, out double length)) length = 3000;
 
-                // Tạo ViewModel tính toán cho từng cột
                 var vm = new TinhToanViewModel
                 {
-                    Name = cot.Name,
+                    DisplayName = cot.DisplayName,
                     Width = cot.Width,
+                    Level = cot.Level,
                     Height = cot.Height,
                     Length = cot.Length,
                     LienKet = cot.LienKet,
                     Psi = cot.Psi,
-
-                    // ✅ Lấy nội lực RIÊNG của từng cột
                     TaiTrong = cot.LoadValue,
                     MomenX = cot.MomentXValue,
                     MomenY = cot.MomentYValue,
-
-                    // Vật liệu
                     MacBeTong = material.ConcreteGrade,
                     Rb = material.Rb,
                     Eb = material.Eb,
                     MacThep = material.SteelGrade,
                     Rs = material.Rs,
                     Es = material.Es,
-
-                    // Gán các chiều (dùng trong TinhToan)
                     ChieuRong = b.ToString(),
-                    ChieuDai = h.ToString(),   // Lưu ý: đây là chiều cao tiết diện h
+                    ChieuDai = h.ToString(),
                     ChieuCao = length.ToString()
                 };
 
-                // Thực hiện tính toán → tự động chọn thép
                 vm.TinhToan();
-
                 ketQuaList.Add(vm);
             }
 
@@ -100,6 +94,14 @@ namespace DALTUDTXD_LOPNV90_2025_28967.View
             };
             viewTinhToan.ShowDialog();
         }
+        private void btnXoaCot_Click(object sender, RoutedEventArgs e)
+        {
+            var dataGrid = this.FindName("DataGridCot") as DataGrid;
+            if (dataGrid == null || dataGrid.SelectedItems.Count == 0) return;
 
+            var selectedItems = dataGrid.SelectedItems.Cast<ColumnModel>().ToList();
+
+            _viewModel.XoaNhieuCot(selectedItems);
+        }
     }
 }
