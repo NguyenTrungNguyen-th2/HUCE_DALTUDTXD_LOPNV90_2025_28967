@@ -19,7 +19,9 @@
     <DockPanel LastChildFill="True" Background="White">
         <StackPanel DockPanel.Dock="Bottom" Orientation="Horizontal" HorizontalAlignment="Right">
             <Button Width="60" Height="30" Content="Vẽ" Style="{StaticResource ButtonStyle}" Command="{Binding OkCommand}"></Button>
-            <Button Width="60" Height="30" Content="Hủy" Margin="20 0 20 0" Style="{StaticResource ButtonStyle}" Command="{Binding CloseCommand}"></Button>
+            <Button Width="60" Height="30" Content="Hủy" Margin="20 0 20 0" Style="{StaticResource ButtonStyle}"
+                    Command="{Binding CloseCommand}"
+                    CommandParameter="{Binding RelativeSource={RelativeSource AncestorType=Window}}"/>
         </StackPanel>
         <StackPanel DockPanel.Dock="Left" Orientation="Horizontal" Width="190">
             <GroupBox Header="Thông số chung" Width="185">
