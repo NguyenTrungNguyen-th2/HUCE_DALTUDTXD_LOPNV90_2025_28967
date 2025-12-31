@@ -3,7 +3,11 @@
   "WorkspaceRootPath": "D:\\do an lap trinh 1027\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{98B56120-10E6-4BFA-B8EF-963CC4316E96}|DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967.csproj|d:\\do an lap trinh 1027\\huce_daltudtxd_lopnv90_2025_28967\\daltudtxd_lopnv90_2025_28967\\daltudtxd_lopnv90_2025_28967\\view\\viewvethep.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "AbsoluteMoniker": "D:0:0:{98B56120-10E6-4BFA-B8EF-963CC4316E96}|DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967.csproj|D:\\do an lap trinh 1027\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\daltudtxd_lopnv90_2025_28967\\viewmodel\\columnrebarviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{98B56120-10E6-4BFA-B8EF-963CC4316E96}|DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967.csproj|solutionrelative:daltudtxd_lopnv90_2025_28967\\viewmodel\\columnrebarviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{98B56120-10E6-4BFA-B8EF-963CC4316E96}|DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967.csproj|D:\\do an lap trinh 1027\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\daltudtxd_lopnv90_2025_28967\\view\\viewvethep.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{98B56120-10E6-4BFA-B8EF-963CC4316E96}|DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967.csproj|solutionrelative:daltudtxd_lopnv90_2025_28967\\view\\viewvethep.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
@@ -11,28 +15,48 @@
       "RelativeMoniker": "D:0:0:{98B56120-10E6-4BFA-B8EF-963CC4316E96}|DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967.csproj|solutionrelative:daltudtxd_lopnv90_2025_28967\\cmd\\cmdchonthep.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{98B56120-10E6-4BFA-B8EF-963CC4316E96}|DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967.csproj|D:\\do an lap trinh 1027\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\daltudtxd_lopnv90_2025_28967\\viewmodel\\mainviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{98B56120-10E6-4BFA-B8EF-963CC4316E96}|DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967.csproj|solutionrelative:daltudtxd_lopnv90_2025_28967\\viewmodel\\mainviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{98B56120-10E6-4BFA-B8EF-963CC4316E96}|DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967.csproj|D:\\do an lap trinh 1027\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\daltudtxd_lopnv90_2025_28967\\model\\columnrebarmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{98B56120-10E6-4BFA-B8EF-963CC4316E96}|DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967.csproj|solutionrelative:daltudtxd_lopnv90_2025_28967\\model\\columnrebarmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{98B56120-10E6-4BFA-B8EF-963CC4316E96}|DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967.csproj|D:\\do an lap trinh 1027\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\daltudtxd_lopnv90_2025_28967\\model\\columnmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{98B56120-10E6-4BFA-B8EF-963CC4316E96}|DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967.csproj|solutionrelative:daltudtxd_lopnv90_2025_28967\\model\\columnmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{98B56120-10E6-4BFA-B8EF-963CC4316E96}|DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967.csproj|D:\\do an lap trinh 1027\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\daltudtxd_lopnv90_2025_28967\\viewmodel\\columnrebarviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{98B56120-10E6-4BFA-B8EF-963CC4316E96}|DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967.csproj|solutionrelative:daltudtxd_lopnv90_2025_28967\\viewmodel\\columnrebarviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{98B56120-10E6-4BFA-B8EF-963CC4316E96}|DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967.csproj|D:\\do an lap trinh 1027\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\daltudtxd_lopnv90_2025_28967\\commandaddin\\myaddin.addin||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "AbsoluteMoniker": "D:0:0:{98B56120-10E6-4BFA-B8EF-963CC4316E96}|DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967.csproj|d:\\do an lap trinh 1027\\huce_daltudtxd_lopnv90_2025_28967\\daltudtxd_lopnv90_2025_28967\\daltudtxd_lopnv90_2025_28967\\commandaddin\\myaddin.addin||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
       "RelativeMoniker": "D:0:0:{98B56120-10E6-4BFA-B8EF-963CC4316E96}|DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967.csproj|solutionrelative:daltudtxd_lopnv90_2025_28967\\commandaddin\\myaddin.addin||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{98B56120-10E6-4BFA-B8EF-963CC4316E96}|DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967.csproj|D:\\do an lap trinh 1027\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\daltudtxd_lopnv90_2025_28967\\cmd\\cmdcot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{98B56120-10E6-4BFA-B8EF-963CC4316E96}|DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967.csproj|solutionrelative:daltudtxd_lopnv90_2025_28967\\cmd\\cmdcot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{98B56120-10E6-4BFA-B8EF-963CC4316E96}|DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967.csproj|D:\\do an lap trinh 1027\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\daltudtxd_lopnv90_2025_28967\\view\\viewthongsocot.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{98B56120-10E6-4BFA-B8EF-963CC4316E96}|DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967.csproj|solutionrelative:daltudtxd_lopnv90_2025_28967\\view\\viewthongsocot.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{98B56120-10E6-4BFA-B8EF-963CC4316E96}|DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967.csproj|D:\\do an lap trinh 1027\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\daltudtxd_lopnv90_2025_28967\\view\\viewthongsove.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{98B56120-10E6-4BFA-B8EF-963CC4316E96}|DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967.csproj|solutionrelative:daltudtxd_lopnv90_2025_28967\\view\\viewthongsove.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{98B56120-10E6-4BFA-B8EF-963CC4316E96}|DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967.csproj|D:\\do an lap trinh 1027\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\daltudtxd_lopnv90_2025_28967\\view\\viewtinhtoan.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{98B56120-10E6-4BFA-B8EF-963CC4316E96}|DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967.csproj|solutionrelative:daltudtxd_lopnv90_2025_28967\\view\\viewtinhtoan.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{98B56120-10E6-4BFA-B8EF-963CC4316E96}|DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967.csproj|D:\\do an lap trinh 1027\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\daltudtxd_lopnv90_2025_28967\\view\\viewvatlieu.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{98B56120-10E6-4BFA-B8EF-963CC4316E96}|DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967.csproj|solutionrelative:daltudtxd_lopnv90_2025_28967\\view\\viewvatlieu.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{98B56120-10E6-4BFA-B8EF-963CC4316E96}|DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967.csproj|D:\\do an lap trinh 1027\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\daltudtxd_lopnv90_2025_28967\\resources\\style\\dictionary1.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{98B56120-10E6-4BFA-B8EF-963CC4316E96}|DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967.csproj|solutionrelative:daltudtxd_lopnv90_2025_28967\\resources\\style\\dictionary1.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{98B56120-10E6-4BFA-B8EF-963CC4316E96}|DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967.csproj|D:\\do an lap trinh 1027\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\daltudtxd_lopnv90_2025_28967\\resources\\style\\textboxstyle.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{98B56120-10E6-4BFA-B8EF-963CC4316E96}|DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967.csproj|solutionrelative:daltudtxd_lopnv90_2025_28967\\resources\\style\\textboxstyle.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{98B56120-10E6-4BFA-B8EF-963CC4316E96}|DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967.csproj|D:\\do an lap trinh 1027\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\daltudtxd_lopnv90_2025_28967\\viewmodel\\mainviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{98B56120-10E6-4BFA-B8EF-963CC4316E96}|DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967.csproj|solutionrelative:daltudtxd_lopnv90_2025_28967\\viewmodel\\mainviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{98B56120-10E6-4BFA-B8EF-963CC4316E96}|DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967.csproj|D:\\do an lap trinh 1027\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\daltudtxd_lopnv90_2025_28967\\model\\columnmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{98B56120-10E6-4BFA-B8EF-963CC4316E96}|DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967.csproj|solutionrelative:daltudtxd_lopnv90_2025_28967\\model\\columnmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{98B56120-10E6-4BFA-B8EF-963CC4316E96}|DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967.csproj|D:\\do an lap trinh 1027\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\daltudtxd_lopnv90_2025_28967\\viewmodel\\columnviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -43,16 +67,8 @@
       "RelativeMoniker": "D:0:0:{98B56120-10E6-4BFA-B8EF-963CC4316E96}|DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967.csproj|solutionrelative:daltudtxd_lopnv90_2025_28967\\view\\viewthongsocot.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{98B56120-10E6-4BFA-B8EF-963CC4316E96}|DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967.csproj|D:\\do an lap trinh 1027\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\daltudtxd_lopnv90_2025_28967\\resources\\style\\textboxstyle.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{98B56120-10E6-4BFA-B8EF-963CC4316E96}|DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967.csproj|solutionrelative:daltudtxd_lopnv90_2025_28967\\resources\\style\\textboxstyle.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{98B56120-10E6-4BFA-B8EF-963CC4316E96}|DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967.csproj|D:\\do an lap trinh 1027\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\daltudtxd_lopnv90_2025_28967\\resources\\style\\groupboxstyle.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{98B56120-10E6-4BFA-B8EF-963CC4316E96}|DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967.csproj|solutionrelative:daltudtxd_lopnv90_2025_28967\\resources\\style\\groupboxstyle.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{98B56120-10E6-4BFA-B8EF-963CC4316E96}|DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967.csproj|D:\\do an lap trinh 1027\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\daltudtxd_lopnv90_2025_28967\\view\\viewvatlieu.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{98B56120-10E6-4BFA-B8EF-963CC4316E96}|DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967.csproj|solutionrelative:daltudtxd_lopnv90_2025_28967\\view\\viewvatlieu.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{98B56120-10E6-4BFA-B8EF-963CC4316E96}|DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967.csproj|D:\\do an lap trinh 1027\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\daltudtxd_lopnv90_2025_28967\\view\\viewvatlieu.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -61,14 +77,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{98B56120-10E6-4BFA-B8EF-963CC4316E96}|DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967.csproj|D:\\do an lap trinh 1027\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\daltudtxd_lopnv90_2025_28967\\resources\\style\\buttonstyle.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{98B56120-10E6-4BFA-B8EF-963CC4316E96}|DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967.csproj|solutionrelative:daltudtxd_lopnv90_2025_28967\\resources\\style\\buttonstyle.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{98B56120-10E6-4BFA-B8EF-963CC4316E96}|DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967.csproj|D:\\do an lap trinh 1027\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\daltudtxd_lopnv90_2025_28967\\view\\viewtinhtoan.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{98B56120-10E6-4BFA-B8EF-963CC4316E96}|DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967.csproj|solutionrelative:daltudtxd_lopnv90_2025_28967\\view\\viewtinhtoan.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{98B56120-10E6-4BFA-B8EF-963CC4316E96}|DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967.csproj|D:\\do an lap trinh 1027\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\daltudtxd_lopnv90_2025_28967\\view\\viewthongsove.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{98B56120-10E6-4BFA-B8EF-963CC4316E96}|DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967.csproj|solutionrelative:daltudtxd_lopnv90_2025_28967\\view\\viewthongsove.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{98B56120-10E6-4BFA-B8EF-963CC4316E96}|DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967.csproj|D:\\do an lap trinh 1027\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\daltudtxd_lopnv90_2025_28967\\view\\viewtinhtoan.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -123,10 +131,6 @@
       "RelativeMoniker": "D:0:0:{98B56120-10E6-4BFA-B8EF-963CC4316E96}|DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967.csproj|solutionrelative:daltudtxd_lopnv90_2025_28967\\cmd\\cmdthongsove.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{98B56120-10E6-4BFA-B8EF-963CC4316E96}|DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967.csproj|D:\\do an lap trinh 1027\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\daltudtxd_lopnv90_2025_28967\\cmd\\cmdcot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{98B56120-10E6-4BFA-B8EF-963CC4316E96}|DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967.csproj|solutionrelative:daltudtxd_lopnv90_2025_28967\\cmd\\cmdcot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{98B56120-10E6-4BFA-B8EF-963CC4316E96}|DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967.csproj|D:\\do an lap trinh 1027\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\daltudtxd_lopnv90_2025_28967\\sharedstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{98B56120-10E6-4BFA-B8EF-963CC4316E96}|DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967.csproj|solutionrelative:daltudtxd_lopnv90_2025_28967\\sharedstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -157,10 +161,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{98B56120-10E6-4BFA-B8EF-963CC4316E96}|DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967.csproj|D:\\do an lap trinh 1027\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\daltudtxd_lopnv90_2025_28967\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{98B56120-10E6-4BFA-B8EF-963CC4316E96}|DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967.csproj|solutionrelative:daltudtxd_lopnv90_2025_28967\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{98B56120-10E6-4BFA-B8EF-963CC4316E96}|DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967.csproj|D:\\do an lap trinh 1027\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\daltudtxd_lopnv90_2025_28967\\resources\\style\\dictionary1.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{98B56120-10E6-4BFA-B8EF-963CC4316E96}|DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967.csproj|solutionrelative:daltudtxd_lopnv90_2025_28967\\resources\\style\\dictionary1.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\CmdTinhToan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
@@ -219,189 +219,19 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "ViewVeThep.xaml",
-              "DocumentMoniker": "D:\\do an lap trinh 1027\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\View\\ViewVeThep.xaml",
-              "RelativeDocumentMoniker": "DALTUDTXD_LOPNV90_2025_28967\\View\\ViewVeThep.xaml",
-              "ToolTip": "D:\\do an lap trinh 1027\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\View\\ViewVeThep.xaml*",
-              "RelativeToolTip": "DALTUDTXD_LOPNV90_2025_28967\\View\\ViewVeThep.xaml*",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-11-24T15:21:22.651Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "ColumnViewModel.cs",
-              "DocumentMoniker": "D:\\do an lap trinh 1027\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\ViewModel\\ColumnViewModel.cs",
-              "RelativeDocumentMoniker": "DALTUDTXD_LOPNV90_2025_28967\\ViewModel\\ColumnViewModel.cs",
-              "ToolTip": "D:\\do an lap trinh 1027\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\ViewModel\\ColumnViewModel.cs",
-              "RelativeToolTip": "DALTUDTXD_LOPNV90_2025_28967\\ViewModel\\ColumnViewModel.cs",
-              "ViewState": "AgIAADEBAAAAAAAAAAAIwFkBAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-25T20:41:13.98Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "ColumnModel.cs",
-              "DocumentMoniker": "D:\\do an lap trinh 1027\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\Model\\ColumnModel.cs",
-              "RelativeDocumentMoniker": "DALTUDTXD_LOPNV90_2025_28967\\Model\\ColumnModel.cs",
-              "ToolTip": "D:\\do an lap trinh 1027\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\Model\\ColumnModel.cs",
-              "RelativeToolTip": "DALTUDTXD_LOPNV90_2025_28967\\Model\\ColumnModel.cs",
-              "ViewState": "AgIAAD4AAAAAAAAAAAAQwF4AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-25T21:07:46.178Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Myaddin.Addin",
-              "DocumentMoniker": "D:\\do an lap trinh 1027\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\CommandAddin\\Myaddin.Addin",
-              "RelativeDocumentMoniker": "DALTUDTXD_LOPNV90_2025_28967\\CommandAddin\\Myaddin.Addin",
-              "ToolTip": "D:\\do an lap trinh 1027\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\CommandAddin\\Myaddin.Addin",
-              "RelativeToolTip": "DALTUDTXD_LOPNV90_2025_28967\\CommandAddin\\Myaddin.Addin",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAACsAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000072|",
-              "WhenOpened": "2025-11-24T13:52:24.933Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "CmdChonThep.cs",
-              "DocumentMoniker": "D:\\do an lap trinh 1027\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\Cmd\\CmdChonThep.cs",
-              "RelativeDocumentMoniker": "DALTUDTXD_LOPNV90_2025_28967\\Cmd\\CmdChonThep.cs",
-              "ToolTip": "D:\\do an lap trinh 1027\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\Cmd\\CmdChonThep.cs",
-              "RelativeToolTip": "DALTUDTXD_LOPNV90_2025_28967\\Cmd\\CmdChonThep.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAkAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-29T09:19:09.301Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
               "Title": "ColumnRebarViewModel.cs",
               "DocumentMoniker": "D:\\do an lap trinh 1027\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\ViewModel\\ColumnRebarViewModel.cs",
               "RelativeDocumentMoniker": "DALTUDTXD_LOPNV90_2025_28967\\ViewModel\\ColumnRebarViewModel.cs",
               "ToolTip": "D:\\do an lap trinh 1027\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\ViewModel\\ColumnRebarViewModel.cs",
               "RelativeToolTip": "DALTUDTXD_LOPNV90_2025_28967\\ViewModel\\ColumnRebarViewModel.cs",
-              "ViewState": "AgIAAHYCAAAAAAAAAAAAwK4CAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAH8BAAAAAAAAAAAqwLcCAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-25T20:46:43.246Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ColumnRebarModel.cs",
-              "DocumentMoniker": "D:\\do an lap trinh 1027\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\Model\\ColumnRebarModel.cs",
-              "RelativeDocumentMoniker": "DALTUDTXD_LOPNV90_2025_28967\\Model\\ColumnRebarModel.cs",
-              "ToolTip": "D:\\do an lap trinh 1027\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\Model\\ColumnRebarModel.cs",
-              "RelativeToolTip": "DALTUDTXD_LOPNV90_2025_28967\\Model\\ColumnRebarModel.cs",
-              "ViewState": "AgIAAHwAAAAAAAAAAAAIwIsAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-25T21:07:54.638Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "MainViewModel.cs",
-              "DocumentMoniker": "D:\\do an lap trinh 1027\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\ViewModel\\MainViewModel.cs",
-              "RelativeDocumentMoniker": "DALTUDTXD_LOPNV90_2025_28967\\ViewModel\\MainViewModel.cs",
-              "ToolTip": "D:\\do an lap trinh 1027\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\ViewModel\\MainViewModel.cs",
-              "RelativeToolTip": "DALTUDTXD_LOPNV90_2025_28967\\ViewModel\\MainViewModel.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAA3wBwAAABRAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-25T20:45:57.512Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "ViewVatLieu.xaml.cs",
-              "DocumentMoniker": "D:\\do an lap trinh 1027\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\View\\ViewVatLieu.xaml.cs",
-              "RelativeDocumentMoniker": "DALTUDTXD_LOPNV90_2025_28967\\View\\ViewVatLieu.xaml.cs",
-              "ToolTip": "D:\\do an lap trinh 1027\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\View\\ViewVatLieu.xaml.cs",
-              "RelativeToolTip": "DALTUDTXD_LOPNV90_2025_28967\\View\\ViewVatLieu.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-25T20:07:53.059Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "ViewThongSoCot.xaml.cs",
-              "DocumentMoniker": "D:\\do an lap trinh 1027\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\View\\ViewThongSoCot.xaml.cs",
-              "RelativeDocumentMoniker": "DALTUDTXD_LOPNV90_2025_28967\\View\\ViewThongSoCot.xaml.cs",
-              "ToolTip": "D:\\do an lap trinh 1027\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\View\\ViewThongSoCot.xaml.cs",
-              "RelativeToolTip": "DALTUDTXD_LOPNV90_2025_28967\\View\\ViewThongSoCot.xaml.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAUwGYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-25T19:51:28.864Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 7,
-              "Title": "ViewThongSoCot.xaml",
-              "DocumentMoniker": "D:\\do an lap trinh 1027\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\View\\ViewThongSoCot.xaml",
-              "RelativeDocumentMoniker": "DALTUDTXD_LOPNV90_2025_28967\\View\\ViewThongSoCot.xaml",
-              "ToolTip": "D:\\do an lap trinh 1027\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\View\\ViewThongSoCot.xaml",
-              "RelativeToolTip": "DALTUDTXD_LOPNV90_2025_28967\\View\\ViewThongSoCot.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-11-24T15:19:52.552Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "ViewVatLieu.xaml",
-              "DocumentMoniker": "D:\\do an lap trinh 1027\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\View\\ViewVatLieu.xaml",
-              "RelativeDocumentMoniker": "DALTUDTXD_LOPNV90_2025_28967\\View\\ViewVatLieu.xaml",
-              "ToolTip": "D:\\do an lap trinh 1027\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\View\\ViewVatLieu.xaml",
-              "RelativeToolTip": "DALTUDTXD_LOPNV90_2025_28967\\View\\ViewVatLieu.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-11-24T15:19:32.667Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "TextBoxStyle.xaml",
-              "DocumentMoniker": "D:\\do an lap trinh 1027\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\resources\\style\\TextBoxStyle.xaml",
-              "RelativeDocumentMoniker": "DALTUDTXD_LOPNV90_2025_28967\\resources\\style\\TextBoxStyle.xaml",
-              "ToolTip": "D:\\do an lap trinh 1027\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\resources\\style\\TextBoxStyle.xaml",
-              "RelativeToolTip": "DALTUDTXD_LOPNV90_2025_28967\\resources\\style\\TextBoxStyle.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-12-13T13:19:14.008Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "ButtonStyle.xaml",
-              "DocumentMoniker": "D:\\do an lap trinh 1027\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\resources\\style\\ButtonStyle.xaml",
-              "RelativeDocumentMoniker": "DALTUDTXD_LOPNV90_2025_28967\\resources\\style\\ButtonStyle.xaml",
-              "ToolTip": "D:\\do an lap trinh 1027\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\resources\\style\\ButtonStyle.xaml",
-              "RelativeToolTip": "DALTUDTXD_LOPNV90_2025_28967\\resources\\style\\ButtonStyle.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-12-13T13:19:09.426Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "GroupBoxStyle.xaml",
-              "DocumentMoniker": "D:\\do an lap trinh 1027\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\resources\\style\\GroupBoxStyle.xaml",
-              "RelativeDocumentMoniker": "DALTUDTXD_LOPNV90_2025_28967\\resources\\style\\GroupBoxStyle.xaml",
-              "ToolTip": "D:\\do an lap trinh 1027\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\resources\\style\\GroupBoxStyle.xaml",
-              "RelativeToolTip": "DALTUDTXD_LOPNV90_2025_28967\\resources\\style\\GroupBoxStyle.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-12-13T13:21:28.407Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
               "Title": "ViewThongSoVe.xaml",
               "DocumentMoniker": "D:\\do an lap trinh 1027\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\View\\ViewThongSoVe.xaml",
               "RelativeDocumentMoniker": "DALTUDTXD_LOPNV90_2025_28967\\View\\ViewThongSoVe.xaml",
@@ -412,102 +242,43 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "ViewTinhToan.xaml",
-              "DocumentMoniker": "D:\\do an lap trinh 1027\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\View\\ViewTinhToan.xaml",
-              "RelativeDocumentMoniker": "DALTUDTXD_LOPNV90_2025_28967\\View\\ViewTinhToan.xaml",
-              "ToolTip": "D:\\do an lap trinh 1027\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\View\\ViewTinhToan.xaml",
-              "RelativeToolTip": "DALTUDTXD_LOPNV90_2025_28967\\View\\ViewTinhToan.xaml",
+              "DocumentIndex": 6,
+              "Title": "ViewThongSoCot.xaml",
+              "DocumentMoniker": "D:\\do an lap trinh 1027\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\View\\ViewThongSoCot.xaml",
+              "RelativeDocumentMoniker": "DALTUDTXD_LOPNV90_2025_28967\\View\\ViewThongSoCot.xaml",
+              "ToolTip": "D:\\do an lap trinh 1027\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\View\\ViewThongSoCot.xaml",
+              "RelativeToolTip": "DALTUDTXD_LOPNV90_2025_28967\\View\\ViewThongSoCot.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-11-24T15:20:44.494Z"
+              "WhenOpened": "2025-11-24T15:19:52.552Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "ViewTinhToan.xaml.cs",
-              "DocumentMoniker": "D:\\do an lap trinh 1027\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\View\\ViewTinhToan.xaml.cs",
-              "RelativeDocumentMoniker": "DALTUDTXD_LOPNV90_2025_28967\\View\\ViewTinhToan.xaml.cs",
-              "ToolTip": "D:\\do an lap trinh 1027\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\View\\ViewTinhToan.xaml.cs",
-              "RelativeToolTip": "DALTUDTXD_LOPNV90_2025_28967\\View\\ViewTinhToan.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-27T09:34:02.012Z"
+              "DocumentIndex": 1,
+              "Title": "ViewVeThep.xaml",
+              "DocumentMoniker": "D:\\do an lap trinh 1027\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\View\\ViewVeThep.xaml",
+              "RelativeDocumentMoniker": "DALTUDTXD_LOPNV90_2025_28967\\View\\ViewVeThep.xaml",
+              "ToolTip": "D:\\do an lap trinh 1027\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\View\\ViewVeThep.xaml",
+              "RelativeToolTip": "DALTUDTXD_LOPNV90_2025_28967\\View\\ViewVeThep.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-11-24T15:21:22.651Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "VatLieuViewModel.cs",
-              "DocumentMoniker": "D:\\do an lap trinh 1027\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\ViewModel\\VatLieuViewModel.cs",
-              "RelativeDocumentMoniker": "DALTUDTXD_LOPNV90_2025_28967\\ViewModel\\VatLieuViewModel.cs",
-              "ToolTip": "D:\\do an lap trinh 1027\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\ViewModel\\VatLieuViewModel.cs",
-              "RelativeToolTip": "DALTUDTXD_LOPNV90_2025_28967\\ViewModel\\VatLieuViewModel.cs",
-              "ViewState": "AgIAAGoAAAAAAAAAAAAiwKkAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-25T20:29:52.759Z"
+              "DocumentIndex": 4,
+              "Title": "Myaddin.Addin",
+              "DocumentMoniker": "D:\\do an lap trinh 1027\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\CommandAddin\\Myaddin.Addin",
+              "RelativeDocumentMoniker": "DALTUDTXD_LOPNV90_2025_28967\\CommandAddin\\Myaddin.Addin",
+              "ToolTip": "D:\\do an lap trinh 1027\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\CommandAddin\\Myaddin.Addin",
+              "RelativeToolTip": "DALTUDTXD_LOPNV90_2025_28967\\CommandAddin\\Myaddin.Addin",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAABVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000072|",
+              "WhenOpened": "2025-11-24T13:52:24.933Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "packages.config",
-              "DocumentMoniker": "D:\\do an lap trinh 1027\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\packages.config",
-              "RelativeDocumentMoniker": "DALTUDTXD_LOPNV90_2025_28967\\packages.config",
-              "ToolTip": "D:\\do an lap trinh 1027\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\packages.config",
-              "RelativeToolTip": "DALTUDTXD_LOPNV90_2025_28967\\packages.config",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
-              "WhenOpened": "2025-12-13T10:14:29.491Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "App.config",
-              "DocumentMoniker": "D:\\do an lap trinh 1027\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\App.config",
-              "RelativeDocumentMoniker": "DALTUDTXD_LOPNV90_2025_28967\\App.config",
-              "ToolTip": "D:\\do an lap trinh 1027\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\App.config",
-              "RelativeToolTip": "DALTUDTXD_LOPNV90_2025_28967\\App.config",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
-              "WhenOpened": "2025-12-13T10:14:10.22Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "TinhToanViewModel.cs",
-              "DocumentMoniker": "D:\\do an lap trinh 1027\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\ViewModel\\TinhToanViewModel.cs",
-              "RelativeDocumentMoniker": "DALTUDTXD_LOPNV90_2025_28967\\ViewModel\\TinhToanViewModel.cs",
-              "ToolTip": "D:\\do an lap trinh 1027\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\ViewModel\\TinhToanViewModel.cs",
-              "RelativeToolTip": "DALTUDTXD_LOPNV90_2025_28967\\ViewModel\\TinhToanViewModel.cs",
-              "ViewState": "AgIAAMQAAAAAAAAAAADwvwIBAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-25T21:11:23.822Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 28,
-              "Title": "CmdTinhToan.cs",
-              "DocumentMoniker": "D:\\do an lap trinh 1027\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\Cmd\\CmdTinhToan.cs",
-              "RelativeDocumentMoniker": "DALTUDTXD_LOPNV90_2025_28967\\Cmd\\CmdTinhToan.cs",
-              "ToolTip": "D:\\do an lap trinh 1027\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\Cmd\\CmdTinhToan.cs",
-              "RelativeToolTip": "DALTUDTXD_LOPNV90_2025_28967\\Cmd\\CmdTinhToan.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADMAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-28T16:56:03.184Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 29,
-              "Title": "CmdThongSoVe.cs",
-              "DocumentMoniker": "D:\\do an lap trinh 1027\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\Cmd\\CmdThongSoVe.cs",
-              "RelativeDocumentMoniker": "DALTUDTXD_LOPNV90_2025_28967\\Cmd\\CmdThongSoVe.cs",
-              "ToolTip": "D:\\do an lap trinh 1027\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\Cmd\\CmdThongSoVe.cs",
-              "RelativeToolTip": "DALTUDTXD_LOPNV90_2025_28967\\Cmd\\CmdThongSoVe.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-12T15:23:41.237Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 5,
               "Title": "CmdCot.cs",
               "DocumentMoniker": "D:\\do an lap trinh 1027\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\Cmd\\CmdCot.cs",
               "RelativeDocumentMoniker": "DALTUDTXD_LOPNV90_2025_28967\\Cmd\\CmdCot.cs",
@@ -519,159 +290,190 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "RevitCommandData.cs",
-              "DocumentMoniker": "D:\\do an lap trinh 1027\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\ViewModel\\RevitCommandData.cs",
-              "RelativeDocumentMoniker": "DALTUDTXD_LOPNV90_2025_28967\\ViewModel\\RevitCommandData.cs",
-              "ToolTip": "D:\\do an lap trinh 1027\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\ViewModel\\RevitCommandData.cs",
-              "RelativeToolTip": "DALTUDTXD_LOPNV90_2025_28967\\ViewModel\\RevitCommandData.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "ColumnRebarModel.cs",
+              "DocumentMoniker": "D:\\do an lap trinh 1027\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\Model\\ColumnRebarModel.cs",
+              "RelativeDocumentMoniker": "DALTUDTXD_LOPNV90_2025_28967\\Model\\ColumnRebarModel.cs",
+              "ToolTip": "D:\\do an lap trinh 1027\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\Model\\ColumnRebarModel.cs",
+              "RelativeToolTip": "DALTUDTXD_LOPNV90_2025_28967\\Model\\ColumnRebarModel.cs",
+              "ViewState": "AgIAAFwAAAAAAAAAAAAiwD8AAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-25T20:45:15.186Z"
+              "WhenOpened": "2025-11-25T21:07:54.638Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "RelayCommand.cs",
-              "DocumentMoniker": "D:\\do an lap trinh 1027\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\ViewModel\\RelayCommand.cs",
-              "RelativeDocumentMoniker": "DALTUDTXD_LOPNV90_2025_28967\\ViewModel\\RelayCommand.cs",
-              "ToolTip": "D:\\do an lap trinh 1027\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\ViewModel\\RelayCommand.cs",
-              "RelativeToolTip": "DALTUDTXD_LOPNV90_2025_28967\\ViewModel\\RelayCommand.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAAAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "CmdChonThep.cs",
+              "DocumentMoniker": "D:\\do an lap trinh 1027\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\Cmd\\CmdChonThep.cs",
+              "RelativeDocumentMoniker": "DALTUDTXD_LOPNV90_2025_28967\\Cmd\\CmdChonThep.cs",
+              "ToolTip": "D:\\do an lap trinh 1027\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\Cmd\\CmdChonThep.cs",
+              "RelativeToolTip": "DALTUDTXD_LOPNV90_2025_28967\\Cmd\\CmdChonThep.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAUwBYAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-25T20:33:10.277Z"
+              "WhenOpened": "2025-11-29T09:19:09.301Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "TinhToanCotService.cs",
-              "DocumentMoniker": "D:\\do an lap trinh 1027\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\services\\TinhToanCotService.cs",
-              "RelativeDocumentMoniker": "DALTUDTXD_LOPNV90_2025_28967\\services\\TinhToanCotService.cs",
-              "ToolTip": "D:\\do an lap trinh 1027\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\services\\TinhToanCotService.cs",
-              "RelativeToolTip": "DALTUDTXD_LOPNV90_2025_28967\\services\\TinhToanCotService.cs",
-              "ViewState": "AgIAAH0AAAAAAAAAAAAowMAAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-28T17:16:40.054Z"
+              "DocumentIndex": 8,
+              "Title": "ViewTinhToan.xaml",
+              "DocumentMoniker": "D:\\do an lap trinh 1027\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\View\\ViewTinhToan.xaml",
+              "RelativeDocumentMoniker": "DALTUDTXD_LOPNV90_2025_28967\\View\\ViewTinhToan.xaml",
+              "ToolTip": "D:\\do an lap trinh 1027\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\View\\ViewTinhToan.xaml",
+              "RelativeToolTip": "DALTUDTXD_LOPNV90_2025_28967\\View\\ViewTinhToan.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-11-24T15:20:44.494Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "MaterialModel.cs",
-              "DocumentMoniker": "D:\\do an lap trinh 1027\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\Model\\MaterialModel.cs",
-              "RelativeDocumentMoniker": "DALTUDTXD_LOPNV90_2025_28967\\Model\\MaterialModel.cs",
-              "ToolTip": "D:\\do an lap trinh 1027\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\Model\\MaterialModel.cs",
-              "RelativeToolTip": "DALTUDTXD_LOPNV90_2025_28967\\Model\\MaterialModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-25T21:09:55.169Z"
+              "DocumentIndex": 10,
+              "Title": "Dictionary1.xaml",
+              "DocumentMoniker": "D:\\do an lap trinh 1027\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\resources\\style\\Dictionary1.xaml",
+              "RelativeDocumentMoniker": "DALTUDTXD_LOPNV90_2025_28967\\resources\\style\\Dictionary1.xaml",
+              "ToolTip": "D:\\do an lap trinh 1027\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\resources\\style\\Dictionary1.xaml",
+              "RelativeToolTip": "DALTUDTXD_LOPNV90_2025_28967\\resources\\style\\Dictionary1.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-11-24T07:09:33.966Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
-              "Title": "HeSoTinhToan.cs",
-              "DocumentMoniker": "D:\\do an lap trinh 1027\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\Model\\HeSoTinhToan.cs",
-              "RelativeDocumentMoniker": "DALTUDTXD_LOPNV90_2025_28967\\Model\\HeSoTinhToan.cs",
-              "ToolTip": "D:\\do an lap trinh 1027\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\Model\\HeSoTinhToan.cs",
-              "RelativeToolTip": "DALTUDTXD_LOPNV90_2025_28967\\Model\\HeSoTinhToan.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-25T21:09:49.669Z"
+              "DocumentIndex": 9,
+              "Title": "ViewVatLieu.xaml",
+              "DocumentMoniker": "D:\\do an lap trinh 1027\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\View\\ViewVatLieu.xaml",
+              "RelativeDocumentMoniker": "DALTUDTXD_LOPNV90_2025_28967\\View\\ViewVatLieu.xaml",
+              "ToolTip": "D:\\do an lap trinh 1027\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\View\\ViewVatLieu.xaml",
+              "RelativeToolTip": "DALTUDTXD_LOPNV90_2025_28967\\View\\ViewVatLieu.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-11-24T15:19:32.667Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
-              "Title": "CmdVatLieu.cs",
-              "DocumentMoniker": "D:\\do an lap trinh 1027\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\Cmd\\CmdVatLieu.cs",
-              "RelativeDocumentMoniker": "DALTUDTXD_LOPNV90_2025_28967\\Cmd\\CmdVatLieu.cs",
-              "ToolTip": "D:\\do an lap trinh 1027\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\Cmd\\CmdVatLieu.cs",
-              "RelativeToolTip": "DALTUDTXD_LOPNV90_2025_28967\\Cmd\\CmdVatLieu.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 41,
+              "Title": "CmdCot.cs",
+              "DocumentMoniker": "C:\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\CmdCot.cs",
+              "ToolTip": "C:\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\CmdCot.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAkwDYAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-28T16:55:56.789Z"
+              "WhenOpened": "2025-11-25T20:09:31.453Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
-              "Title": "SharedState.cs",
-              "DocumentMoniker": "D:\\do an lap trinh 1027\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\SharedState.cs",
-              "RelativeDocumentMoniker": "DALTUDTXD_LOPNV90_2025_28967\\SharedState.cs",
-              "ToolTip": "D:\\do an lap trinh 1027\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\SharedState.cs",
-              "RelativeToolTip": "DALTUDTXD_LOPNV90_2025_28967\\SharedState.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAA5AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-28T16:59:53.812Z"
+              "DocumentIndex": 39,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "D:\\do an lap trinh 1027\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "DALTUDTXD_LOPNV90_2025_28967\\MainWindow.xaml",
+              "ToolTip": "D:\\do an lap trinh 1027\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\MainWindow.xaml",
+              "RelativeToolTip": "DALTUDTXD_LOPNV90_2025_28967\\MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-11-24T07:09:06.041Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
-              "Title": "GetBarDiameter.cs",
-              "DocumentMoniker": "D:\\do an lap trinh 1027\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\classcolumnrebar\\GetBarDiameter.cs",
-              "RelativeDocumentMoniker": "DALTUDTXD_LOPNV90_2025_28967\\classcolumnrebar\\GetBarDiameter.cs",
-              "ToolTip": "D:\\do an lap trinh 1027\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\classcolumnrebar\\GetBarDiameter.cs",
-              "RelativeToolTip": "DALTUDTXD_LOPNV90_2025_28967\\classcolumnrebar\\GetBarDiameter.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 12,
+              "Title": "MainViewModel.cs",
+              "DocumentMoniker": "D:\\do an lap trinh 1027\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\ViewModel\\MainViewModel.cs",
+              "RelativeDocumentMoniker": "DALTUDTXD_LOPNV90_2025_28967\\ViewModel\\MainViewModel.cs",
+              "ToolTip": "D:\\do an lap trinh 1027\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\ViewModel\\MainViewModel.cs",
+              "RelativeToolTip": "DALTUDTXD_LOPNV90_2025_28967\\ViewModel\\MainViewModel.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAA3wBwAAABRAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-29T09:19:58.259Z"
+              "WhenOpened": "2025-11-25T20:45:57.512Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
-              "Title": "MyAddin1.cs",
-              "DocumentMoniker": "D:\\do an lap trinh 1027\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\CommandAddin\\MyAddin1.cs",
-              "RelativeDocumentMoniker": "DALTUDTXD_LOPNV90_2025_28967\\CommandAddin\\MyAddin1.cs",
-              "ToolTip": "D:\\do an lap trinh 1027\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\CommandAddin\\MyAddin1.cs",
-              "RelativeToolTip": "DALTUDTXD_LOPNV90_2025_28967\\CommandAddin\\MyAddin1.cs",
-              "ViewState": "AgIAACIAAAAAAAAAAAAgwCAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 14,
+              "Title": "ColumnViewModel.cs",
+              "DocumentMoniker": "D:\\do an lap trinh 1027\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\ViewModel\\ColumnViewModel.cs",
+              "RelativeDocumentMoniker": "DALTUDTXD_LOPNV90_2025_28967\\ViewModel\\ColumnViewModel.cs",
+              "ToolTip": "D:\\do an lap trinh 1027\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\ViewModel\\ColumnViewModel.cs",
+              "RelativeToolTip": "DALTUDTXD_LOPNV90_2025_28967\\ViewModel\\ColumnViewModel.cs",
+              "ViewState": "AgIAADEBAAAAAAAAAAAIwFkBAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-24T12:52:18.33Z"
+              "WhenOpened": "2025-11-25T20:41:13.98Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
-              "Title": "DoubleUtils.cs",
-              "DocumentMoniker": "D:\\do an lap trinh 1027\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\classcolumnrebar\\DoubleUtils.cs",
-              "RelativeDocumentMoniker": "DALTUDTXD_LOPNV90_2025_28967\\classcolumnrebar\\DoubleUtils.cs",
-              "ToolTip": "D:\\do an lap trinh 1027\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\classcolumnrebar\\DoubleUtils.cs",
-              "RelativeToolTip": "DALTUDTXD_LOPNV90_2025_28967\\classcolumnrebar\\DoubleUtils.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-29T09:19:57.349Z"
+              "DocumentIndex": 11,
+              "Title": "TextBoxStyle.xaml",
+              "DocumentMoniker": "D:\\do an lap trinh 1027\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\resources\\style\\TextBoxStyle.xaml",
+              "RelativeDocumentMoniker": "DALTUDTXD_LOPNV90_2025_28967\\resources\\style\\TextBoxStyle.xaml",
+              "ToolTip": "D:\\do an lap trinh 1027\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\resources\\style\\TextBoxStyle.xaml",
+              "RelativeToolTip": "DALTUDTXD_LOPNV90_2025_28967\\resources\\style\\TextBoxStyle.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-12-13T13:19:14.008Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
-              "Title": "DistributeStirrupType.cs",
-              "DocumentMoniker": "D:\\do an lap trinh 1027\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\classcolumnrebar\\DistributeStirrupType.cs",
-              "RelativeDocumentMoniker": "DALTUDTXD_LOPNV90_2025_28967\\classcolumnrebar\\DistributeStirrupType.cs",
-              "ToolTip": "D:\\do an lap trinh 1027\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\classcolumnrebar\\DistributeStirrupType.cs",
-              "RelativeToolTip": "DALTUDTXD_LOPNV90_2025_28967\\classcolumnrebar\\DistributeStirrupType.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 40,
+              "Title": "CmdTinhToan.cs",
+              "DocumentMoniker": "C:\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\CmdTinhToan.cs",
+              "ToolTip": "C:\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\CmdTinhToan.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-29T09:19:56.635Z"
+              "WhenOpened": "2025-11-25T20:14:41.56Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
-              "Title": "ColumnSelectionFilter.cs",
-              "DocumentMoniker": "D:\\do an lap trinh 1027\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\classcolumnrebar\\ColumnSelectionFilter.cs",
-              "RelativeDocumentMoniker": "DALTUDTXD_LOPNV90_2025_28967\\classcolumnrebar\\ColumnSelectionFilter.cs",
-              "ToolTip": "D:\\do an lap trinh 1027\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\classcolumnrebar\\ColumnSelectionFilter.cs",
-              "RelativeToolTip": "DALTUDTXD_LOPNV90_2025_28967\\classcolumnrebar\\ColumnSelectionFilter.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 17,
+              "Title": "ViewVatLieu.xaml.cs",
+              "DocumentMoniker": "D:\\do an lap trinh 1027\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\View\\ViewVatLieu.xaml.cs",
+              "RelativeDocumentMoniker": "DALTUDTXD_LOPNV90_2025_28967\\View\\ViewVatLieu.xaml.cs",
+              "ToolTip": "D:\\do an lap trinh 1027\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\View\\ViewVatLieu.xaml.cs",
+              "RelativeToolTip": "DALTUDTXD_LOPNV90_2025_28967\\View\\ViewVatLieu.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-29T09:19:55.795Z"
+              "WhenOpened": "2025-11-25T20:07:53.059Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
-              "Title": "ColumnCanvas.cs",
-              "DocumentMoniker": "D:\\do an lap trinh 1027\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\classcolumnrebar\\ColumnCanvas.cs",
-              "RelativeDocumentMoniker": "DALTUDTXD_LOPNV90_2025_28967\\classcolumnrebar\\ColumnCanvas.cs",
-              "ToolTip": "D:\\do an lap trinh 1027\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\classcolumnrebar\\ColumnCanvas.cs",
-              "RelativeToolTip": "DALTUDTXD_LOPNV90_2025_28967\\classcolumnrebar\\ColumnCanvas.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 15,
+              "Title": "ViewThongSoCot.xaml.cs",
+              "DocumentMoniker": "D:\\do an lap trinh 1027\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\View\\ViewThongSoCot.xaml.cs",
+              "RelativeDocumentMoniker": "DALTUDTXD_LOPNV90_2025_28967\\View\\ViewThongSoCot.xaml.cs",
+              "ToolTip": "D:\\do an lap trinh 1027\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\View\\ViewThongSoCot.xaml.cs",
+              "RelativeToolTip": "DALTUDTXD_LOPNV90_2025_28967\\View\\ViewThongSoCot.xaml.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAUwGYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-29T09:19:53.612Z"
+              "WhenOpened": "2025-11-25T19:51:28.864Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "ButtonStyle.xaml",
+              "DocumentMoniker": "D:\\do an lap trinh 1027\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\resources\\style\\ButtonStyle.xaml",
+              "RelativeDocumentMoniker": "DALTUDTXD_LOPNV90_2025_28967\\resources\\style\\ButtonStyle.xaml",
+              "ToolTip": "D:\\do an lap trinh 1027\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\resources\\style\\ButtonStyle.xaml",
+              "RelativeToolTip": "DALTUDTXD_LOPNV90_2025_28967\\resources\\style\\ButtonStyle.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-12-13T13:19:09.426Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "GroupBoxStyle.xaml",
+              "DocumentMoniker": "D:\\do an lap trinh 1027\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\resources\\style\\GroupBoxStyle.xaml",
+              "RelativeDocumentMoniker": "DALTUDTXD_LOPNV90_2025_28967\\resources\\style\\GroupBoxStyle.xaml",
+              "ToolTip": "D:\\do an lap trinh 1027\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\resources\\style\\GroupBoxStyle.xaml",
+              "RelativeToolTip": "DALTUDTXD_LOPNV90_2025_28967\\resources\\style\\GroupBoxStyle.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-12-13T13:21:28.407Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "ColumnModel.cs",
+              "DocumentMoniker": "D:\\do an lap trinh 1027\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\Model\\ColumnModel.cs",
+              "RelativeDocumentMoniker": "DALTUDTXD_LOPNV90_2025_28967\\Model\\ColumnModel.cs",
+              "ToolTip": "D:\\do an lap trinh 1027\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\Model\\ColumnModel.cs",
+              "RelativeToolTip": "DALTUDTXD_LOPNV90_2025_28967\\Model\\ColumnModel.cs",
+              "ViewState": "AgIAAD4AAAAAAAAAAAAQwF4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-25T21:07:46.178Z"
             },
             {
               "$type": "Document",
@@ -695,46 +497,243 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
-              "Title": "CmdTinhToan.cs",
-              "DocumentMoniker": "C:\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\CmdTinhToan.cs",
-              "ToolTip": "C:\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\CmdTinhToan.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAABAAAAAAAAAA==",
+              "DocumentIndex": 19,
+              "Title": "ViewTinhToan.xaml.cs",
+              "DocumentMoniker": "D:\\do an lap trinh 1027\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\View\\ViewTinhToan.xaml.cs",
+              "RelativeDocumentMoniker": "DALTUDTXD_LOPNV90_2025_28967\\View\\ViewTinhToan.xaml.cs",
+              "ToolTip": "D:\\do an lap trinh 1027\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\View\\ViewTinhToan.xaml.cs",
+              "RelativeToolTip": "DALTUDTXD_LOPNV90_2025_28967\\View\\ViewTinhToan.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-25T20:14:41.56Z"
+              "WhenOpened": "2025-11-27T09:34:02.012Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 41,
-              "Title": "CmdCot.cs",
-              "DocumentMoniker": "C:\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\CmdCot.cs",
-              "ToolTip": "C:\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\CmdCot.cs",
-              "ViewState": "AgIAAAIAAAAAAAAAAAAkwDYAAAABAAAAAAAAAA==",
+              "DocumentIndex": 20,
+              "Title": "VatLieuViewModel.cs",
+              "DocumentMoniker": "D:\\do an lap trinh 1027\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\ViewModel\\VatLieuViewModel.cs",
+              "RelativeDocumentMoniker": "DALTUDTXD_LOPNV90_2025_28967\\ViewModel\\VatLieuViewModel.cs",
+              "ToolTip": "D:\\do an lap trinh 1027\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\ViewModel\\VatLieuViewModel.cs",
+              "RelativeToolTip": "DALTUDTXD_LOPNV90_2025_28967\\ViewModel\\VatLieuViewModel.cs",
+              "ViewState": "AgIAAGoAAAAAAAAAAAAiwKkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-25T20:09:31.453Z"
+              "WhenOpened": "2025-11-25T20:29:52.759Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "packages.config",
+              "DocumentMoniker": "D:\\do an lap trinh 1027\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\packages.config",
+              "RelativeDocumentMoniker": "DALTUDTXD_LOPNV90_2025_28967\\packages.config",
+              "ToolTip": "D:\\do an lap trinh 1027\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\packages.config",
+              "RelativeToolTip": "DALTUDTXD_LOPNV90_2025_28967\\packages.config",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2025-12-13T10:14:29.491Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "App.config",
+              "DocumentMoniker": "D:\\do an lap trinh 1027\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\App.config",
+              "RelativeDocumentMoniker": "DALTUDTXD_LOPNV90_2025_28967\\App.config",
+              "ToolTip": "D:\\do an lap trinh 1027\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\App.config",
+              "RelativeToolTip": "DALTUDTXD_LOPNV90_2025_28967\\App.config",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2025-12-13T10:14:10.22Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "TinhToanViewModel.cs",
+              "DocumentMoniker": "D:\\do an lap trinh 1027\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\ViewModel\\TinhToanViewModel.cs",
+              "RelativeDocumentMoniker": "DALTUDTXD_LOPNV90_2025_28967\\ViewModel\\TinhToanViewModel.cs",
+              "ToolTip": "D:\\do an lap trinh 1027\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\ViewModel\\TinhToanViewModel.cs",
+              "RelativeToolTip": "DALTUDTXD_LOPNV90_2025_28967\\ViewModel\\TinhToanViewModel.cs",
+              "ViewState": "AgIAAMQAAAAAAAAAAADwvwIBAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-25T21:11:23.822Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "CmdTinhToan.cs",
+              "DocumentMoniker": "D:\\do an lap trinh 1027\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\Cmd\\CmdTinhToan.cs",
+              "RelativeDocumentMoniker": "DALTUDTXD_LOPNV90_2025_28967\\Cmd\\CmdTinhToan.cs",
+              "ToolTip": "D:\\do an lap trinh 1027\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\Cmd\\CmdTinhToan.cs",
+              "RelativeToolTip": "DALTUDTXD_LOPNV90_2025_28967\\Cmd\\CmdTinhToan.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADMAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-28T16:56:03.184Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "CmdThongSoVe.cs",
+              "DocumentMoniker": "D:\\do an lap trinh 1027\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\Cmd\\CmdThongSoVe.cs",
+              "RelativeDocumentMoniker": "DALTUDTXD_LOPNV90_2025_28967\\Cmd\\CmdThongSoVe.cs",
+              "ToolTip": "D:\\do an lap trinh 1027\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\Cmd\\CmdThongSoVe.cs",
+              "RelativeToolTip": "DALTUDTXD_LOPNV90_2025_28967\\Cmd\\CmdThongSoVe.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-12T15:23:41.237Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "RevitCommandData.cs",
+              "DocumentMoniker": "D:\\do an lap trinh 1027\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\ViewModel\\RevitCommandData.cs",
+              "RelativeDocumentMoniker": "DALTUDTXD_LOPNV90_2025_28967\\ViewModel\\RevitCommandData.cs",
+              "ToolTip": "D:\\do an lap trinh 1027\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\ViewModel\\RevitCommandData.cs",
+              "RelativeToolTip": "DALTUDTXD_LOPNV90_2025_28967\\ViewModel\\RevitCommandData.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-25T20:45:15.186Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "RelayCommand.cs",
+              "DocumentMoniker": "D:\\do an lap trinh 1027\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\ViewModel\\RelayCommand.cs",
+              "RelativeDocumentMoniker": "DALTUDTXD_LOPNV90_2025_28967\\ViewModel\\RelayCommand.cs",
+              "ToolTip": "D:\\do an lap trinh 1027\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\ViewModel\\RelayCommand.cs",
+              "RelativeToolTip": "DALTUDTXD_LOPNV90_2025_28967\\ViewModel\\RelayCommand.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-25T20:33:10.277Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "TinhToanCotService.cs",
+              "DocumentMoniker": "D:\\do an lap trinh 1027\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\services\\TinhToanCotService.cs",
+              "RelativeDocumentMoniker": "DALTUDTXD_LOPNV90_2025_28967\\services\\TinhToanCotService.cs",
+              "ToolTip": "D:\\do an lap trinh 1027\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\services\\TinhToanCotService.cs",
+              "RelativeToolTip": "DALTUDTXD_LOPNV90_2025_28967\\services\\TinhToanCotService.cs",
+              "ViewState": "AgIAAH0AAAAAAAAAAAAowMAAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-28T17:16:40.054Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "MaterialModel.cs",
+              "DocumentMoniker": "D:\\do an lap trinh 1027\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\Model\\MaterialModel.cs",
+              "RelativeDocumentMoniker": "DALTUDTXD_LOPNV90_2025_28967\\Model\\MaterialModel.cs",
+              "ToolTip": "D:\\do an lap trinh 1027\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\Model\\MaterialModel.cs",
+              "RelativeToolTip": "DALTUDTXD_LOPNV90_2025_28967\\Model\\MaterialModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-25T21:09:55.169Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "HeSoTinhToan.cs",
+              "DocumentMoniker": "D:\\do an lap trinh 1027\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\Model\\HeSoTinhToan.cs",
+              "RelativeDocumentMoniker": "DALTUDTXD_LOPNV90_2025_28967\\Model\\HeSoTinhToan.cs",
+              "ToolTip": "D:\\do an lap trinh 1027\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\Model\\HeSoTinhToan.cs",
+              "RelativeToolTip": "DALTUDTXD_LOPNV90_2025_28967\\Model\\HeSoTinhToan.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-25T21:09:49.669Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "CmdVatLieu.cs",
+              "DocumentMoniker": "D:\\do an lap trinh 1027\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\Cmd\\CmdVatLieu.cs",
+              "RelativeDocumentMoniker": "DALTUDTXD_LOPNV90_2025_28967\\Cmd\\CmdVatLieu.cs",
+              "ToolTip": "D:\\do an lap trinh 1027\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\Cmd\\CmdVatLieu.cs",
+              "RelativeToolTip": "DALTUDTXD_LOPNV90_2025_28967\\Cmd\\CmdVatLieu.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-28T16:55:56.789Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "SharedState.cs",
+              "DocumentMoniker": "D:\\do an lap trinh 1027\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\SharedState.cs",
+              "RelativeDocumentMoniker": "DALTUDTXD_LOPNV90_2025_28967\\SharedState.cs",
+              "ToolTip": "D:\\do an lap trinh 1027\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\SharedState.cs",
+              "RelativeToolTip": "DALTUDTXD_LOPNV90_2025_28967\\SharedState.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-28T16:59:53.812Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "GetBarDiameter.cs",
+              "DocumentMoniker": "D:\\do an lap trinh 1027\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\classcolumnrebar\\GetBarDiameter.cs",
+              "RelativeDocumentMoniker": "DALTUDTXD_LOPNV90_2025_28967\\classcolumnrebar\\GetBarDiameter.cs",
+              "ToolTip": "D:\\do an lap trinh 1027\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\classcolumnrebar\\GetBarDiameter.cs",
+              "RelativeToolTip": "DALTUDTXD_LOPNV90_2025_28967\\classcolumnrebar\\GetBarDiameter.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-29T09:19:58.259Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "MyAddin1.cs",
+              "DocumentMoniker": "D:\\do an lap trinh 1027\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\CommandAddin\\MyAddin1.cs",
+              "RelativeDocumentMoniker": "DALTUDTXD_LOPNV90_2025_28967\\CommandAddin\\MyAddin1.cs",
+              "ToolTip": "D:\\do an lap trinh 1027\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\CommandAddin\\MyAddin1.cs",
+              "RelativeToolTip": "DALTUDTXD_LOPNV90_2025_28967\\CommandAddin\\MyAddin1.cs",
+              "ViewState": "AgIAACIAAAAAAAAAAAAgwCAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-24T12:52:18.33Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "DoubleUtils.cs",
+              "DocumentMoniker": "D:\\do an lap trinh 1027\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\classcolumnrebar\\DoubleUtils.cs",
+              "RelativeDocumentMoniker": "DALTUDTXD_LOPNV90_2025_28967\\classcolumnrebar\\DoubleUtils.cs",
+              "ToolTip": "D:\\do an lap trinh 1027\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\classcolumnrebar\\DoubleUtils.cs",
+              "RelativeToolTip": "DALTUDTXD_LOPNV90_2025_28967\\classcolumnrebar\\DoubleUtils.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-29T09:19:57.349Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "DistributeStirrupType.cs",
+              "DocumentMoniker": "D:\\do an lap trinh 1027\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\classcolumnrebar\\DistributeStirrupType.cs",
+              "RelativeDocumentMoniker": "DALTUDTXD_LOPNV90_2025_28967\\classcolumnrebar\\DistributeStirrupType.cs",
+              "ToolTip": "D:\\do an lap trinh 1027\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\classcolumnrebar\\DistributeStirrupType.cs",
+              "RelativeToolTip": "DALTUDTXD_LOPNV90_2025_28967\\classcolumnrebar\\DistributeStirrupType.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-29T09:19:56.635Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "ColumnSelectionFilter.cs",
+              "DocumentMoniker": "D:\\do an lap trinh 1027\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\classcolumnrebar\\ColumnSelectionFilter.cs",
+              "RelativeDocumentMoniker": "DALTUDTXD_LOPNV90_2025_28967\\classcolumnrebar\\ColumnSelectionFilter.cs",
+              "ToolTip": "D:\\do an lap trinh 1027\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\classcolumnrebar\\ColumnSelectionFilter.cs",
+              "RelativeToolTip": "DALTUDTXD_LOPNV90_2025_28967\\classcolumnrebar\\ColumnSelectionFilter.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-29T09:19:55.795Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 38,
-              "Title": "MainWindow.xaml",
-              "DocumentMoniker": "D:\\do an lap trinh 1027\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\MainWindow.xaml",
-              "RelativeDocumentMoniker": "DALTUDTXD_LOPNV90_2025_28967\\MainWindow.xaml",
-              "ToolTip": "D:\\do an lap trinh 1027\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\MainWindow.xaml",
-              "RelativeToolTip": "DALTUDTXD_LOPNV90_2025_28967\\MainWindow.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-11-24T07:09:06.041Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 39,
-              "Title": "Dictionary1.xaml",
-              "DocumentMoniker": "D:\\do an lap trinh 1027\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\resources\\style\\Dictionary1.xaml",
-              "RelativeDocumentMoniker": "DALTUDTXD_LOPNV90_2025_28967\\resources\\style\\Dictionary1.xaml",
-              "ToolTip": "D:\\do an lap trinh 1027\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\resources\\style\\Dictionary1.xaml",
-              "RelativeToolTip": "DALTUDTXD_LOPNV90_2025_28967\\resources\\style\\Dictionary1.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-11-24T07:09:33.966Z",
-              "EditorCaption": ""
+              "Title": "ColumnCanvas.cs",
+              "DocumentMoniker": "D:\\do an lap trinh 1027\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\classcolumnrebar\\ColumnCanvas.cs",
+              "RelativeDocumentMoniker": "DALTUDTXD_LOPNV90_2025_28967\\classcolumnrebar\\ColumnCanvas.cs",
+              "ToolTip": "D:\\do an lap trinh 1027\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\classcolumnrebar\\ColumnCanvas.cs",
+              "RelativeToolTip": "DALTUDTXD_LOPNV90_2025_28967\\classcolumnrebar\\ColumnCanvas.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-29T09:19:53.612Z"
             }
           ]
         },

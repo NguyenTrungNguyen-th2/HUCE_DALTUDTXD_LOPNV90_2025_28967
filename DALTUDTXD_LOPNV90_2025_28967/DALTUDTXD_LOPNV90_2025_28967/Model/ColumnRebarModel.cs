@@ -61,8 +61,7 @@ namespace DALTUDTXD_LOPNV90_2025_28967.Model
         }
 
         public double Cover { get; set; } = 30;
-        public int StirrupSpacing { get; set; } = 200;
-        public int Lan { get; set; } = 30;
+        public string BaseLevelName { get; }
 
         public RebarBarType XDiameter
         {
@@ -114,6 +113,10 @@ namespace DALTUDTXD_LOPNV90_2025_28967.Model
 
             Mark = column.LookupParameter("Mark")?.AsString() ?? "";
             vematcatcot();
+            var levelId = Column.get_Parameter(BuiltInParameter.FAMILY_BASE_LEVEL_PARAM)?.AsElementId();
+            BaseLevelName = (levelId != null && levelId != ElementId.InvalidElementId)
+                ? (Column.Document.GetElement(levelId) as Level)?.Name ?? "N/A"
+                : "N/A";
         }
         void vematcatcot()
         {
