@@ -20,6 +20,7 @@ namespace DALTUDTXD_LOPNV90_2025_28967.ViewModel
 {
     public class ColumnRebarViewModel : ObservableObject
     {
+        #region thuoctinh
         public double Cover
         {
             get => _cover;
@@ -190,13 +191,8 @@ namespace DALTUDTXD_LOPNV90_2025_28967.ViewModel
 
         public ViewVeThep viewvethep
         {
-            get => _viewvethep;
-            set
-            {
-                if (Equals(value, _viewvethep)) return;
-                _viewvethep = value;
-                OnPropertyChanged();
-            }
+            get;
+            set;
         }
 
         public ColumnRebarModel columnModel;
@@ -206,6 +202,8 @@ namespace DALTUDTXD_LOPNV90_2025_28967.ViewModel
             get => _okCommand;
             set => _okCommand = value;
         }
+
+
 
         public RelayCommand CloseCommand
         {
@@ -222,6 +220,7 @@ namespace DALTUDTXD_LOPNV90_2025_28967.ViewModel
                 OnPropertyChanged();
             }
         }
+        public List<ElementId> CreatedRebarIds { get; set; } = new List<ElementId>();
 
         private Document doc;
         private UIDocument uiDoc;
@@ -255,8 +254,8 @@ namespace DALTUDTXD_LOPNV90_2025_28967.ViewModel
         private RebarCoverType _coverType1;
         private ViewVeThep _viewvethep;
         public ObservableCollection<ColumnRebarModel> DanhSachCot { get; set; } = new ObservableCollection<ColumnRebarModel>();
-
-
+        #endregion
+        #region hamkhoitao
         public ColumnRebarViewModel(Document doc, UIDocument uiDoc)
         {
 
@@ -291,15 +290,16 @@ namespace DALTUDTXD_LOPNV90_2025_28967.ViewModel
             this.doc = doc;
             this.uiDoc = uiDoc;
             OkCommand = new RelayCommand(_ => Run());
-            CloseCommand = new RelayCommand(_ => Close());
+            CloseCommand = new RelayCommand(w =>
+            {
+                if (w is Window window)
+                    window.Close();
+            });
 
             GetData();
         }
-
-
-
-
-
+        #endregion
+        #region laythongtinmohinh
         void GetData()
         {
             var references = uiDoc.Selection.PickObjects(
@@ -319,34 +319,16 @@ namespace DALTUDTXD_LOPNV90_2025_28967.ViewModel
                 }
             }
 
-            // 👇 Gán SelectedColumn = cột đầu tiên (nếu có)
             SelectedColumn = DanhSachCot.FirstOrDefault();
-
-            // ... phần còn lại: lấy Diameters, HookTypes, v.v.
             var FilterStirrupName = new HashSet<string> { "M_T1", "M_T2", "M_T6" };
-            var FilterHookTypeName = new HashSet<string> { "Standard - 90 deg.", "Standard - 180 deg." };
 
             StirrupRebarShapes = new FilteredElementCollector(doc).OfClass(typeof(RebarShape)).Cast<RebarShape>()
                 .Where(x => FilterStirrupName.Contains(x.Name)).ToList();
-
-            HookTypes = new FilteredElementCollector(doc)
-                .OfClass(typeof(RebarHookType))
-                .Cast<RebarHookType>()
-                .Where(x => FilterHookTypeName.Contains(x.Name))
-                .OrderBy(x => x.Name)
-                .ToList();
-
             Diameters = new FilteredElementCollector(doc)
                 .OfClass(typeof(RebarBarType))
                 .Cast<RebarBarType>()
                 .OrderBy(x => x.Name)
                 .ToList();
-            //Covers = new FilteredElementCollector(doc)
-            //    .OfClass(typeof(RebarCoverType))
-            //    .Cast<RebarCoverType>()
-            //    .OrderBy(x => x.Name)
-            //    .ToList();
-
             SelectedColumn.XDiameter = Diameters.FirstOrDefault(x => x.BarNominalDiameter.FeetToMm() > 20)
                         ?? Diameters.FirstOrDefault()
                         ?? throw new InvalidOperationException("Không tìm thấy loại thép nào!");
@@ -365,22 +347,37 @@ namespace DALTUDTXD_LOPNV90_2025_28967.ViewModel
             StirrupShape = StirrupRebarShapes.FirstOrDefault(x => x.Name == "M_T1");
 
         }
+        #endregion
+        #region hamrun
         public void Run()
         {
-
-
-
             using (var tx = new Transaction(document: doc, name: "create columns"))
             {
                 tx.Start();
-                foreach (var column in DanhSachCot)
+                string mode = $"{SeletedLanType.Name}";
+                switch (mode)
                 {
-                    columnModel = column;
-                    CreateStirrup();
-                    CreateXMainRebar();
-                    CreateYMainRebar();
-
+                    case "So le":
+                        foreach (var column in DanhSachCot)
+                        {
+                            columnModel = column;
+                            CreateStirrup();
+                            CreateXMainRebar();
+                            CreateYMainRebar();
+                        }
+                        break;
+                    case "Đồng nhất":
+                        foreach (var column in DanhSachCot)
+                        {
+                            columnModel = column;
+                            CreateStirrup();
+                            CreateXMainRebar1();
+                            CreateYMainRebar1();
+                        }
+                        break;
                 }
+
+
 
 
                 tx.Commit();
@@ -388,6 +385,8 @@ namespace DALTUDTXD_LOPNV90_2025_28967.ViewModel
             }
 
         }
+        #endregion
+        #region vethepsole
         void CreateStirrup()
         {
             var o1 = columnModel.D.Add(source: columnModel.XVector * Cover).Add(source: columnModel.YVector * Cover);
@@ -397,6 +396,7 @@ namespace DALTUDTXD_LOPNV90_2025_28967.ViewModel
             var shapeDrivenAccessor = rebar.GetShapeDrivenAccessor();
             shapeDrivenAccessor.ScaleToBox(origin: o1, xVec: columnModel.XVector * (columnModel.Width - 2 * Cover), yVec: (columnModel.YVector) * (columnModel.Height - 2 * Cover));
             shapeDrivenAccessor.SetLayoutAsMaximumSpacing(spacing: StirrupSpacing.MmToFeet(), arrayLength: (columnModel.TopElevation - columnModel.BotElevation) - 2 * Cover - StirrupDiameter.BarNominalDiameter, barsOnNormalSide: true, includeFirstBar: true, includeLastBar: true);
+            SetPartition(rebar);
         }
 
         void CreateXMainRebar()
@@ -405,8 +405,8 @@ namespace DALTUDTXD_LOPNV90_2025_28967.ViewModel
                 (columnModel.Width - 2 * Cover - 2 * StirrupDiameter.BarNominalDiameter -
                  SelectedColumn.XDiameter.BarNominalDiameter) / (SelectedColumn.NumberOfXRebar - 1);
             var columnHeight = columnModel.TopElevation - columnModel.BotElevation;
-
-            var topRebars = new List<Rebar>();
+            var XRebars = new List<Rebar>();
+            var XRebars1 = new List<Rebar>();
             if (SelectedColumn.NumberOfXRebar > 2)
             {
                 for (int i = 0; i < SelectedColumn.NumberOfXRebar; i++)
@@ -441,13 +441,15 @@ namespace DALTUDTXD_LOPNV90_2025_28967.ViewModel
                                 host: columnModel.Column,
                                 norm: columnModel.XVector, curves: new List<Curve>() { line20 }, startHookOrient: RebarHookOrientation.Right,
                                 endHookOrient: RebarHookOrientation.Right, useExistingShapeIfPossible: true, createNewShape: true);
-                            topRebars.Add(item: rebarA);
+                            XRebars.Add(item: rebarA);
                             var rebarD = Rebar.CreateFromCurves(doc: doc, style: RebarStyle.Standard, barType: SelectedColumn.XDiameter, startHook: HookTyped,
                                 endHook: HookTypet,
                                 host: columnModel.Column,
                                 norm: columnModel.XVector, curves: new List<Curve>() { line30_o3 }, startHookOrient: RebarHookOrientation.Left,
                                 endHookOrient: RebarHookOrientation.Left, useExistingShapeIfPossible: true, createNewShape: true);
-                            topRebars.Add(item: rebarD);
+                            XRebars.Add(item: rebarD);
+                            SetPartition(rebarA);
+                            SetPartition(rebarD);
 
                         }
                         else
@@ -457,14 +459,15 @@ namespace DALTUDTXD_LOPNV90_2025_28967.ViewModel
                                 host: columnModel.Column,
                                 norm: columnModel.XVector, curves: new List<Curve>() { line30 }, startHookOrient: RebarHookOrientation.Right,
                                 endHookOrient: RebarHookOrientation.Right, useExistingShapeIfPossible: true, createNewShape: true);
-                            topRebars.Add(item: rebarA);
+                            XRebars1.Add(item: rebarA);
                             var rebarD = Rebar.CreateFromCurves(doc: doc, style: RebarStyle.Standard, barType: SelectedColumn.XDiameter, startHook: HookTyped,
                                 endHook: HookTypet,
                                 host: columnModel.Column,
                                 norm: columnModel.XVector, curves: new List<Curve>() { line20_o3 }, startHookOrient: RebarHookOrientation.Left,
                                 endHookOrient: RebarHookOrientation.Left, useExistingShapeIfPossible: true, createNewShape: true);
-                            topRebars.Add(item: rebarD);
-
+                            XRebars1.Add(item: rebarD);
+                            SetPartition(rebarA);
+                            SetPartition(rebarD);
                         }
                     }
                     else
@@ -485,13 +488,15 @@ namespace DALTUDTXD_LOPNV90_2025_28967.ViewModel
                                 host: columnModel.Column,
                                 norm: columnModel.XVector, curves: new List<Curve>() { line0 }, startHookOrient: RebarHookOrientation.Right,
                                 endHookOrient: RebarHookOrientation.Right, useExistingShapeIfPossible: true, createNewShape: true);
-                            topRebars.Add(item: rebarA);
+                            XRebars.Add(item: rebarA);
                             var rebarD = Rebar.CreateFromCurves(doc: doc, style: RebarStyle.Standard, barType: SelectedColumn.XDiameter, startHook: HookTyped,
                                 endHook: HookTypet,
                                 host: columnModel.Column,
                                 norm: columnModel.XVector, curves: new List<Curve>() { line03 }, startHookOrient: RebarHookOrientation.Left,
                                 endHookOrient: RebarHookOrientation.Left, useExistingShapeIfPossible: true, createNewShape: true);
-                            topRebars.Add(item: rebarD);
+                            XRebars.Add(item: rebarD);
+                            SetPartition(rebarA);
+                            SetPartition(rebarD);
 
                         }
                         else
@@ -501,17 +506,20 @@ namespace DALTUDTXD_LOPNV90_2025_28967.ViewModel
                                 host: columnModel.Column,
                                 norm: columnModel.XVector, curves: new List<Curve>() { line01 }, startHookOrient: RebarHookOrientation.Right,
                                 endHookOrient: RebarHookOrientation.Right, useExistingShapeIfPossible: true, createNewShape: true);
-                            topRebars.Add(item: rebarA);
+                            XRebars1.Add(item: rebarA);
                             var rebarD = Rebar.CreateFromCurves(doc: doc, style: RebarStyle.Standard, barType: SelectedColumn.XDiameter, startHook: HookTyped,
                                 endHook: HookTypet,
                                 host: columnModel.Column,
                                 norm: columnModel.XVector, curves: new List<Curve>() { line02 }, startHookOrient: RebarHookOrientation.Left,
                                 endHookOrient: RebarHookOrientation.Left, useExistingShapeIfPossible: true, createNewShape: true);
-                            topRebars.Add(item: rebarD);
+                            XRebars1.Add(item: rebarD);
+                            SetPartition(rebarA);
+                            SetPartition(rebarD);
 
                         }
                     }
                 }
+
             }
             else
             {
@@ -522,7 +530,6 @@ namespace DALTUDTXD_LOPNV90_2025_28967.ViewModel
 
 
         }
-
         void CreateYMainRebar()
         {
 
@@ -531,7 +538,8 @@ namespace DALTUDTXD_LOPNV90_2025_28967.ViewModel
             var spacing2Rebars =
                 (columnModel.Height - 2 * Cover - 2 * StirrupDiameter.BarNominalDiameter -
                  SelectedColumn.YDiameter.BarNominalDiameter) / (SelectedColumn.NumberOfYRebar - 1);
-            var topRebars = new List<Rebar>();
+            var YRebars = new List<Rebar>();
+            var YRebars1 = new List<Rebar>();
             if (SelectedColumn.NumberOfYRebar > 2)
             {
 
@@ -573,13 +581,15 @@ namespace DALTUDTXD_LOPNV90_2025_28967.ViewModel
                                 host: columnModel.Column,
                                 norm: columnModel.YVector, curves: new List<Curve>() { line20 }, startHookOrient: RebarHookOrientation.Right,
                                 endHookOrient: RebarHookOrientation.Right, useExistingShapeIfPossible: true, createNewShape: true);
-                            topRebars.Add(item: rebarA);
+                            YRebars1.Add(item: rebarA);
                             var rebarC = Rebar.CreateFromCurves(doc: doc, style: RebarStyle.Standard, barType: SelectedColumn.YDiameter, startHook: HookTyped,
                                 endHook: HookTypet,
                                 host: columnModel.Column,
                                 norm: columnModel.YVector, curves: new List<Curve>() { line20_o3 }, startHookOrient: RebarHookOrientation.Left,
                                 endHookOrient: RebarHookOrientation.Left, useExistingShapeIfPossible: true, createNewShape: true);
-                            topRebars.Add(item: rebarC);
+                            YRebars1.Add(item: rebarC);
+                            SetPartition(rebarA);
+                            SetPartition(rebarC);
                         }
                         else
                         {
@@ -588,12 +598,15 @@ namespace DALTUDTXD_LOPNV90_2025_28967.ViewModel
                                 host: columnModel.Column,
                                 norm: columnModel.YVector, curves: new List<Curve>() { line30 }, startHookOrient: RebarHookOrientation.Right,
                                 endHookOrient: RebarHookOrientation.Right, useExistingShapeIfPossible: true, createNewShape: true);
+                            YRebars.Add(item: rebarA);
                             var rebarC = Rebar.CreateFromCurves(doc: doc, style: RebarStyle.Standard, barType: SelectedColumn.YDiameter, startHook: HookTyped,
                                 endHook: HookTypet,
                                 host: columnModel.Column,
                                 norm: columnModel.YVector, curves: new List<Curve>() { line30_o3 }, startHookOrient: RebarHookOrientation.Left,
                                 endHookOrient: RebarHookOrientation.Left, useExistingShapeIfPossible: true, createNewShape: true);
-                            topRebars.Add(item: rebarC);
+                            YRebars.Add(item: rebarC);
+                            SetPartition(rebarA);
+                            SetPartition(rebarC);
 
                         }
                     }
@@ -615,13 +628,15 @@ namespace DALTUDTXD_LOPNV90_2025_28967.ViewModel
                                 host: columnModel.Column,
                                 norm: columnModel.YVector, curves: new List<Curve>() { line20 }, startHookOrient: RebarHookOrientation.Right,
                                 endHookOrient: RebarHookOrientation.Right, useExistingShapeIfPossible: true, createNewShape: true);
-                            topRebars.Add(item: rebarA);
+                            YRebars1.Add(item: rebarA);
                             var rebarC = Rebar.CreateFromCurves(doc: doc, style: RebarStyle.Standard, barType: SelectedColumn.YDiameter, startHook: HookTyped,
                                 endHook: HookTypet,
                                 host: columnModel.Column,
                                 norm: columnModel.YVector, curves: new List<Curve>() { line20_o3 }, startHookOrient: RebarHookOrientation.Left,
                                 endHookOrient: RebarHookOrientation.Left, useExistingShapeIfPossible: true, createNewShape: true);
-                            topRebars.Add(item: rebarC);
+                            YRebars1.Add(item: rebarC);
+                            SetPartition(rebarA);
+                            SetPartition(rebarC);
                         }
                         else
                         {
@@ -630,12 +645,15 @@ namespace DALTUDTXD_LOPNV90_2025_28967.ViewModel
                                 host: columnModel.Column,
                                 norm: columnModel.YVector, curves: new List<Curve>() { line30 }, startHookOrient: RebarHookOrientation.Right,
                                 endHookOrient: RebarHookOrientation.Right, useExistingShapeIfPossible: true, createNewShape: true);
+                            YRebars.Add(item: rebarA);
                             var rebarC = Rebar.CreateFromCurves(doc: doc, style: RebarStyle.Standard, barType: SelectedColumn.YDiameter, startHook: HookTyped,
                                 endHook: HookTypet,
                                 host: columnModel.Column,
                                 norm: columnModel.YVector, curves: new List<Curve>() { line30_o3 }, startHookOrient: RebarHookOrientation.Left,
                                 endHookOrient: RebarHookOrientation.Left, useExistingShapeIfPossible: true, createNewShape: true);
-                            topRebars.Add(item: rebarC);
+                            YRebars.Add(item: rebarC);
+                            SetPartition(rebarA);
+                            SetPartition(rebarC);
                         }
 
                     }
@@ -643,13 +661,78 @@ namespace DALTUDTXD_LOPNV90_2025_28967.ViewModel
                 }
             }
         }
-
-        void Close()
+        #endregion
+        #region vethepdongnhat
+        void CreateXMainRebar1()
         {
+            var spacing2Rebars =
+                (columnModel.Width - 2 * Cover - 2 * StirrupDiameter.BarNominalDiameter -
+                SelectedColumn.XDiameter.BarNominalDiameter) / (SelectedColumn.NumberOfXRebar - 1);
 
-            viewvethep.Close();
-
+            var topRebars = new List<Rebar>();
+            for (int i = 0; i < SelectedColumn.NumberOfXRebar; i++)
+            {
+                var o2 = columnModel.A
+                    .Add(source: columnModel.XVector * (Cover + StirrupDiameter.BarNominalDiameter +
+                    SelectedColumn.XDiameter.BarNominalDiameter / 2 + spacing2Rebars * i))
+                    .Add(source: -columnModel.YVector *
+                                 (Cover + StirrupDiameter.BarNominalDiameter +
+                    SelectedColumn.XDiameter.BarNominalDiameter / 2));
+                o2 = new XYZ(o2.X, o2.Y, columnModel.BotElevation);
+                var columnHeight = columnModel.TopElevation - columnModel.BotElevation;
+                var line1 = Line.CreateBound(endpoint1: o2,
+                    endpoint2: o2.Add(source: XYZ.BasisZ *
+                                              (columnHeight + Lan * SelectedColumn.XDiameter.BarNominalDiameter)));
+                var rebar = Rebar.CreateFromCurves(doc, RebarStyle.Standard, SelectedColumn.XDiameter, HookTyped, HookTypet,
+                    columnModel.Column, columnModel.XVector, new List<Curve> { line1 }, RebarHookOrientation.Right,
+                    RebarHookOrientation.Right, true, true);
+                topRebars.Add(item: rebar);
+                SetPartition(rebar);
+            }
+            var centerPointY = columnModel.A.Add(columnModel.YVector.Multiply(-columnModel.Height / 2));
+            var mirrorPlane = Plane.CreateByNormalAndOrigin(columnModel.YVector, centerPointY);
+            ElementTransformUtils.MirrorElements(doc, topRebars.Select(x => x.Id).ToList(), mirrorPlane, true);
         }
+        void CreateYMainRebar1()
+        {
+            var spacing2Rebars =
+                (columnModel.Height - 2 * Cover - 2 * StirrupDiameter.BarNominalDiameter -
+                SelectedColumn.YDiameter.BarNominalDiameter) / (SelectedColumn.NumberOfYRebar - 1);
+
+            var topRebars = new List<Rebar>();
+            if (SelectedColumn.NumberOfYRebar > 2)
+            {
+                for (int i = 1; i <= SelectedColumn.NumberOfYRebar - 2; i++)
+                {
+                    var o2 = columnModel.A
+                        .Add(source: columnModel.XVector *
+                                     (Cover + StirrupDiameter.BarNominalDiameter +
+                        SelectedColumn.YDiameter.BarNominalDiameter / 2))
+                        .Add(source: -columnModel.YVector *
+                                     (Cover + StirrupDiameter.BarNominalDiameter +
+                        SelectedColumn.YDiameter.BarNominalDiameter / 2 +
+                                      i * spacing2Rebars));
+                    o2 = new XYZ(o2.X, o2.Y, columnModel.BotElevation);
+                    var columnHeight = columnModel.TopElevation - columnModel.BotElevation;
+                    var line1 = Line.CreateBound(endpoint1: o2,
+                        endpoint2: o2.Add(source: XYZ.BasisZ *
+                                                  (columnHeight + Lan * SelectedColumn.YDiameter.BarNominalDiameter)));
+                    var rebar = Rebar.CreateFromCurves(doc, RebarStyle.Standard, SelectedColumn.YDiameter, HookTyped, HookTypet,
+                        columnModel.Column, columnModel.YVector, new List<Curve> { line1 }, RebarHookOrientation.Right,
+                        RebarHookOrientation.Right, true, true);
+                    topRebars.Add(item: rebar);
+                    SetPartition(rebar);
+                }
+
+                var centerPointX = columnModel.A.Add(columnModel.XVector.Multiply(columnModel.Width / 2));
+                var mirrorPlane = Plane.CreateByNormalAndOrigin(columnModel.XVector, centerPointX);
+                ElementTransformUtils.MirrorElements(doc, topRebars.Select(x => x.Id).ToList(), mirrorPlane, true);
+            }
+        }
+
+
+        #endregion
+        #region ham gan thong tin
         private bool _applyToAllColumns;
         public bool ApplyToAllColumns
         {
@@ -663,11 +746,11 @@ namespace DALTUDTXD_LOPNV90_2025_28967.ViewModel
                 if (value && SelectedColumn != null)
                 {
                     // Áp dụng thông số từ SelectedColumn sang tất cả các cột
-                    ApplyCurrentSettingsToAllColumns();
+                    ApplyToAllColumns1();
                 }
             }
         }
-        private void ApplyCurrentSettingsToAllColumns()
+        private void ApplyToAllColumns1()
         {
             if (SelectedColumn == null) return;
 
@@ -675,15 +758,21 @@ namespace DALTUDTXD_LOPNV90_2025_28967.ViewModel
 
             foreach (var col in DanhSachCot)
             {
-                // Bỏ qua chính cột nguồn (nếu muốn, nhưng gán lại cũng không sao)
                 col.NumberOfXRebar = source.NumberOfXRebar;
                 col.NumberOfYRebar = source.NumberOfYRebar;
                 col.XDiameter = source.XDiameter;
                 col.YDiameter = source.YDiameter;
-                // Bạn có thể thêm các thuộc tính khác như: StirrupSpacing, HookType, v.v.
             }
         }
 
-
+        void SetPartition(Rebar rb)
+        {
+            Parameter partParam = rb.LookupParameter("Partition");
+            if (partParam != null && !partParam.IsReadOnly)
+            {
+                partParam.Set($"{columnModel.Mark}_{columnModel.BaseLevelName}");
+            }
+        }
+        #endregion
     }
 }
