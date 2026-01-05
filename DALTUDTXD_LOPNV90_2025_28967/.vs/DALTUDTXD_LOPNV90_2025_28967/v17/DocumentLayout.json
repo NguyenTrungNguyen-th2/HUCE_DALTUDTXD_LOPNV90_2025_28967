@@ -3,8 +3,12 @@
   "WorkspaceRootPath": "D:\\do an lap trinh 1027\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{98B56120-10E6-4BFA-B8EF-963CC4316E96}|DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967.csproj|D:\\do an lap trinh 1027\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\daltudtxd_lopnv90_2025_28967\\viewmodel\\columnrebarviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{98B56120-10E6-4BFA-B8EF-963CC4316E96}|DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967.csproj|d:\\do an lap trinh 1027\\huce_daltudtxd_lopnv90_2025_28967\\daltudtxd_lopnv90_2025_28967\\daltudtxd_lopnv90_2025_28967\\viewmodel\\columnrebarviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{98B56120-10E6-4BFA-B8EF-963CC4316E96}|DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967.csproj|solutionrelative:daltudtxd_lopnv90_2025_28967\\viewmodel\\columnrebarviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{98B56120-10E6-4BFA-B8EF-963CC4316E96}|DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967.csproj|D:\\do an lap trinh 1027\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\daltudtxd_lopnv90_2025_28967\\model\\columnrebarmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{98B56120-10E6-4BFA-B8EF-963CC4316E96}|DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967.csproj|solutionrelative:daltudtxd_lopnv90_2025_28967\\model\\columnrebarmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{98B56120-10E6-4BFA-B8EF-963CC4316E96}|DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967.csproj|D:\\do an lap trinh 1027\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\daltudtxd_lopnv90_2025_28967\\view\\viewvethep.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
@@ -15,11 +19,7 @@
       "RelativeMoniker": "D:0:0:{98B56120-10E6-4BFA-B8EF-963CC4316E96}|DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967.csproj|solutionrelative:daltudtxd_lopnv90_2025_28967\\cmd\\cmdchonthep.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{98B56120-10E6-4BFA-B8EF-963CC4316E96}|DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967.csproj|D:\\do an lap trinh 1027\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\daltudtxd_lopnv90_2025_28967\\model\\columnrebarmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{98B56120-10E6-4BFA-B8EF-963CC4316E96}|DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967.csproj|solutionrelative:daltudtxd_lopnv90_2025_28967\\model\\columnrebarmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{98B56120-10E6-4BFA-B8EF-963CC4316E96}|DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967.csproj|d:\\do an lap trinh 1027\\huce_daltudtxd_lopnv90_2025_28967\\daltudtxd_lopnv90_2025_28967\\daltudtxd_lopnv90_2025_28967\\commandaddin\\myaddin.addin||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "AbsoluteMoniker": "D:0:0:{98B56120-10E6-4BFA-B8EF-963CC4316E96}|DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967.csproj|D:\\do an lap trinh 1027\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\daltudtxd_lopnv90_2025_28967\\commandaddin\\myaddin.addin||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
       "RelativeMoniker": "D:0:0:{98B56120-10E6-4BFA-B8EF-963CC4316E96}|DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967.csproj|solutionrelative:daltudtxd_lopnv90_2025_28967\\commandaddin\\myaddin.addin||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     },
     {
@@ -224,7 +224,7 @@
               "RelativeDocumentMoniker": "DALTUDTXD_LOPNV90_2025_28967\\ViewModel\\ColumnRebarViewModel.cs",
               "ToolTip": "D:\\do an lap trinh 1027\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\ViewModel\\ColumnRebarViewModel.cs",
               "RelativeToolTip": "DALTUDTXD_LOPNV90_2025_28967\\ViewModel\\ColumnRebarViewModel.cs",
-              "ViewState": "AgIAAH8BAAAAAAAAAAAqwAcDAAASAAAAAAAAAA==",
+              "ViewState": "AgIAAPcCAAAAAAAAAAAuwAYDAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-25T20:46:43.246Z",
               "EditorCaption": ""
@@ -253,15 +253,14 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "ViewVeThep.xaml",
               "DocumentMoniker": "D:\\do an lap trinh 1027\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\View\\ViewVeThep.xaml",
               "RelativeDocumentMoniker": "DALTUDTXD_LOPNV90_2025_28967\\View\\ViewVeThep.xaml",
               "ToolTip": "D:\\do an lap trinh 1027\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\View\\ViewVeThep.xaml",
               "RelativeToolTip": "DALTUDTXD_LOPNV90_2025_28967\\View\\ViewVeThep.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-11-24T15:21:22.651Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-24T15:21:22.651Z"
             },
             {
               "$type": "Document",
@@ -273,8 +272,7 @@
               "RelativeToolTip": "DALTUDTXD_LOPNV90_2025_28967\\CommandAddin\\Myaddin.Addin",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAABVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000072|",
-              "WhenOpened": "2025-11-24T13:52:24.933Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-24T13:52:24.933Z"
             },
             {
               "$type": "Document",
@@ -290,20 +288,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "ColumnRebarModel.cs",
               "DocumentMoniker": "D:\\do an lap trinh 1027\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\Model\\ColumnRebarModel.cs",
               "RelativeDocumentMoniker": "DALTUDTXD_LOPNV90_2025_28967\\Model\\ColumnRebarModel.cs",
               "ToolTip": "D:\\do an lap trinh 1027\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\Model\\ColumnRebarModel.cs",
               "RelativeToolTip": "DALTUDTXD_LOPNV90_2025_28967\\Model\\ColumnRebarModel.cs",
-              "ViewState": "AgIAAFwAAAAAAAAAAAAiwD8AAAAsAAAAAAAAAA==",
+              "ViewState": "AgIAABsAAAAAAAAAAAAswCQAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-25T21:07:54.638Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "CmdChonThep.cs",
               "DocumentMoniker": "D:\\do an lap trinh 1027\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\Cmd\\CmdChonThep.cs",
               "RelativeDocumentMoniker": "DALTUDTXD_LOPNV90_2025_28967\\Cmd\\CmdChonThep.cs",
@@ -311,8 +309,7 @@
               "RelativeToolTip": "DALTUDTXD_LOPNV90_2025_28967\\Cmd\\CmdChonThep.cs",
               "ViewState": "AgIAAAkAAAAAAAAAAAAUwBYAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-29T09:19:09.301Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-29T09:19:09.301Z"
             },
             {
               "$type": "Document",
@@ -334,8 +331,7 @@
               "ToolTip": "D:\\do an lap trinh 1027\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\resources\\style\\Dictionary1.xaml",
               "RelativeToolTip": "DALTUDTXD_LOPNV90_2025_28967\\resources\\style\\Dictionary1.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-11-24T07:09:33.966Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-24T07:09:33.966Z"
             },
             {
               "$type": "Document",
@@ -402,8 +398,7 @@
               "ToolTip": "D:\\do an lap trinh 1027\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\resources\\style\\TextBoxStyle.xaml",
               "RelativeToolTip": "DALTUDTXD_LOPNV90_2025_28967\\resources\\style\\TextBoxStyle.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-12-13T13:19:14.008Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-13T13:19:14.008Z"
             },
             {
               "$type": "Document",
@@ -448,8 +443,7 @@
               "ToolTip": "D:\\do an lap trinh 1027\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\resources\\style\\ButtonStyle.xaml",
               "RelativeToolTip": "DALTUDTXD_LOPNV90_2025_28967\\resources\\style\\ButtonStyle.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-12-13T13:19:09.426Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-13T13:19:09.426Z"
             },
             {
               "$type": "Document",
@@ -460,8 +454,7 @@
               "ToolTip": "D:\\do an lap trinh 1027\\HUCE_DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\DALTUDTXD_LOPNV90_2025_28967\\resources\\style\\GroupBoxStyle.xaml",
               "RelativeToolTip": "DALTUDTXD_LOPNV90_2025_28967\\resources\\style\\GroupBoxStyle.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-12-13T13:21:28.407Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-13T13:21:28.407Z"
             },
             {
               "$type": "Document",

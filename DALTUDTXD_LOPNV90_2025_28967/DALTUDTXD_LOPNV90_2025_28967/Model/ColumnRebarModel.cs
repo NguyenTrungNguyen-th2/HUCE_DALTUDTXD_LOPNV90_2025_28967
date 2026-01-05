@@ -34,6 +34,7 @@ namespace DALTUDTXD_LOPNV90_2025_28967.Model
         public double Height { get; set; }
         public FamilyInstance Column { get; set; }
         public Point1 Origin { get; set; } = new Point1(100, 200); //tọa độ gốc
+        public string ColumnLocationMark { get; }
 
         public int NumberOfXRebar
         {
@@ -114,6 +115,9 @@ namespace DALTUDTXD_LOPNV90_2025_28967.Model
             Mark = column.LookupParameter("Mark")?.AsString() ?? "";
             vematcatcot();
             var levelId = Column.get_Parameter(BuiltInParameter.FAMILY_BASE_LEVEL_PARAM)?.AsElementId();
+            ColumnLocationMark = column
+                .LookupParameter("Column Location Mark")
+                ?.AsString() ?? "";
             BaseLevelName = (levelId != null && levelId != ElementId.InvalidElementId)
                 ? (Column.Document.GetElement(levelId) as Level)?.Name ?? "N/A"
                 : "N/A";

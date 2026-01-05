@@ -770,7 +770,7 @@ namespace DALTUDTXD_LOPNV90_2025_28967.ViewModel
             Parameter partParam = rb.LookupParameter("Partition");
             if (partParam != null && !partParam.IsReadOnly)
             {
-                partParam.Set($"{columnModel.Mark}_{columnModel.BaseLevelName}");
+                partParam.Set($"{columnModel.ColumnLocationMark}_{columnModel.BaseLevelName}");
             }
         }
         #endregion
