@@ -267,46 +267,38 @@ namespace DALTUDTXD_LOPNV90_2025_28967.ViewModel
         {
             ClassBienToanCuc.RevitColumns.Clear();
 
-            var typeMarkCounter = new Dictionary<string, int>();
-
             var columns = new FilteredElementCollector(_doc)
                 .OfCategory(BuiltInCategory.OST_StructuralColumns)
                 .WhereElementIsNotElementType()
                 .OfClass(typeof(FamilyInstance))
-                .Cast<FamilyInstance>();
+                .Cast<FamilyInstance>()
+                .ToList();
 
-            using (Transaction t = new Transaction(_doc, "Gán Mark tự động"))
+            using (Transaction t = new Transaction(_doc, "Gán Mark từ Column Location Mark"))
             {
                 t.Start();
 
                 foreach (var fi in columns)
                 {
-                    string mark = fi.LookupParameter("Column Location Mark")?.AsString()?.Trim();
-
-                    if (string.IsNullOrEmpty(mark))
+                    string columnLocationMark = fi.LookupParameter("Column Location Mark")?.AsString()?.Trim();
+                    if (string.IsNullOrEmpty(columnLocationMark))
                     {
-                        mark = fi.LookupParameter("Mark")?.AsString()?.Trim();
+                        continue;
                     }
 
-                    if (string.IsNullOrEmpty(mark))
+                    Parameter markParam = fi.LookupParameter("Mark");
+                    if (markParam == null || markParam.IsReadOnly)
                     {
-                        string typeMark = fi.Symbol.LookupParameter("Type Mark")?.AsString() ?? "DEFAULT";
-
-                        if (!typeMarkCounter.ContainsKey(typeMark))
-                            typeMarkCounter[typeMark] = 1;
-                        else
-                            typeMarkCounter[typeMark]++;
-
-                        int index = typeMarkCounter[typeMark];
-                        mark = $"{typeMark}-C{index}";
-
-                        Parameter markParam = fi.LookupParameter("Mark");
-                        if (markParam != null && !markParam.IsReadOnly)
-                        {
-                            markParam.Set(mark);
-                        }
+                        continue; 
                     }
 
+                    string currentMark = markParam.AsString()?.Trim();
+                    if (string.IsNullOrEmpty(currentMark))
+                    {
+                        markParam.Set(columnLocationMark);
+                    }
+
+                    string mark = markParam.AsString()?.Trim() ?? columnLocationMark;
                     var symbol = _doc.GetElement(fi.GetTypeId()) as FamilySymbol;
                     var pb = symbol?.LookupParameter("b") ?? fi.LookupParameter("b");
                     var ph = symbol?.LookupParameter("h") ?? fi.LookupParameter("h");
@@ -314,8 +306,10 @@ namespace DALTUDTXD_LOPNV90_2025_28967.ViewModel
 
                     double b = pb.AsDouble() * 304.8;
                     double h = ph.AsDouble() * 304.8;
+
                     var bb = fi.get_BoundingBox(null);
                     double len = bb != null ? Math.Abs(bb.Max.Z - bb.Min.Z) * 304.8 : 0;
+
                     string level = _doc.GetElement(fi.LevelId)?.Name ?? "—";
 
                     ClassBienToanCuc.RevitColumns.Add(new ColumnModel

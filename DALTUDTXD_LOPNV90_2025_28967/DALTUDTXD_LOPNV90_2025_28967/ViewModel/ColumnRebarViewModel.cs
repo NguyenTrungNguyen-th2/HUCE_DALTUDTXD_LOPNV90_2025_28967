@@ -294,36 +294,7 @@ namespace DALTUDTXD_LOPNV90_2025_28967.ViewModel
                 GetData();
             }
 
-            void GetDataFromCurrentSelection()
-            {
-                DanhSachCot.Clear();
-
-                var ids = uiDoc.Selection.GetElementIds();
-
-                foreach (var id in ids)
-                {
-                    var col = doc.GetElement(id) as FamilyInstance;
-
-                    if (col != null &&
-                        col.Category?.Id.IntegerValue == (int)BuiltInCategory.OST_StructuralColumns)
-                    {
-                        DanhSachCot.Add(new ColumnRebarModel(col));
-                    }
-                }
-
-                if (!DanhSachCot.Any())
-                {
-                    TaskDialog.Show("Lỗi", "Bạn chưa chọn cột nào trong Revit");
-                    return;
-                }
-
-                SelectedColumn = DanhSachCot.FirstOrDefault();
-            }
-
-
-
-
-
+       
 
         void GetData()
         {

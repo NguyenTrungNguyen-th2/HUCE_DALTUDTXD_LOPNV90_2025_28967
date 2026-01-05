@@ -112,7 +112,7 @@ namespace DALTUDTXD_LOPNV90_2025_28967.Model
             var bb = column.get_BoundingBox(null);
             TopElevation = bb.Max.Z;
             BotElevation = bb.Min.Z;
-
+            
             ColumnLocationMark = column
                         .LookupParameter("Column Location Mark")
                         ?.AsString() ?? ""; vematcatcot();
@@ -120,7 +120,7 @@ namespace DALTUDTXD_LOPNV90_2025_28967.Model
             BaseLevelName = (levelId != null && levelId != ElementId.InvalidElementId)
                 ? (Column.Document.GetElement(levelId) as Level)?.Name ?? "N/A"
                 : "N/A";
-                   
+            Mark = ColumnLocationMark;
 
         }
         void vematcatcot()
@@ -209,7 +209,7 @@ namespace DALTUDTXD_LOPNV90_2025_28967.Model
                 }
             }
 
-            ProfilerightYGeometry = rightGeometryGroup;
+            ProfilerightYRebar = rightGeometryGroup;
             ProfileleftYRebar = leftGeometryGroup;
             PathGeometry Geo_Dim = new PathGeometry();
             PathFigure Figure_Dim = new PathFigure();
@@ -286,7 +286,7 @@ namespace DALTUDTXD_LOPNV90_2025_28967.Model
             }
         }
 
-        public Geometry ProfilerightYGeometry
+        public Geometry ProfilerightYRebar
         {
             get => _profilerightYGeometry;
             set

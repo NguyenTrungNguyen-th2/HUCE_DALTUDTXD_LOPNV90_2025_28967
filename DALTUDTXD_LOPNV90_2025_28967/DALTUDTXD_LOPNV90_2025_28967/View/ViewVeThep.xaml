@@ -95,7 +95,7 @@
                             <Path x:Name="PathRebarXT" Data="{Binding SelectedColumn.ProfiletopXRebar}" Fill="Red"/>
                             <Path x:Name="PathRebarXB" Data="{Binding SelectedColumn.ProfilebotXRebar}" Fill="Red"/>
                             <Path x:Name="PathRebarYL" Data="{Binding SelectedColumn.ProfileleftYRebar}" Fill="Red"/>
-                            <Path x:Name="PathRebarYR" Data="{Binding SelectedColumn.ProfilerightYGeometry}" Fill="Red"/>
+                            <Path x:Name="PathRebarYR" Data="{Binding SelectedColumn.ProfilerightYRebar}" Fill="Red"/>
                             <Path x:Name="Dim1" Data="{Binding SelectedColumn.DimHor}" Stroke="Black" StrokeThickness="2"></Path>
 
 

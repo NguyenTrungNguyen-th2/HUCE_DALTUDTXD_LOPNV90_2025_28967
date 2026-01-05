@@ -90,20 +90,20 @@ namespace DALTUDTXD_LOPNV90_2025_28967.View
                 _uiDoc
             );
 
-            //var view = new ViewVeThep
-            //{
-            //    DataContext = vm,
-            //    Owner = this
-            //};
-
-
-            var viewVeThep = new ViewVeThep
+            var view = new ViewVeThep
             {
-                DataContext = vm
+                DataContext = vm,
+                Owner = this
             };
-            this.Owner?.Close();
-            this.Close();
-            viewVeThep.ShowDialog();
+
+
+            //var viewVeThep = new ViewVeThep
+            //{
+            //    DataContext = vm
+            //};
+            //this.Owner?.Close();
+            //this.Close();
+            view.ShowDialog();
         }
 
 
