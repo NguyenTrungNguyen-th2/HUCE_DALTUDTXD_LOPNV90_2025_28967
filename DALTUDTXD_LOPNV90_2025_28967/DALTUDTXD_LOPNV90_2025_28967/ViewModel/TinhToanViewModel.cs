@@ -132,7 +132,7 @@ namespace DALTUDTXD_LOPNV90_2025_28967.ViewModel
             get => _selectedRebarArea;
             set { _selectedRebarArea = value; OnPropertyChanged(); }
         }
-
+        public string RevitId { get; set; } 
         public ICommand cmTinhToan { get; }
         private readonly TinhToanCotService _service;
         private readonly double[] _availableDiameters = {  16, 18, 20, 22, 25, 28 };

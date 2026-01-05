@@ -58,6 +58,7 @@ namespace DALTUDTXD_LOPNV90_2025_28967.View
                 var vm = new TinhToanViewModel
                 {
                     DisplayName = cot.DisplayName,
+                    RevitId = cot.Id,
                     Width = cot.Width,
                     Level = cot.Level,
                     Height = cot.Height,
@@ -78,6 +79,7 @@ namespace DALTUDTXD_LOPNV90_2025_28967.View
                     ChieuCao = length.ToString()
                 };
 
+
                 vm.TinhToan();
                 ketQuaList.Add(vm);
             }
@@ -88,7 +90,7 @@ namespace DALTUDTXD_LOPNV90_2025_28967.View
                 return;
             }
 
-            var viewTinhToan = new ViewTinhToan(ketQuaList)
+            var viewTinhToan = new ViewTinhToan(ketQuaList, _viewModel.UIDoc)
             {
                 Owner = this
             };

@@ -256,48 +256,70 @@ namespace DALTUDTXD_LOPNV90_2025_28967.ViewModel
         private readonly Dictionary<string, TinhToanViewModel> _ketQuaTheoCot;
 
 
-        public ColumnRebarViewModel(Document doc, UIDocument uiDoc)
+            public ColumnRebarViewModel(Document doc, UIDocument uiDoc)
+            {
+                this.doc = doc;
+                this.uiDoc = uiDoc;
+
+                LanType = new List<LanType>
         {
+            new LanType { Name = "So le" },
+            new LanType { Name = "Đồng nhất" }
+        };
 
-            LanType = new List<LanType>
+                DistributeStirrupTypes = new List<DistributeStirrupType>
+        {
+            new DistributeStirrupType
             {
-                new LanType
+                Name = "Phân bố đều",
+                ImagePath = "/DALTUDTXD_LOPNV90_2025_28967;component/resources/images/thepdaipbd.png"
+            },
+            new DistributeStirrupType
+            {
+                Name = "Tùy chỉnh",
+                ImagePath = "/DALTUDTXD_LOPNV90_2025_28967;component/resources/images/thepdai.png"
+            }
+        };
+
+                DistributeStirrupType = DistributeStirrupTypes.FirstOrDefault();
+                SeletedLanType = LanType.FirstOrDefault();
+
+                OkCommand = new RelayCommand(_ => Run());
+                CloseCommand = new RelayCommand(w =>
                 {
-                    Name = "So le"
-                },
-                new LanType
+                    if (w is Window window)
+                        window.Close();
+                });
+
+                GetData();
+            }
+
+            void GetDataFromCurrentSelection()
+            {
+                DanhSachCot.Clear();
+
+                var ids = uiDoc.Selection.GetElementIds();
+
+                foreach (var id in ids)
                 {
-                    Name = "Đồng nhất"
+                    var col = doc.GetElement(id) as FamilyInstance;
+
+                    if (col != null &&
+                        col.Category?.Id.IntegerValue == (int)BuiltInCategory.OST_StructuralColumns)
+                    {
+                        DanhSachCot.Add(new ColumnRebarModel(col));
+                    }
                 }
-            };
-            DistributeStirrupTypes = new List<DistributeStirrupType>()
-            {
-                new DistributeStirrupType()
-                {
-                    Name = "Phân bố đều",
-                    ImagePath = "/DALTUDTXD_LOPNV90_2025_28967;component/resources/images/thepdaipbd.png"
-                },new DistributeStirrupType()
-                {
-                    Name = "Tùy chỉnh",
-                    ImagePath = "/DALTUDTXD_LOPNV90_2025_28967;component/resources/images/thepdai.png"
 
+                if (!DanhSachCot.Any())
+                {
+                    TaskDialog.Show("Lỗi", "Bạn chưa chọn cột nào trong Revit");
+                    return;
                 }
 
-            };
-            DistributeStirrupType = DistributeStirrupTypes.FirstOrDefault();
-            SeletedLanType = LanType.FirstOrDefault();
+                SelectedColumn = DanhSachCot.FirstOrDefault();
+            }
 
-            this.doc = doc;
-            this.uiDoc = uiDoc;
-            OkCommand = new RelayCommand(_ => Run());
-            CloseCommand = new RelayCommand(w =>
-            {
-                if (w is Window window)
-                    window.Close();
-            });
-
-            GetData();
-        }
 
 
 
@@ -305,51 +327,73 @@ namespace DALTUDTXD_LOPNV90_2025_28967.ViewModel
 
         void GetData()
         {
-            var references = uiDoc.Selection.PickObjects(
-                ObjectType.Element,
-                new ColumnSelectionFilter(),
-                "Select Columns!"
-            );
-
             DanhSachCot.Clear();
 
-            foreach (var reference in references)
+            var selectedIds = uiDoc.Selection.GetElementIds();
+
+            if (selectedIds == null || selectedIds.Count == 0)
             {
-                var column = doc.GetElement(reference) as FamilyInstance;
-                if (column != null)
+                TaskDialog.Show("Thông báo", "Vui lòng chọn cột trước khi mở vẽ thép.");
+                return;
+            }
+
+            foreach (var id in selectedIds)
+            {
+                var column = doc.GetElement(id) as FamilyInstance;
+
+                if (column != null &&
+                    column.Category != null &&
+                    column.Category.Id.IntegerValue == (int)BuiltInCategory.OST_StructuralColumns)
                 {
                     DanhSachCot.Add(new ColumnRebarModel(column));
                 }
             }
 
-            SelectedColumn = DanhSachCot.FirstOrDefault();
+            if (!DanhSachCot.Any())
+            {
+                TaskDialog.Show("Thông báo", "Selection hiện tại không có cột bê tông.");
+                return;
+            }
+
+            SelectedColumn = DanhSachCot.First();
             var FilterStirrupName = new HashSet<string> { "M_T1", "M_T2", "M_T6" };
 
-            StirrupRebarShapes = new FilteredElementCollector(doc).OfClass(typeof(RebarShape)).Cast<RebarShape>()
-                .Where(x => FilterStirrupName.Contains(x.Name)).ToList();
+            StirrupRebarShapes = new FilteredElementCollector(doc)
+                .OfClass(typeof(RebarShape))
+                .Cast<RebarShape>()
+                .Where(x => FilterStirrupName.Contains(x.Name))
+                .ToList();
+
             Diameters = new FilteredElementCollector(doc)
                 .OfClass(typeof(RebarBarType))
                 .Cast<RebarBarType>()
-                .OrderBy(x => x.Name)
+                .OrderBy(x => x.BarNominalDiameter)
                 .ToList();
-            SelectedColumn.XDiameter = Diameters.FirstOrDefault(x => x.BarNominalDiameter.FeetToMm() > 20)
-                        ?? Diameters.FirstOrDefault()
-                        ?? throw new InvalidOperationException("Không tìm thấy loại thép nào!");
-            SelectedColumn.YDiameter = Diameters.FirstOrDefault(x => x.BarNominalDiameter.FeetToMm() > 20)
-                                       ?? Diameters.FirstOrDefault()
-                                       ?? throw new InvalidOperationException("Không tìm thấy loại thép nào!");
 
-            StirrupDiameter = Diameters.FirstOrDefault(x => x.BarNominalDiameter.FeetToMm() < 10)
-                              ?? Diameters.LastOrDefault();
+            if (!Diameters.Any())
+                throw new InvalidOperationException("Không tìm thấy RebarBarType trong project!");
+
+            SelectedColumn.XDiameter =
+                Diameters.FirstOrDefault(x => x.BarNominalDiameter.FeetToMm() >= 20)
+                ?? Diameters.First();
+
+            SelectedColumn.YDiameter =
+                Diameters.FirstOrDefault(x => x.BarNominalDiameter.FeetToMm() >= 20)
+                ?? Diameters.First();
+
+            StirrupDiameter =
+                Diameters.FirstOrDefault(x => x.BarNominalDiameter.FeetToMm() <= 10)
+                ?? Diameters.First();
             RebarCoverTypes = new FilteredElementCollector(doc)
                 .OfClass(typeof(RebarCoverType))
                 .Cast<RebarCoverType>()
                 .OrderBy(x => x.Name)
                 .ToList();
+
             CoverType = RebarCoverTypes.FirstOrDefault();
             StirrupShape = StirrupRebarShapes.FirstOrDefault(x => x.Name == "M_T1");
-
         }
+
         public void Run()
         {
 

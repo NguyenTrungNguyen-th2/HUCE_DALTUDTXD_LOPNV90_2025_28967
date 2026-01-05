@@ -1,5 +1,4 @@
-﻿// File: ViewModel/ColumnViewModel.cs
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
@@ -23,7 +22,7 @@ namespace DALTUDTXD_LOPNV90_2025_28967.ViewModel
         private readonly UIDocument _uiDoc;
         private readonly Document _doc;
         public readonly TinhToanViewModel TinhToanVM;
-
+        public UIDocument UIDoc => _uiDoc;
         public ICommand cmNhapRevit { get; private set; }
         public ICommand cmThemNoiLuc { get; private set; }
         public ICommand cmXoaCot { get; private set; }
@@ -113,7 +112,6 @@ namespace DALTUDTXD_LOPNV90_2025_28967.ViewModel
             }
         }
 
-        // ←←← TRỎ VÀO STATIC CLASS
         public ObservableCollection<ColumnModel> DanhSachCotTuRevit { get; private set; }
         public ObservableCollection<ColumnModel> DanhSachCotDaGanNoiLuc { get; private set; }
 
@@ -314,7 +312,7 @@ namespace DALTUDTXD_LOPNV90_2025_28967.ViewModel
                     var ph = symbol?.LookupParameter("h") ?? fi.LookupParameter("h");
                     if (pb == null || ph == null) continue;
 
-                    double b = pb.AsDouble() * 304.8; // ft → mm
+                    double b = pb.AsDouble() * 304.8;
                     double h = ph.AsDouble() * 304.8;
                     var bb = fi.get_BoundingBox(null);
                     double len = bb != null ? Math.Abs(bb.Max.Z - bb.Min.Z) * 304.8 : 0;
