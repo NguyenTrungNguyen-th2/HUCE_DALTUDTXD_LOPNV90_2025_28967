@@ -298,69 +298,47 @@ namespace DALTUDTXD_LOPNV90_2025_28967.ViewModel
 
         void GetData()
         {
+            var references = uiDoc.Selection.PickObjects(
+                ObjectType.Element,
+                new ColumnSelectionFilter(),
+                "Select Columns!"
+            );
+
             DanhSachCot.Clear();
 
-            var selectedIds = uiDoc.Selection.GetElementIds();
-
-            if (selectedIds == null || selectedIds.Count == 0)
+            foreach (var reference in references)
             {
-                TaskDialog.Show("Thông báo", "Vui lòng chọn cột trước khi mở vẽ thép.");
-                return;
-            }
-
-            foreach (var id in selectedIds)
-            {
-                var column = doc.GetElement(id) as FamilyInstance;
-
-                if (column != null &&
-                    column.Category != null &&
-                    column.Category.Id.IntegerValue == (int)BuiltInCategory.OST_StructuralColumns)
+                var column = doc.GetElement(reference) as FamilyInstance;
+                if (column != null)
                 {
                     DanhSachCot.Add(new ColumnRebarModel(column));
                 }
             }
 
-            if (!DanhSachCot.Any())
-            {
-                TaskDialog.Show("Thông báo", "Selection hiện tại không có cột bê tông.");
-                return;
-            }
-
-            SelectedColumn = DanhSachCot.First();
+            SelectedColumn = DanhSachCot.FirstOrDefault();
             var FilterStirrupName = new HashSet<string> { "M_T1", "M_T2", "M_T6" };
 
-            StirrupRebarShapes = new FilteredElementCollector(doc)
-                .OfClass(typeof(RebarShape))
-                .Cast<RebarShape>()
-                .Where(x => FilterStirrupName.Contains(x.Name))
-                .ToList();
-
+            StirrupRebarShapes = new FilteredElementCollector(doc).OfClass(typeof(RebarShape)).Cast<RebarShape>()
+                .Where(x => FilterStirrupName.Contains(x.Name)).ToList();
             Diameters = new FilteredElementCollector(doc)
                 .OfClass(typeof(RebarBarType))
                 .Cast<RebarBarType>()
-                .OrderBy(x => x.BarNominalDiameter)
+                .OrderBy(x => x.Name)
                 .ToList();
+            SelectedColumn.XDiameter = Diameters.FirstOrDefault(x => x.BarNominalDiameter.FeetToMm() > 20)
+                                       ?? Diameters.FirstOrDefault()
+                                       ?? throw new InvalidOperationException("Không tìm thấy loại thép nào!");
+            SelectedColumn.YDiameter = Diameters.FirstOrDefault(x => x.BarNominalDiameter.FeetToMm() > 20)
+                                       ?? Diameters.FirstOrDefault()
+                                       ?? throw new InvalidOperationException("Không tìm thấy loại thép nào!");
 
-            if (!Diameters.Any())
-                throw new InvalidOperationException("Không tìm thấy RebarBarType trong project!");
-
-            SelectedColumn.XDiameter =
-                Diameters.FirstOrDefault(x => x.BarNominalDiameter.FeetToMm() >= 20)
-                ?? Diameters.First();
-
-            SelectedColumn.YDiameter =
-                Diameters.FirstOrDefault(x => x.BarNominalDiameter.FeetToMm() >= 20)
-                ?? Diameters.First();
-
-            StirrupDiameter =
-                Diameters.FirstOrDefault(x => x.BarNominalDiameter.FeetToMm() <= 10)
-                ?? Diameters.First();
+            StirrupDiameter = Diameters.FirstOrDefault(x => x.BarNominalDiameter.FeetToMm() < 10)
+                              ?? Diameters.LastOrDefault();
             RebarCoverTypes = new FilteredElementCollector(doc)
                 .OfClass(typeof(RebarCoverType))
                 .Cast<RebarCoverType>()
                 .OrderBy(x => x.Name)
                 .ToList();
-
             CoverType = RebarCoverTypes.FirstOrDefault();
             StirrupShape = StirrupRebarShapes.FirstOrDefault(x => x.Name == "M_T1");
         }
@@ -368,19 +346,35 @@ namespace DALTUDTXD_LOPNV90_2025_28967.ViewModel
         public void Run()
         {
 
-
-
             using (var tx = new Transaction(document: doc, name: "create columns"))
             {
                 tx.Start();
-                foreach (var column in DanhSachCot)
+                string mode = $"{SeletedLanType.Name}";
+                switch (mode)
                 {
-                    columnModel = column;
-                    CreateStirrup();
-                    CreateXMainRebar();
-                    CreateYMainRebar();
+                    case "So le":
+                        foreach (var column in DanhSachCot)
+                        {
+                            columnModel = column;
+                            CreateStirrup();
+                            CreateXMainRebar();
+                            CreateYMainRebar();
 
+                        }
+                        break;
+                    case "Đồng nhất":
+                        foreach (var column in DanhSachCot)
+                        {
+                            columnModel = column;
+                            CreateStirrup();
+                            CreateXMainRebar1();
+                            CreateYMainRebar1();
+
+                        }
+                        break;
                 }
+
+
 
 
                 tx.Commit();
@@ -676,7 +670,70 @@ namespace DALTUDTXD_LOPNV90_2025_28967.ViewModel
                 }
             }
         }
+        void CreateXMainRebar1()
+        {
+            var spacing2Rebars =
+                (columnModel.Width - 2 * Cover - 2 * StirrupDiameter.BarNominalDiameter -
+                SelectedColumn.XDiameter.BarNominalDiameter) / (SelectedColumn.NumberOfXRebar - 1);
 
+            var topRebars = new List<Rebar>();
+            for (int i = 0; i < SelectedColumn.NumberOfXRebar; i++)
+            {
+                var o2 = columnModel.A
+                    .Add(source: columnModel.XVector * (Cover + StirrupDiameter.BarNominalDiameter +
+                    SelectedColumn.XDiameter.BarNominalDiameter / 2 + spacing2Rebars * i))
+                    .Add(source: -columnModel.YVector *
+                                 (Cover + StirrupDiameter.BarNominalDiameter +
+                    SelectedColumn.XDiameter.BarNominalDiameter / 2));
+                o2 = new XYZ(o2.X, o2.Y, columnModel.BotElevation);
+                var columnHeight = columnModel.TopElevation - columnModel.BotElevation;
+                var line1 = Line.CreateBound(endpoint1: o2,
+                    endpoint2: o2.Add(source: XYZ.BasisZ *
+                                              (columnHeight + Lan * SelectedColumn.XDiameter.BarNominalDiameter)));
+                var rebar = Rebar.CreateFromCurves(doc, RebarStyle.Standard, SelectedColumn.XDiameter, HookTyped, HookTypet,
+                    columnModel.Column, columnModel.XVector, new List<Curve> { line1 }, RebarHookOrientation.Right,
+                    RebarHookOrientation.Right, true, true);
+                topRebars.Add(item: rebar);
+            }
+            var centerPointY = columnModel.A.Add(columnModel.YVector.Multiply(-columnModel.Height / 2));
+            var mirrorPlane = Plane.CreateByNormalAndOrigin(columnModel.YVector, centerPointY);
+            ElementTransformUtils.MirrorElements(doc, topRebars.Select(x => x.Id).ToList(), mirrorPlane, true);
+        }
+        void CreateYMainRebar1()
+        {
+            var spacing2Rebars =
+                (columnModel.Height - 2 * Cover - 2 * StirrupDiameter.BarNominalDiameter -
+                SelectedColumn.YDiameter.BarNominalDiameter) / (SelectedColumn.NumberOfYRebar - 1);
+
+            var topRebars = new List<Rebar>();
+            if (SelectedColumn.NumberOfYRebar > 2)
+            {
+                for (int i = 1; i <= SelectedColumn.NumberOfYRebar - 2; i++)
+                {
+                    var o2 = columnModel.A
+                        .Add(source: columnModel.XVector *
+                                     (Cover + StirrupDiameter.BarNominalDiameter +
+                        SelectedColumn.YDiameter.BarNominalDiameter / 2))
+                        .Add(source: -columnModel.YVector *
+                                     (Cover + StirrupDiameter.BarNominalDiameter +
+                        SelectedColumn.YDiameter.BarNominalDiameter / 2 +
+                                      i * spacing2Rebars));
+                    o2 = new XYZ(o2.X, o2.Y, columnModel.BotElevation);
+                    var columnHeight = columnModel.TopElevation - columnModel.BotElevation;
+                    var line1 = Line.CreateBound(endpoint1: o2,
+                        endpoint2: o2.Add(source: XYZ.BasisZ *
+                                                  (columnHeight + Lan * SelectedColumn.YDiameter.BarNominalDiameter)));
+                    var rebar = Rebar.CreateFromCurves(doc, RebarStyle.Standard, SelectedColumn.YDiameter, HookTyped, HookTypet,
+                        columnModel.Column, columnModel.YVector, new List<Curve> { line1 }, RebarHookOrientation.Right,
+                        RebarHookOrientation.Right, true, true);
+                    topRebars.Add(item: rebar);
+                }
+
+                var centerPointX = columnModel.A.Add(columnModel.XVector.Multiply(columnModel.Width / 2));
+                var mirrorPlane = Plane.CreateByNormalAndOrigin(columnModel.XVector, centerPointX);
+                ElementTransformUtils.MirrorElements(doc, topRebars.Select(x => x.Id).ToList(), mirrorPlane, true);
+            }
+        }
         void Close()
         {
             viewvethep?.Close();
