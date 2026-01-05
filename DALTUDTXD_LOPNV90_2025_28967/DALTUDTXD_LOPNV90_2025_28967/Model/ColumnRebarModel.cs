@@ -94,6 +94,7 @@ namespace DALTUDTXD_LOPNV90_2025_28967.Model
         // 👇 Thêm ID và Mark như trước
         public ElementId Id => Column?.Id ?? ElementId.InvalidElementId;
         public string Mark { get; private set; }
+       
 
         public ColumnRebarModel(FamilyInstance column)
         {

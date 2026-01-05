@@ -426,7 +426,7 @@ namespace DALTUDTXD_LOPNV90_2025_28967.ViewModel
             var shapeDrivenAccessor = rebar.GetShapeDrivenAccessor();
             shapeDrivenAccessor.ScaleToBox(origin: o1, xVec: columnModel.XVector * (columnModel.Width - 2 * Cover), yVec: (columnModel.YVector) * (columnModel.Height - 2 * Cover));
             shapeDrivenAccessor.SetLayoutAsMaximumSpacing(spacing: StirrupSpacing.MmToFeet(), arrayLength: (columnModel.TopElevation - columnModel.BotElevation) - 2 * Cover - StirrupDiameter.BarNominalDiameter, barsOnNormalSide: true, includeFirstBar: true, includeLastBar: true);
-            SetPartitionByLengthAndDiameter(rebar);
+            SetPartition(rebar);
         }
 
         void CreateXMainRebar()
@@ -479,11 +479,9 @@ namespace DALTUDTXD_LOPNV90_2025_28967.ViewModel
                                 norm: columnModel.XVector, curves: new List<Curve>() { line30_o3 }, startHookOrient: RebarHookOrientation.Left,
                                 endHookOrient: RebarHookOrientation.Left, useExistingShapeIfPossible: true, createNewShape: true);
                             XRebars.Add(item: rebarD);
-                            foreach (var VARIABLE in XRebars)
-                            {
-                                SetPartitionByLengthAndDiameter1(rebarA);
-                                SetPartitionByLengthAndDiameter(rebarD);
-                            }
+                            
+                                SetPartition(rebarA);
+                                SetPartition(rebarD);
 
                         }
                         else
@@ -502,8 +500,8 @@ namespace DALTUDTXD_LOPNV90_2025_28967.ViewModel
                             XRebars1.Add(item: rebarD);
                             foreach (var VARIABLE in XRebars1)
                             {
-                                SetPartitionByLengthAndDiameter(rebarA);
-                                SetPartitionByLengthAndDiameter1(rebarD);
+                                SetPartition(rebarA);
+                                SetPartition(rebarD);
                             }
                         }
                     }
@@ -532,11 +530,9 @@ namespace DALTUDTXD_LOPNV90_2025_28967.ViewModel
                                 norm: columnModel.XVector, curves: new List<Curve>() { line03 }, startHookOrient: RebarHookOrientation.Left,
                                 endHookOrient: RebarHookOrientation.Left, useExistingShapeIfPossible: true, createNewShape: true);
                             XRebars.Add(item: rebarD);
-                            foreach (var VARIABLE in XRebars)
-                            {
-                                SetPartitionByLengthAndDiameter(rebarA);
-                                SetPartitionByLengthAndDiameter(rebarD);
-                            }
+                                SetPartition(rebarA);
+                                SetPartition(rebarD);
+                            
 
                         }
                         else
@@ -553,11 +549,10 @@ namespace DALTUDTXD_LOPNV90_2025_28967.ViewModel
                                 norm: columnModel.XVector, curves: new List<Curve>() { line02 }, startHookOrient: RebarHookOrientation.Left,
                                 endHookOrient: RebarHookOrientation.Left, useExistingShapeIfPossible: true, createNewShape: true);
                             XRebars1.Add(item: rebarD);
-                            foreach (var VARIABLE in XRebars1)
-                            {
-                                SetPartitionByLengthAndDiameter1(rebarA);
-                                SetPartitionByLengthAndDiameter1(rebarD);
-                            }
+                           
+                                SetPartition(rebarA);
+                                SetPartition(rebarD);
+                            
 
                         }
                     }
@@ -632,11 +627,9 @@ namespace DALTUDTXD_LOPNV90_2025_28967.ViewModel
                                 norm: columnModel.YVector, curves: new List<Curve>() { line20_o3 }, startHookOrient: RebarHookOrientation.Left,
                                 endHookOrient: RebarHookOrientation.Left, useExistingShapeIfPossible: true, createNewShape: true);
                             YRebars1.Add(item: rebarC);
-                            foreach (var VARIABLE in YRebars1)
-                            {
-                                SetPartitionByLengthAndDiameter1(rebarA);
-                                SetPartitionByLengthAndDiameter1(rebarC);
-                            }
+                                SetPartition(rebarA);
+                                SetPartition(rebarC);
+                            
                         }
                         else
                         {
@@ -652,11 +645,9 @@ namespace DALTUDTXD_LOPNV90_2025_28967.ViewModel
                                 norm: columnModel.YVector, curves: new List<Curve>() { line30_o3 }, startHookOrient: RebarHookOrientation.Left,
                                 endHookOrient: RebarHookOrientation.Left, useExistingShapeIfPossible: true, createNewShape: true);
                             YRebars.Add(item: rebarC);
-                            foreach (var VARIABLE in YRebars)
-                            {
-                                SetPartitionByLengthAndDiameter(rebarA);
-                                SetPartitionByLengthAndDiameter(rebarC);
-                            }
+                                SetPartition(rebarA);
+                                SetPartition(rebarC);
+                            
 
                         }
                     }
@@ -685,11 +676,10 @@ namespace DALTUDTXD_LOPNV90_2025_28967.ViewModel
                                 norm: columnModel.YVector, curves: new List<Curve>() { line20_o3 }, startHookOrient: RebarHookOrientation.Left,
                                 endHookOrient: RebarHookOrientation.Left, useExistingShapeIfPossible: true, createNewShape: true);
                             YRebars1.Add(item: rebarC);
-                            foreach (var VARIABLE in YRebars1)
-                            {
-                                SetPartitionByLengthAndDiameter1(rebarA);
-                                SetPartitionByLengthAndDiameter1(rebarC);
-                            }
+                           
+                                SetPartition(rebarA);
+                                SetPartition(rebarC);
+                            
                         }
                         else
                         {
@@ -705,11 +695,9 @@ namespace DALTUDTXD_LOPNV90_2025_28967.ViewModel
                                 norm: columnModel.YVector, curves: new List<Curve>() { line30_o3 }, startHookOrient: RebarHookOrientation.Left,
                                 endHookOrient: RebarHookOrientation.Left, useExistingShapeIfPossible: true, createNewShape: true);
                             YRebars.Add(item: rebarC);
-                            foreach (var VARIABLE in YRebars)
-                            {
-                                SetPartitionByLengthAndDiameter(rebarA);
-                                SetPartitionByLengthAndDiameter(rebarC);
-                            }
+                                SetPartition(rebarA);
+                                SetPartition(rebarC);
+                            
                         }
 
                     }
@@ -748,38 +736,22 @@ namespace DALTUDTXD_LOPNV90_2025_28967.ViewModel
 
             foreach (var col in DanhSachCot)
             {
-                // Bỏ qua chính cột nguồn (nếu muốn, nhưng gán lại cũng không sao)
+               
                 col.NumberOfXRebar = source.NumberOfXRebar;
                 col.NumberOfYRebar = source.NumberOfYRebar;
                 col.XDiameter = source.XDiameter;
                 col.YDiameter = source.YDiameter;
-                // Bạn có thể thêm các thuộc tính khác như: StirrupSpacing, HookType, v.v.
             }
         }
 
-        void SetPartitionByLengthAndDiameter(Rebar rb)
+        void SetPartition(Rebar rb)
         {
             if (rb == null) return;
+            string locationMark = columnModel.ColumnLocationMark;
+            string baseLevel = columnModel.BaseLevelName;
 
-            // Lấy đường kính
-            var barType = doc.GetElement(rb.GetTypeId()) as RebarBarType;
-            if (barType == null) return;
-
-            double diaMm = barType.BarNominalDiameter.FeetToMm();
-
-            // Lấy chiều dài (chuẩn Revit – có móc)
-            Parameter lenParam = rb.get_Parameter(
-                BuiltInParameter.REBAR_ELEM_LENGTH);
-
-            if (lenParam == null) return;
-
-            double lenMm = lenParam.AsDouble().FeetToMm();
-
-            // Tạo Partition
             string partitionName =
-                $"D{Math.Round(diaMm)}_L{Math.Round(lenMm)}";
-
-            // 👉 LẤY PARTITION BẰNG TÊN
+                $"{locationMark}_{baseLevel}";
             Parameter partParam = rb.LookupParameter("Partition");
 
             if (partParam != null && !partParam.IsReadOnly)
@@ -787,37 +759,6 @@ namespace DALTUDTXD_LOPNV90_2025_28967.ViewModel
                 partParam.Set(partitionName);
             }
         }
-        void SetPartitionByLengthAndDiameter1(Rebar rb)
-        {
-            if (rb == null) return;
-
-            // Lấy đường kính
-            var barType = doc.GetElement(rb.GetTypeId()) as RebarBarType;
-            if (barType == null) return;
-
-            double diaMm = barType.BarNominalDiameter.FeetToMm();
-
-            // Lấy chiều dài (chuẩn Revit – có móc)
-            Parameter lenParam = rb.get_Parameter(
-                BuiltInParameter.REBAR_ELEM_LENGTH);
-
-            if (lenParam == null) return;
-
-            double lenMm = lenParam.AsDouble().FeetToMm();
-
-            // Tạo Partition
-            string partitionName =
-                $"D{Math.Round(diaMm)}_L1";
-
-            // 👉 LẤY PARTITION BẰNG TÊN
-            Parameter partParam = rb.LookupParameter("Partition");
-
-            if (partParam != null && !partParam.IsReadOnly)
-            {
-                partParam.Set(partitionName);
-            }
-        }
-
 
 
     }
